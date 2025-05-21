@@ -2362,3 +2362,796 @@ body.dark-mode .download-text h2{
   position: relative; /* Stays above image */
   z-index: 2; /* Ensures text stays on top */
 }
+
+/* Sign In Section */
+.signin-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--background-light);
+}
+
+.signin-container {
+    display: flex;
+    background-color: white;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.signin-form {
+    flex: 1;
+    padding: var(--spacing-xxl);
+}
+
+.signin-image {
+    flex: 1;
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+.signin-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-xl);
+    color: white;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.image-overlay h3 {
+    font-size: 24px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-header {
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.form-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.form-header p {
+    color: var(--text-secondary);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    color: var(--text-light);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 45px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 8px;
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: var(--spacing-xl) 0;
+    color: var(--text-light);
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.divider span {
+    padding: 0 var(--spacing-md);
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.btn-social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.btn-social.google:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-social.facebook {
+    background-color: #3b5998;
+    color: white;
+    border-color: #3b5998;
+}
+
+.btn-social.facebook:hover {
+    background-color: #344e86;
+}
+
+.signup-link {
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.signup-link a {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Dark Mode Styles for Sign In Page */
+body.dark-mode .signin-container {
+    background-color: var(--background-white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .signin-form {
+    background-color: var(--background-white);
+}
+
+body.dark-mode .form-header h2 {
+    color: var(--text-primary);
+}
+
+body.dark-mode .input-group input {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode .btn-social {
+    background-color: var(--background-white);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .btn-social.facebook {
+    background-color: #3b5998;
+    color: white;
+    border-color: #3b5998;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .signin-container {
+        flex-direction: column;
+    }
+    
+    .signin-image {
+        order: -1;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .signin-form {
+        padding: var(--spacing-xl);
+    }
+    
+    .form-header h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signin-form {
+        padding: var(--spacing-lg);
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+    
+    .forgot-password {
+        margin-top: var(--spacing-sm);
+    }
+}
+/* Cart Section */
+.cart-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--background-light);
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.cart-header .btn-light {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: var(--spacing-xl);
+}
+
+.cart-items {
+    background-color: white;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.restaurant-info-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.restaurant-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+}
+
+.restaurant-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.restaurant-details h3 {
+    font-size: 18px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.delivery-time {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.delivery-time i {
+    margin-right: var(--spacing-xs);
+    color: var(--primary-color);
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 120px 80px 40px;
+    gap: var(--spacing-md);
+    align-items: center;
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-image {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-details h3 {
+    font-size: 16px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.item-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.item-price {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: var(--primary-extra-light);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.quantity {
+    min-width: 20px;
+    text-align: center;
+}
+
+.item-total {
+    font-weight: 600;
+    text-align: right;
+}
+
+.item-remove {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.item-remove:hover {
+    color: var(--error-color);
+}
+
+.special-instructions {
+    margin-top: var(--spacing-xl);
+}
+
+.special-instructions h4 {
+    font-size: 16px;
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.special-instructions h4 i {
+    color: var(--primary-color);
+}
+
+.special-instructions textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+    min-height: 80px;
+}
+
+.special-instructions textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.cart-summary {
+    position: sticky;
+    top: calc(var(--header-height) + var(--spacing-lg));
+    align-self: start;
+}
+
+.summary-card {
+    background-color: white;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.summary-card h3 {
+    font-size: 20px;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+}
+
+.summary-row.total {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.promo-code {
+    margin: var(--spacing-xl) 0;
+}
+
+.promo-code h4 {
+    font-size: 16px;
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.promo-code h4 i {
+    color: var(--primary-color);
+}
+
+.promo-input {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.promo-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+}
+
+.promo-input input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn-checkout {
+    width: 100%;
+    margin-bottom: var(--spacing-xl);
+}
+
+.payment-methods {
+    text-align: center;
+}
+
+.payment-methods p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    font-size: 24px;
+    color: var(--text-light);
+}
+
+/* Cart button in header */
+.cart-btn {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cart-btn.active {
+    color: var(--primary-color);
+}
+
+/* Dark Mode Styles for Cart Page */
+body.dark-mode .cart-items,
+body.dark-mode .summary-card {
+    background-color: var(--background-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .restaurant-info-card,
+body.dark-mode .cart-item {
+    border-color: var(--border-color);
+}
+
+body.dark-mode .quantity-btn {
+    background-color: var(--background-white);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .quantity-btn:hover {
+    background-color: var(--primary-extra-light);
+}
+
+body.dark-mode .special-instructions textarea {
+    background-color: #333;
+    color: white;
+    border-color: var(--border-color);
+}
+
+body.dark-mode .promo-input input {
+    background-color: #333;
+    color: white;
+    border-color: var(--border-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .cart-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart-summary {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+    
+    .cart-item {
+        grid-template-columns: 60px 1fr;
+        grid-template-rows: auto auto auto;
+        gap: var(--spacing-sm);
+    }
+    
+    .item-image {
+        grid-row: span 3;
+    }
+    
+    .item-quantity {
+        grid-column: 2;
+    }
+    
+    .item-total {
+        grid-column: 2;
+        text-align: left;
+    }
+    
+    .item-remove {
+        grid-column: 2;
+        grid-row: 3;
+        justify-self: end;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-items,
+    .summary-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .restaurant-info-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .promo-input {
+        flex-direction: column;
+    }
+}
+/* Add smooth transitions for dark mode elements */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Transition for header */
+.main-header {
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Transition for cards and other elements */
+.restaurant-card,
+.category-item,
+.featured-banner,
+.info-card,
+.menu-nav,
+.menu-content,
+.summary-container,
+.cart-items,
+.summary-card {
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+/* Transition for text elements */
+.section-title,
+.restaurant-info h3,
+.menu-section-title,
+.summary-container h3,
+.info-card h3,
+.download-text h2,
+.download-text p,
+.restaurant-info h3,
+.menu-item-info h3,
+.price {
+    transition: color 0.5s ease;
+}
+
+/* Transition for form elements */
+.search-bar input,
+.filter-options select,
+.location-select select,
+.newsletter-form input,
+.special-instructions textarea,
+.promo-input input {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+
+/* Transition for buttons */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-light,
+.app-button,
+.add-to-cart,
+.checkout-btn,
+.quantity-btn {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, transform 0.3s ease;
+}
+
+/* Transition for footer */
+.main-footer {
+    transition: background-color 0.5s ease;
+}
+
+.footer-links a,
+.footer-bottom,
+.footer-bottom-links a {
+    transition: color 0.5s ease;
+}
+/* Add these styles to your style.css file */
+
+/* General button hover effect */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Specific button styles */
+.btn-primary {
+  /* Your existing primary button styles */
+  transition: all 0.3s ease; /* Add this line */
+}
+
+.btn-secondary {
+  /* Your existing secondary button styles */
+  transition: all 0.3s ease; /* Add this line */
+}
+
+.btn-light {
+  /* Your existing light button styles */
+  transition: all 0.3s ease; /* Add this line */
+}
+
+/* App download buttons hover effect */
+.app-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Category items hover effect */
+.category-item:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+/* Restaurant cards hover effect */
+.restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Sign in button hover effect */
+.signin-btn:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Cart button hover effect */
+.cart-btn:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
