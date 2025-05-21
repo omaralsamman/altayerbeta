@@ -4,18 +4,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Check for saved preference
     if (localStorage.getItem('darkMode') === 'enabled') {
-        body.classList.add('dark-mode');
+        enableDarkMode();
         darkModeToggle.checked = true;
     }
 
-    // Toggle dark mode
+    // Toggle dark mode with transition
     darkModeToggle.addEventListener('change', function() {
         if (this.checked) {
-            body.classList.add('dark-mode');
+            enableDarkMode();
             localStorage.setItem('darkMode', 'enabled');
         } else {
-            body.classList.remove('dark-mode');
+            disableDarkMode();
             localStorage.setItem('darkMode', 'disabled');
         }
     });
+
+    function enableDarkMode() {
+        body.style.transition = 'background-color 1s ease, color 1s ease';
+        body.classList.add('dark-mode');
+        
+        // Remove transition after animation completes
+        setTimeout(() => {
+            body.style.transition = '';
+        }, 1000);
+    }
+
+    function disableDarkMode() {
+        body.style.transition = 'background-color 1s ease, color 1s ease';
+        body.classList.remove('dark-mode');
+        
+        // Remove transition after animation completes
+        setTimeout(() => {
+            body.style.transition = '';
+        }, 1000);
+    }
 });
