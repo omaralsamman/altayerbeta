@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Garden Salad Bar - Altayer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-utensils"></i> Altayer</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for food, restaurants...">
+                    </div>
+                    <div class="user-actions">
+                        <a href="#" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="signin-btn">Sign in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="location-select">
+                <i class="fas fa-map-marker-alt"></i>
+                <select>
+                    <option>Deliver to: Current Location</option>
+                    <option>New York, NY</option>
+                    <option>Los Angeles, CA</option>
+                    <option>Chicago, IL</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Restaurant Hero -->
+    <section class="restaurant-hero">
+        <div class="container">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to restaurants</a>
+            <div class="restaurant-banner">
+                <div class="restaurant-cover">
+                   <img id="mainbanner" src="https://static.vecteezy.com/system/resources/previews/007/774/305/non_2x/salad-bar-buffet-at-restaurant-fresh-salad-bar-buffet-for-lunch-or-dinner-healthy-food-fresh-green-and-purple-lettuce-in-white-plate-on-counter-catering-food-banquet-service-vegetarian-food-photo.jpg" alt="" style="background-color: rgb(247, 247, 247);">
+
+                </div>
+                <div class="restaurant-overlay">
+                    <div class="restaurant-details">
+                        <h1>Green Garden Salad Bar</h1>
+                        <div class="restaurant-meta-details">
+                            <span class="meta-item"><i class="fas fa-star"></i> 4.8 (200+ ratings)</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> 25-35 min</span>
+                            <span class="meta-item"><i class="fas fa-tag"></i> $$</span>
+                        </div>
+                        <p class="restaurant-description">Farm-fresh ingredients and house-made dressings. Healthy eating made delicious!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Menu -->
+    <section class="restaurant-menu">
+        <div class="container">
+            <div class="menu-layout">
+                <!-- Menu Navigation -->
+                <div class="menu-nav">
+                    <ul>
+                        <li class="active"><a href="#featured">Featured</a></li>
+                        <li><a href="#salads">Salads</a></li>
+                        <li><a href="#bowls">Healthy Bowls</a></li>
+                        <li><a href="#sandwiches">Sandwiches & Wraps</a></li>
+                        <li><a href="#drinks">Drinks</a></li>
+                        <li><a href="#sides">Sides</a></li>
+                    </ul>
+                </div>
+
+                <!-- Menu Content -->
+                <div class="menu-content">
+                    <div id="featured" class="menu-section">
+                        <h2 class="menu-section-title">Featured Items</h2>
+                        
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Superfood Salad</h3>
+                                    <p>Kale, spinach, quinoa, avocado, berries, nuts, and lemon vinaigrette</p>
+                                    <span class="price">$12.99</span>
+                                </div>
+                                <div class="menu-item-image featured-item-1"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Mediterranean Bowl</h3>
+                                    <p>Falafel, hummus, tabbouleh, cucumber, tomato, and tahini dressing</p>
+                                    <span class="price">$14.99</span>
+                                </div>
+                                <div class="menu-item-image featured-item-2"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Green Detox Smoothie</h3>
+                                    <p>Spinach, kale, apple, banana, ginger, and fresh lemon juice</p>
+                                    <span class="price">$7.99</span>
+                                </div>
+                                <div class="menu-item-image featured-item-3"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="salads" class="menu-section">
+                        <h2 class="menu-section-title">Salads</h2>
+                        
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Garden Fresh Salad</h3>
+                                    <p>Mixed greens, cucumber, tomato, carrot, red onion with balsamic vinaigrette</p>
+                                    <span class="price">$9.99</span>
+                                </div>
+                                <div class="menu-item-image salad-1"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Caesar Salad</h3>
+                                    <p>Romaine lettuce, parmesan, croutons, and classic caesar dressing</p>
+                                    <span class="price">$10.99</span>
+                                    <div class="add-protein">
+                                        <span>Add protein:</span>
+                                        <a href="#">Grilled Chicken +$3.50</a>
+                                        <a href="#">Tofu +$2.50</a>
+                                    </div>
+                                </div>
+                                <div class="menu-item-image salad-2"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Greek Salad</h3>
+                                    <p>Romaine, cucumber, tomato, red onion, kalamata olives, feta, and Greek dressing</p>
+                                    <span class="price">$11.99</span>
+                                </div>
+                                <div class="menu-item-image salad-3"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Asian Crunch Salad</h3>
+                                    <p>Napa cabbage, carrots, edamame, bell peppers, mandarin oranges, crunchy noodles, sesame dressing</p>
+                                    <span class="price">$12.99</span>
+                                </div>
+                                <div class="menu-item-image salad-4"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="bowls" class="menu-section">
+                        <h2 class="menu-section-title">Healthy Bowls</h2>
+                        
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Power Bowl</h3>
+                                    <p>Brown rice, grilled chicken, avocado, black beans, roasted veggies with cilantro-lime dressing</p>
+                                    <span class="price">$14.99</span>
+                                </div>
+                                <div class="menu-item-image bowl-1"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Buddha Bowl</h3>
+                                    <p>Quinoa, roasted sweet potato, chickpeas, broccoli, kale, tahini dressing</p>
+                                    <span class="price">$13.99</span>
+                                </div>
+                                <div class="menu-item-image bowl-2"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Poke Bowl</h3>
+                                    <p>Sushi rice, ahi tuna, cucumber, avocado, edamame, seaweed, sesame seeds, sriracha mayo</p>
+                                    <span class="price">$16.99</span>
+                                </div>
+                                <div class="menu-item-image bowl-3"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sandwiches" class="menu-section">
+                        <h2 class="menu-section-title">Sandwiches & Wraps</h2>
+                        
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Avocado Veggie Wrap</h3>
+                                    <p>Avocado, cucumber, carrot, sprouts, tomato, hummus in whole wheat wrap</p>
+                                    <span class="price">$10.99</span>
+                                </div>
+                                <div class="menu-item-image sandwich-1"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Grilled Chicken Pesto</h3>
+                                    <p>Grilled chicken, pesto, mozzarella, roasted red peppers on ciabatta</p>
+                                    <span class="price">$12.99</span>
+                                </div>
+                                <div class="menu-item-image sandwich-2"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Mediterranean Wrap</h3>
+                                    <p>Falafel, hummus, tzatziki, cucumber, tomato, red onion in spinach wrap</p>
+                                    <span class="price">$11.99</span>
+                                </div>
+                                <div class="menu-item-image sandwich-3"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="drinks" class="menu-section">
+                        <h2 class="menu-section-title">Drinks</h2>
+                        
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Fresh Squeezed Juice</h3>
+                                    <p>Orange, apple, carrot, or green juice blend</p>
+                                    <span class="price">$5.99</span>
+                                </div>
+                                <div class="menu-item-image drink-1"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Protein Smoothie</h3>
+                                    <p>Banana, berries, almond milk, protein powder, peanut butter</p>
+                                    <span class="price">$6.99</span>
+                                </div>
+                                <div class="menu-item-image drink-2"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Iced Green Tea</h3>
+                                    <p>Organic jasmine green tea, light honey, fresh mint</p>
+                                    <span class="price">$3.99</span>
+                                </div>
+                                <div class="menu-item-image drink-3"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Sparkling Water</h3>
+                                    <p>Still or sparkling, choice of lemon, lime, or cucumber</p>
+                                    <span class="price">$2.99</span>
+                                </div>
+                                <div class="menu-item-image drink-4"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sides" class="menu-section">
+                        <h2 class="menu-section-title">Sides</h2>
+                        
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Sweet Potato Fries</h3>
+                                    <p>Baked sweet potato fries with chipotle aioli</p>
+                                    <span class="price">$4.99</span>
+                                </div>
+                                <div class="menu-item-image side-1"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Roasted Veggies</h3>
+                                    <p>Seasonal veggies roasted with herbs and olive oil</p>
+                                    <span class="price">$5.99</span>
+                                </div>
+                                <div class="menu-item-image side-2"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Hummus & Pita</h3>
+                                    <p>House-made hummus with warm pita bread</p>
+                                    <span class="price">$6.99</span>
+                                </div>
+                                <div class="menu-item-image side-3"></div>
+                                <button class="add-to-cart">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <div class="summary-container">
+                        <h3>Your Order</h3>
+                        <p class="empty-cart-message">Your cart is empty</p>
+                        <!-- Cart items would be added here dynamically -->
+                        <div class="cart-actions">
+                            <button class="btn btn-primary checkout-btn">Go to Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Info Section -->
+    <section class="restaurant-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-info-circle"></i> About</h3>
+                    <p>Green Garden Salad Bar brings healthy eating to your doorstep. We source the freshest ingredients from local farms and prepare everything in-house daily. Our commitment is to provide nutritious, delicious meals that energize your day.</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday</span> <span>10:00 AM - 9:00 PM</span></li>
+                        <li><span>Saturday - Sunday</span> <span>11:00 AM - 8:00 PM</span></li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                    <p>123 Green St, Healthyville</p>
+                    <div class="location-map"></div>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-star"></i> Reviews</h3>
+                    <div class="review-summary">
+                        <div class="rating-overview">
+                            <span class="big-rating">4.8</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>200+ ratings</span>
+                        </div>
+                        <div class="rating-breakdown">
+                            <div class="rating-item">
+                                <span>Food</span>
+                                <div class="rating-bar">
+                                    <div class="bar-fill" style="width: 96%;"></div>
+                                </div>
+                                <span>4.8</span>
+                            </div>
+                            <div class="rating-item">
+                                <span>Delivery</span>
+                                <div class="rating-bar">
+                                    <div class="bar-fill" style="width: 94%;"></div>
+                                </div>
+                                <span>4.7</span>
+                            </div>
+                            <div class="rating-item">
+                                <span>Value</span>
+                                <div class="rating-bar">
+                                    <div class="bar-fill" style="width: 90%;"></div>
+                                </div>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">Altayer</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Get Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">How to Order</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Delivery Areas</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">For Restaurants</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Partner with Us</a></li>
+                        <li><a href="#">Restaurant Portal</a></li>
+                        <li><a href="#">Restaurant Success</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Subscribe to our newsletter</h4>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Altayer. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
