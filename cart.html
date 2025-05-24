@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altayer - Your Cart</title>
     <!-- Google Fonts -->
@@ -12,6 +12,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for quantity controls */
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quantity-btn:hover {
+            background-color: var(--primary-extra-light);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .quantity {
+            min-width: 20px;
+            text-align: center;
+            margin: 0 8px;
+        }
+
+        .item-quantity {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        body.dark-mode .quantity-btn {
+            background-color: var(--background-white);
+            border-color: var(--border-color);
+            color: var(--text-primary);
+        }
+
+        body.dark-mode .quantity-btn:hover {
+            background-color: var(--primary-extra-light);
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -49,8 +92,8 @@
             </div>
             
             <div class="cart-layout">
-                <div class="cart-items">
-                    <div class="empty-cart">
+                <div class="cart-items" id="cartItemsContainer">
+                    <div class="empty-cart" id="emptyCartMessage">
                         <div class="empty-cart-icon">
                             <i class="fas fa-shopping-cart"></i>
                         </div>
@@ -64,27 +107,27 @@
                     <div class="summary-card">
                         <h3>Order Summary</h3>
                         <div class="summary-row">
-                            <span>Subtotal (0 items)</span>
-                            <span>$0.00</span>
+                            <span>Subtotal (<span id="itemCount">0</span> items)</span>
+                            <span id="subtotal">$0.00</span>
                         </div>
                         <div class="summary-row">
                             <span>Delivery Fee</span>
-                            <span>$0.00</span>
+                            <span id="deliveryFee">$0.00</span>
                         </div>
                         <div class="summary-row">
                             <span>Service Fee</span>
-                            <span>$0.00</span>
+                            <span id="serviceFee">$0.00</span>
                         </div>
                         <div class="summary-row">
                             <span>Tax</span>
-                            <span>$0.00</span>
+                            <span id="tax">$0.00</span>
                         </div>
                         <div class="summary-row total">
                             <span>Total</span>
-                            <span>$0.00</span>
+                            <span id="total">$0.00</span>
                         </div>
                         
-                        <button class="btn btn-primary btn-checkout" disabled>
+                        <button class="btn btn-primary btn-checkout" id="checkoutButton">
                             Proceed to Checkout
                         </button>
                     </div>
@@ -93,7 +136,7 @@
         </div>
     </section>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
@@ -153,28 +196,131 @@
 
     <script src="darkmode.js"></script>
     <script>
-        // Toggle password visibility
-        document.querySelector('.toggle-password').addEventListener('click', function() {
-            const passwordInput = document.getElementById('password');
-            const icon = this.querySelector('i');
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM Elements
+            const cartItemsContainer = document.getElementById('cartItemsContainer');
+            const emptyCartMessage = document.getElementById('emptyCartMessage');
+            const checkoutButton = document.getElementById('checkoutButton');
             
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                icon.classList.remove('fa-eye');
-                icon.classList.add('fa-eye-slash');
-            } else {
-                passwordInput.type = 'password';
-                icon.classList.remove('fa-eye-slash');
-                icon.classList.add('fa-eye');
+            // Load cart from localStorage or initialize empty array
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Initialize cart display
+            updateCartDisplay();
+            
+            // Setup all event listeners once
+            setupEventListeners();
+            
+            function setupEventListeners() {
+                // Delegate events to the cart items container
+                cartItemsContainer.addEventListener('click', function(e) {
+                    const target = e.target;
+                    const itemId = target.closest('.cart-item')?.getAttribute('data-id');
+                    const item = cart.find(item => item.id === itemId);
+                    
+                    if (!item) return;
+                    
+                    // Quantity increase
+                    if (target.classList.contains('plus') || target.closest('.plus')) {
+                        item.quantity = Number(item.quantity) + 1;
+                        saveCart();
+                    }
+                    // Quantity decrease
+                    else if (target.classList.contains('minus') || target.closest('.minus')) {
+                        item.quantity = Math.max(1, Number(item.quantity) - 1);
+                        saveCart();
+                    }
+                    // Item removal
+                    else if (target.classList.contains('item-remove') || target.classList.contains('fa-trash')) {
+                        cart = cart.filter(cartItem => cartItem.id !== itemId);
+                        saveCart();
+                    }
+                });
+                
+                // Checkout button
+                checkoutButton.addEventListener('click', function() {
+                    if (cart.length > 0) {
+                        window.location.href = 'payment.html';
+                    }
+                });
             }
-        });
-
-        // Form submission
-        document.getElementById('signinForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Add your form submission logic here
-            alert('Sign in functionality would be implemented here');
-            // window.location.href = 'index.html'; // Redirect after successful login
+            
+            // Save cart to localStorage and update UI
+            function saveCart() {
+                if (cart.length === 0) {
+                    localStorage.removeItem('cart');
+                } else {
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                }
+                updateCartDisplay();
+            }
+            
+            // Update the entire cart display
+            function updateCartDisplay() {
+                updateCartItems();
+                updateCartSummary();
+                updateCheckoutButton();
+            }
+            
+            // Update the cart items list
+            function updateCartItems() {
+                if (cart.length === 0) {
+                    emptyCartMessage.style.display = 'block';
+                    cartItemsContainer.innerHTML = '';
+                    return;
+                }
+                
+                emptyCartMessage.style.display = 'none';
+                
+                let itemsHTML = '';
+                cart.forEach(item => {
+                    itemsHTML += `
+                        <div class="cart-item" data-id="${item.id}">
+                            <div class="item-image">
+                                <img src="${item.image}" alt="${item.name}">
+                            </div>
+                            <div class="item-details">
+                                <h4 class="item-name">${item.name}</h4>
+                                <p class="item-restaurant">${item.restaurant}</p>
+                                <div class="item-price">$${item.price.toFixed(2)}</div>
+                                <div class="item-quantity">
+                                    <button class="quantity-btn minus">-</button>
+                                    <span class="quantity">${item.quantity}</span>
+                                    <button class="quantity-btn plus">+</button>
+                                </div>
+                            </div>
+                            <button class="item-remove">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    `;
+                });
+                
+                cartItemsContainer.innerHTML = itemsHTML;
+            }
+            
+            // Update the cart summary
+            function updateCartSummary() {
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * Number(item.quantity)), 0);
+                const deliveryFee = subtotal > 0 ? 2.99 : 0;
+                const serviceFee = subtotal * 0.05;
+                const tax = subtotal * 0.1;
+                const total = subtotal + deliveryFee + serviceFee + tax;
+                
+                document.getElementById('itemCount').textContent = cart.reduce((sum, item) => sum + Number(item.quantity), 0);
+                document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+                document.getElementById('deliveryFee').textContent = `$${deliveryFee.toFixed(2)}`;
+                document.getElementById('serviceFee').textContent = `$${serviceFee.toFixed(2)}`;
+                document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+                document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+            }
+            
+            // Update checkout button state
+            function updateCheckoutButton() {
+                checkoutButton.disabled = cart.length === 0;
+                checkoutButton.style.opacity = cart.length === 0 ? '0.6' : '1';
+                checkoutButton.style.cursor = cart.length === 0 ? 'not-allowed' : 'pointer';
+            }
         });
     </script>
 </body>
