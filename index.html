@@ -10,26 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    
 </head>
 <body>
     <!-- Header Section -->
     <header class="main-header">
+
+        
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="index.html" style="text-decoration: none;">
-                        <h1><i class="fas fa-utensils"></i> Altayer</h1>
-                    </a>
+                    <h1><i class="fas fa-utensils"></i> Altayer</h1>
                 </div>
                 <div class="header-right">
                     <div class="search-bar">
+                        
                         <i class="fas fa-search"></i>
                         <input type="text" placeholder="Search for food, restaurants...">
                     </div>
                     
-                    <button id="darkmode-button" aria-label="Toggle dark mode">🌙</button>
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="darkmode-switch">
+                        <label for="darkmode-switch" class="toggle-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="toggle-ball"></span>
+                        </label>
+                    </div>
+                    
                     
                     <div class="user-actions">
                         <a href="cart.html" class="cart-btn">
@@ -55,7 +69,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+
                 <h2 style="color: white !important; -webkit-text-fill-color: white !important;">Food delivery in minutes</h2>
+
                 <p>Order food from the best local restaurants</p>
                 <div class="hero-cta">
                     <a href="#restaurants" class="btn btn-primary">Order Now</a>
@@ -64,169 +80,86 @@
         </div>
     </section>
 
-    <div class="container">
-        <div class="home-layout">
-            <main class="main-content">
-                <!-- Food Categories -->
-                <section class="categories">
-                    <h2 class="section-title">Explore by Category</h2>
-                    <div class="category-list">
-                        <div class="category-item">
-                            <a href="restaurants.html?category=burgers" class="category-link">
-                                <div class="category-icon">
-                                    <i class="fas fa-hamburger"></i>
-                                </div>
-                                <p>Burgers</p>
-                            </a>
-                        </div>
-                        <div class="category-item">
-                            <a href="restaurants.html?category=pizza" class="category-link">
-                                <div class="category-icon">
-                                    <i class="fas fa-pizza-slice"></i>
-                                </div>
-                                <p>Pizza</p>
-                            </a>
-                        </div>
-                        <div class="category-item">
-                            <a href="restaurants.html?category=asian" class="category-link">
-                                <div class="category-icon">
-                                    <i class="fas fa-bowl-rice"></i>
-                                </div>
-                                <p>Asian</p>
-                            </a>
-                        </div>
-                        <div class="category-item">
-                            <a href="restaurants.html?category=chicken" class="category-link">
-                                <div class="category-icon">
-                                    <i class="fas fa-drumstick-bite"></i>
-                                </div>
-                                <p>Chicken</p>
-                            </a>
-                        </div>
-                        <div class="category-item">
-                            <a href="restaurants.html?category=vegan" class="category-link">
-                                <div class="category-icon">
-                                    <i class="fas fa-seedling"></i>
-                                </div>
-                                <p>Vegan</p>
-                            </a>
-                        </div>
-                        <div class="category-item">
-                            <a href="restaurants.html?category=desserts" class="category-link">
-                                <div class="category-icon">
-                                    <i class="fas fa-ice-cream"></i>
-                                </div>
-                                <p>Desserts</p>
-                            </a>
-                        </div>
-                        <div class="category-item">
-                            <a href="restaurants.html?category=coffee" class="category-link">
-                                <div class="category-icon">
-                                    <i class="fas fa-coffee"></i>
-                                </div>
-                                <p>Coffee</p>
-                            </a>
-                        </div>
-                        <div class="category-item">
-                            <a href="restaurants.html?category=seafood" class="category-link">
-                                <div class="category-icon">
-                                    <i class="fas fa-fish"></i>
-                                </div>
-                                <p>Seafood</p>
-                            </a>
-                        </div>
+    <!-- Food Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Explore by Category</h2>
+            <div class="category-list">
+                <div class="category-item">
+                    <div class="category-icon" style="background-color: #FFE8D6;">
+                        <i class="fas fa-hamburger" style="color: #CB997E;"></i>
                     </div>
-                </section>
-
-                <!-- Restaurants Section -->
-                <section id="restaurants" class="restaurants">
-                    <div class="section-header">
-                        <h2 class="section-title">Popular Restaurants</h2>
-                        <a href="restaurants.html" class="btn btn-light">View All</a>
+                    <p>Burgers</p>
+                    <div class="category-hover">
+                        <span>Explore</span>
+                        <i class="fas fa-arrow-right"></i>
                     </div>
-
-                    <div class="restaurant-grid">
-                        <!-- Restaurant Card 1 -->
-                        <a href="restaurant1.html" class="restaurant-card">
-                            <div class="restaurant-img">
-                                <img src="https://static.vecteezy.com/system/resources/previews/007/774/305/non_2x/salad-bar-buffet-at-restaurant-fresh-salad-bar-buffet-for-lunch-or-dinner-healthy-food-fresh-green-and-purple-lettuce-in-white-plate-on-counter-catering-food-banquet-service-vegetarian-food-photo.jpg" alt="">
-                                <div class="delivery-time">25-35 min</div>
-                            </div>
-                            <div class="restaurant-info">
-                                <h3>Green Garden Salad Bar</h3>
-                                <div class="restaurant-meta">
-                                    <span class="rating"><i class="fas fa-star"></i> 4.8 (200+)</span>
-                                    <span class="price">$$</span>
-                                </div>
-                                <p class="restaurant-tags">Salads • Healthy • Vegan</p>
-                                <p class="delivery-fee">$0.99 Delivery Fee</p>
-                            </div>
-                        </a>
-                        
-                        <!-- Restaurant Card 2 -->
-                        <a href="restaurant.html" class="restaurant-card">
-                            <div class="restaurant-img">
-                                <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="">
-                                <div class="delivery-time">15-25 min</div>
-                            </div>
-                            <div class="restaurant-info">
-                                <h3>Gourmet Burger House</h3>
-                                <div class="restaurant-meta">
-                                    <span class="rating"><i class="fas fa-star"></i> 4.5 (150+)</span>
-                                    <span class="price">$$</span>
-                                </div>
-                                <p class="restaurant-tags">Burgers • Fast Food • American</p>
-                                <p class="delivery-fee">$1.49 Delivery Fee</p>
-                            </div>
-                        </a>
-
-                        <!-- Restaurant Card 3 -->
-                        <a href="restaurant.html" class="restaurant-card">
-                            <div class="restaurant-img">
-                                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1035&h=690&q=80" alt="">
-                                <div class="delivery-time">20-30 min</div>
-                            </div>
-                            <div class="restaurant-info">
-                                <h3>Napoli's Pizzeria</h3>
-                                <div class="restaurant-meta">
-                                    <span class="rating"><i class="fas fa-star"></i> 4.7 (300+)</span>
-                                    <span class="price">$$</span>
-                                </div>
-                                <p class="restaurant-tags">Pizza • Italian • Pasta</p>
-                                <p class="delivery-fee">$0.99 Delivery Fee</p>
-                            </div>
-                        </a>
-
-                        <!-- Restaurant Card 4 -->
-                        <a href="restaurant.html" class="restaurant-card">
-                            <div class="restaurant-img">
-                                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c" alt="">
-                                <div class="delivery-time">30-40 min</div>
-                            </div>
-                            <div class="restaurant-info">
-                                <h3>Sushi Sensation</h3>
-                                <div class="restaurant-meta">
-                                    <span class="rating"><i class="fas fa-star"></i> 4.9 (400+)</span>
-                                    <span class="price">$$$</span>
-                                </div>
-                                <p class="restaurant-tags">Sushi • Japanese • Asian</p>
-                                <p class="delivery-fee">$2.49 Delivery Fee</p>
-                            </div>
-                        </a>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon" style="background-color: #FFD6E0;">
+                        <i class="fas fa-pizza-slice" style="color: #FF5D8F;"></i>
                     </div>
-
-                    <div class="load-more">
-                        <a href="restaurants.html" class="btn btn-secondary">View All Restaurants</a>
+                    <p>Pizza</p>
+                    <div class="category-hover">
+                        <span>Explore</span>
+                        <i class="fas fa-arrow-right"></i>
                     </div>
-                </section>
-            </main>
-            
-            <aside class="featured-sidebar">
-                <h2 class="section-title">Featured Offers</h2>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon" style="background-color: #E2F3FB;">
+                        <i class="fas fa-bowl-rice" style="color: #3D9BE9;"></i>
+                    </div>
+                    <p>Asian</p>
+                    <div class="category-hover">
+                        <span>Explore</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon" style="background-color: #FEEAFA;">
+                        <i class="fas fa-drumstick-bite" style="color: #D47AE8;"></i>
+                    </div>
+                    <p>Chicken</p>
+                    <div class="category-hover">
+                        <span>Explore</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="category-item">
+                    <div class="category-icon" style="background-color: #FFF5E6;">
+                        <i class="fas fa-ice-cream" style="color: #FFA726;"></i>
+                    </div>
+                    <p>Desserts</p>
+                    <div class="category-hover">
+                        <span>Explore</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon" style="background-color: #F5E9FF;">
+                        <i class="fas fa-coffee" style="color: #9C27B0;"></i>
+                    </div>
+                    <p>Coffee</p>
+                    <div class="category-hover">
+                        <span>Explore</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title">Featured on Altayer</h2>
+            <div class="featured-banners">
                 <div class="featured-banner">
                     <div class="featured-content">
                         <h3>Free Delivery on Your First 3 Orders</h3>
-                        <a href="#" class="btn btn-light">Order Now</a>
+                        <a href="#restaurants" class="btn btn-light">Order Now</a>
                     </div>
                 </div>
                 <div class="featured-banner banner-dark">
@@ -235,11 +168,141 @@
                         <a href="#" class="btn btn-light">Join Now</a>
                     </div>
                 </div>
-            </aside>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Download App Section -->
+    <!-- Restaurants Section -->
+    <section id="restaurants" class="restaurants">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Restaurants</h2>
+                <div class="filter-options">
+                    <select>
+                        <option>Sort by: Recommended</option>
+                        <option>Fastest Delivery</option>
+                        <option>Rating</option>
+                        <option>Distance</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="restaurant-grid">
+                <!-- Restaurant Card 1 -->
+                <a href="restaurantcard1.html" class="restaurant-card">
+                    <div class="restaurant-img">
+                        <img src="https://static.vecteezy.com/system/resources/previews/007/774/305/non_2x/salad-bar-buffet-at-restaurant-fresh-salad-bar-buffet-for-lunch-or-dinner-healthy-food-fresh-green-and-purple-lettuce-in-white-plate-on-counter-catering-food-banquet-service-vegetarian-food-photo.jpg" alt="">
+                        <div class="delivery-time">25-35 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Green Garden Salad Bar</h3>
+                        <div class="restaurant-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.8 (200+)</span>
+                            <span class="price">$$</span>
+                        </div>
+                        <p class="restaurant-tags">Salads • Healthy • Vegan</p>
+                        <p class="delivery-fee">$0.99 Delivery Fee</p>
+                    </div>
+                </a>
+                
+                <!-- Restaurant Card 2 -->
+                <a href="restaurant.html" class="restaurant-card">
+                    <div class="restaurant-img burger-shop">
+                        <div class="delivery-time">15-25 min</div>
+                        <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="" style="display: flex;">
+
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Gourmet Burger House</h3>
+                        <div class="restaurant-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.5 (150+)</span>
+                            <span class="price">$$</span>
+                        </div>
+                        <p class="restaurant-tags">Burgers • Fast Food • American</p>
+                        <p class="delivery-fee">$1.49 Delivery Fee</p>
+                    </div>
+                </a>
+
+                
+
+                <!-- Restaurant Card 3 -->
+                <a href="restaurant.html" class="restaurant-card">
+                    <div class="restaurant-img pizza-shop">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1035&h=690&q=80" alt="pic" style="display: flex;">
+                        <div class="delivery-time">20-30 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Napoli's Pizzeria</h3>
+                        <div class="restaurant-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7 (300+)</span>
+                            <span class="price">$$</span>
+                        </div>
+                        <p class="restaurant-tags">Pizza • Italian • Pasta</p>
+                        <p class="delivery-fee">$0.99 Delivery Fee</p>
+                    </div>
+                </a>
+
+                <!-- Restaurant Card 4 -->
+                <a href="restaurant.html" class="restaurant-card">
+                    <div class="restaurant-img sushi-shop">
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c" alt="pic" style="display: flex;">
+                        <div class="delivery-time">30-40 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Sushi Sensation</h3>
+                        <div class="restaurant-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.9 (400+)</span>
+                            <span class="price">$$$</span>
+                        </div>
+                        <p class="restaurant-tags">Sushi • Japanese • Asian</p>
+                        <p class="delivery-fee">$2.49 Delivery Fee</p>
+                    </div>
+                </a>
+
+                <!-- Restaurant Card 5 -->
+                <a href="restaurant.html" class="restaurant-card">
+                    <div class="restaurant-img taco-shop">
+                        <img src="https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c" alt="pic" style="display: flex;">
+                        <div class="delivery-time">20-30 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Taco Fiesta</h3>
+                        <div class="restaurant-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.6 (180+)</span>
+                            <span class="price">$</span>
+                        </div>
+                        <p class="restaurant-tags">Mexican • Tacos • Burritos</p>
+                        <p class="delivery-fee">$1.99 Delivery Fee</p>
+                    </div>
+                </a>
+
+                <!-- Restaurant Card 6 -->
+                <a href="restaurant.html" class="restaurant-card">
+                    <div class="restaurant-img coffee-shop">
+                        <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg" alt="pic" style="display: flex;">
+                        <div class="delivery-time">15-25 min</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Morning Brew Café</h3>
+                        <div class="restaurant-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7 (200+)</span>
+                            <span class="price">$$</span>
+                        </div>
+                        <p class="restaurant-tags">Coffee • Breakfast • Pastries</p>
+                        <p class="delivery-fee">$0.99 Delivery Fee</p>
+                    </div>
+                </a>
+            </div>
+
+<div class="load-more">
+    <button class="btn btn-load-more">
+        Load More Restaurants
+    </button>
+</div>
+        </div>
+    </section>
+
+   <!-- Download App Section -->
     <section class="download-app">
         <div class="container">
             <div class="download-content">
@@ -271,16 +334,17 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
+   <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
                     <h3 class="footer-title">Altayer</h3>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -327,20 +391,8 @@
             </div>
         </div>
     </footer>
-
-    <script src="darkmode.js"></script>
-    <script>
-        // Apply category filter if coming from category link
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const category = urlParams.get('category');
-            
-            if (category) {
-                // This would filter restaurants in a real implementation
-                console.log('Filtering by category:', category);
-            }
-        });
-    </script>
-    <a href="/restaurants.html">View All Restaurants</a>
+    
+    <script src="javascript\darkmode.js"></script>
+    
 </body>
 </html>
