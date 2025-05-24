@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Garden Salad Bar - Altayer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <div class="logo">
+                    <h1><i class="fas fa-utensils"></i> Altayer</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for food, restaurants..." aria-label="Search for food and restaurants">
+                    </div>
+                    
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="darkmode-switch">
+                        <label for="darkmode-switch" class="toggle-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="toggle-ball"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="user-actions">
+                        <a href="cart.html" class="cart-btn" aria-label="Shopping cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                        <a href="signin.html" class="signin-btn">Sign in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="location-select">
+                <i class="fas fa-map-marker-alt"></i>
+                <select aria-label="Delivery location">
+                    <option>Deliver to: Current Location</option>
+                    <option>New York, NY</option>
+                    <option>Los Angeles, CA</option>
+                    <option>Chicago, IL</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Restaurant Header -->
+    <section class="restaurant-header">
+        <div class="container">
+            <div class="restaurant-banner">
+                <img src="https://static.vecteezy.com/system/resources/previews/007/774/305/non_2x/salad-bar-buffet-at-restaurant-fresh-salad-bar-buffet-for-lunch-or-dinner-healthy-food-fresh-green-and-purple-lettuce-in-white-plate-on-counter-catering-food-banquet-service-vegetarian-food-photo.jpg" alt="Green Garden Salad Bar">
+                <div class="banner-overlay">
+                    <div class="restaurant-info">
+                        <h1>Green Garden Salad Bar</h1>
+                        <div class="meta-details">
+                            <span class="rating"><i class="fas fa-star"></i> 4.8 (200+)</span>
+                            <span class="price">$$</span>
+                            <span class="categories">Salads • Healthy • Vegan</span>
+                        </div>
+                        <div class="delivery-details">
+                            <span><i class="fas fa-clock"></i> 25-35 min</span>
+                            <span><i class="fas fa-truck"></i> $0.99 Delivery Fee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Menu -->
+    <section class="restaurant-menu">
+        <div class="container">
+            <div class="menu-layout">
+                <!-- Menu Categories Sidebar -->
+                <aside class="menu-sidebar" aria-label="Menu categories">
+                    <nav class="menu-navigation">
+                        <h3>Menu</h3>
+                        <ul class="category-list">
+                            <li class="active"><a href="#signature-bowls">Signature Bowls</a></li>
+                            <li><a href="#classic-salads">Classic Salads</a></li>
+                            <li><a href="#breakfast-bowls">Breakfast Bowls</a></li>
+                            <li><a href="#sandwiches">Sandwiches</a></li>
+                            <li><a href="#smoothies">Smoothies</a></li>
+                            <li><a href="#sides">Sides</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                
+                <!-- Menu Items -->
+                <main class="menu-content">
+                    <!-- Signature Bowls -->
+                    <section id="signature-bowls" class="menu-category" aria-labelledby="signature-bowls-heading">
+                        <h2 id="signature-bowls-heading">Signature Bowls</h2>
+                        <div class="menu-items">
+                            <article class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=350" alt="Signature Garden Bowl">
+                                </div>
+                                <div class="menu-item-info">
+                                    <div class="menu-item-header">
+                                        <h3>Signature Garden Bowl</h3>
+                                        <span class="price">$12.99</span>
+                                    </div>
+                                    <p class="description">Mix of fresh greens, avocado, cherry tomatoes, cucumber, bell peppers with house dressing.</p>
+                                    <button class="add-to-cart-btn" aria-label="Add Signature Garden Bowl to cart" data-id="sig-garden" data-name="Signature Garden Bowl" data-price="12.99" data-restaurant="Green Garden Salad Bar" data-image="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=350">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </article>
+                            
+                            <article class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="https://images.unsplash.com/photo-1505253149613-112d21d9f6a9?w=500&h=350" alt="Protein Power Bowl">
+                                </div>
+                                <div class="menu-item-info">
+                                    <div class="menu-item-header">
+                                        <h3>Protein Power Bowl</h3>
+                                        <span class="price">$14.99</span>
+                                    </div>
+                                    <p class="description">Grilled chicken, boiled eggs, quinoa, chickpeas, mixed greens and light vinaigrette.</p>
+                                    <button class="add-to-cart-btn" aria-label="Add Protein Power Bowl to cart" data-id="protein-power" data-name="Protein Power Bowl" data-price="14.99" data-restaurant="Green Garden Salad Bar" data-image="https://images.unsplash.com/photo-1505253149613-112d21d9f6a9?w=500&h=350">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    
+                    <!-- Classic Salads -->
+                    <section id="classic-salads" class="menu-category" aria-labelledby="classic-salads-heading">
+                        <h2 id="classic-salads-heading">Classic Salads</h2>
+                        <div class="menu-items">
+                            <article class="menu-item">
+                                <div class="menu-item-info full-width">
+                                    <div class="menu-item-header">
+                                        <h3>Caesar Salad</h3>
+                                        <span class="price">$10.99</span>
+                                    </div>
+                                    <p class="description">Romaine lettuce, croutons, parmesan cheese, and caesar dressing.</p>
+                                    <button class="add-to-cart-btn" aria-label="Add Caesar Salad to cart" data-id="caesar" data-name="Caesar Salad" data-price="10.99" data-restaurant="Green Garden Salad Bar" data-image="https://images.unsplash.com/photo-1546793665-c74683f339c1?w=500&h=350">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </article>
+                            
+                            <article class="menu-item">
+                                <div class="menu-item-info full-width">
+                                    <div class="menu-item-header">
+                                        <h3>Greek Salad</h3>
+                                        <span class="price">$11.99</span>
+                                    </div>
+                                    <p class="description">Tomatoes, cucumber, onion, feta cheese, olives with olive oil and oregano.</p>
+                                    <button class="add-to-cart-btn" aria-label="Add Greek Salad to cart" data-id="greek" data-name="Greek Salad" data-price="11.99" data-restaurant="Green Garden Salad Bar" data-image="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=350">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    
+                    <!-- Breakfast Bowls -->
+                    <section id="breakfast-bowls" class="menu-category" aria-labelledby="breakfast-bowls-heading">
+                        <h2 id="breakfast-bowls-heading">Breakfast Bowls</h2>
+                        <div class="menu-items">
+                            <article class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="https://images.unsplash.com/photo-1511690078903-71dc5a49f5e3?w=500&h=350" alt="Smoothie Bowl">
+                                </div>
+                                <div class="menu-item-info">
+                                    <div class="menu-item-header">
+                                        <h3>Smoothie Bowl</h3>
+                                        <span class="price">$9.99</span>
+                                    </div>
+                                    <p class="description">Thick smoothie base topped with granola, fresh fruit, and honey.</p>
+                                    <button class="add-to-cart-btn" aria-label="Add Smoothie Bowl to cart" data-id="smoothie-bowl" data-name="Smoothie Bowl" data-price="9.99" data-restaurant="Green Garden Salad Bar" data-image="https://images.unsplash.com/photo-1511690078903-71dc5a49f5e3?w=500&h=350">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">Altayer</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Get Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">How to Order</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Delivery Areas</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">For Restaurants</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Partner with Us</a></li>
+                        <li><a href="#">Restaurant Portal</a></li>
+                        <li><a href="#">Restaurant Success</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Subscribe to our newsletter</h4>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email address" aria-label="Your email address">
+                            <button type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Altayer. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle Functionality
+        const darkModeToggle = document.getElementById('darkmode-switch');
+        const body = document.body;
+        
+        // Check for saved user preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        
+        // Toggle dark mode
+        darkModeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+        
+        // Smooth scrolling for menu category navigation
+        document.querySelectorAll('.category-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 120,
+                    behavior: 'smooth'
+                });
+                
+                // Update active class
+                document.querySelectorAll('.category-list li').forEach(item => {
+                    item.classList.remove('active');
+                });
+                this.parentElement.classList.add('active');
+            });
+        });
+
+        // Add to cart functionality
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+        const cartCount = document.querySelector('.cart-count');
+        
+        // Load cart count from localStorage
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
+        }
+        
+        // Initialize cart count
+        updateCartCount();
+        
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const item = {
+                    id: this.getAttribute('data-id'),
+                    name: this.getAttribute('data-name'),
+                    price: parseFloat(this.getAttribute('data-price')),
+                    restaurant: this.getAttribute('data-restaurant'),
+                    image: this.getAttribute('data-image'),
+                    quantity: 1
+                };
+                
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                
+                // Check if item already exists in cart
+                const existingItem = cart.find(cartItem => cartItem.id === item.id);
+                
+                if (existingItem) {
+                    existingItem.quantity++;
+                } else {
+                    cart.push(item);
+                }
+                
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+                
+                // Animation effect
+                this.innerHTML = '<i class="fas fa-check"></i> Added';
+                this.classList.add('added');
+                
+                setTimeout(() => {
+                    this.innerHTML = 'Add to Cart';
+                    this.classList.remove('added');
+                }, 1500);
+            });
+        });
+
+        // Highlight current menu category while scrolling
+        const menuCategories = document.querySelectorAll('.menu-category');
+        const menuLinks = document.querySelectorAll('.category-list a');
+
+        window.addEventListener('scroll', function() {
+            let current = '';
+            
+            menuCategories.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            menuLinks.forEach(link => {
+                link.parentElement.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.parentElement.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
