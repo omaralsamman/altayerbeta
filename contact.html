@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Contact Altayer</title>
+    <title>Contact Altayer</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,10 +11,202 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Elegant contact page styles */
+        .contact-section {
+            padding: 80px 0;
+            background-color: var(--background-light);
+            transition: background-color 0.5s ease;
+        }
+
+        .page-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: var(--text-primary);
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .page-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .contact-content {
+            display: flex;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+            background: var(--background-white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-info:hover, .contact-form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h2, .contact-form h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .info-item i {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-right: 20px;
+            margin-top: 3px;
+        }
+
+        .info-item p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .business-hours {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .business-hours h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .business-hours p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px var(--primary-light);
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .contact-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .page-title {
+                font-size: 36px;
+            }
+            
+            .contact-info h2, .contact-form h2 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 60px 0;
+            }
+            
+            .page-title {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+            
+            .contact-info, .contact-form {
+                padding: 30px;
+            }
+            
+            .info-item p {
+                font-size: 16px;
+            }
+        }
+
+        /* Dark mode adjustments */
+        body.dark-mode .contact-section {
+            background-color: var(--background-dark);
+        }
+        
+        body.dark-mode .contact-info,
+        body.dark-mode .contact-form {
+            background-color: var(--background-white);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        body.dark-mode .contact-info:hover,
+        body.dark-mode .contact-form:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        body.dark-mode .business-hours {
+            border-top-color: var(--border-color);
+        }
+    </style>
 </head>
 <body>
-  <!-- Header Section -->
+    <!-- Header Section -->
     <header class="main-header">
         <div class="container">
             <div class="header-content">
@@ -29,7 +221,14 @@
                         <input type="text" placeholder="Search for food, restaurants...">
                     </div>
                     
-                    <button id="darkmode-button" aria-label="Toggle dark mode">🌙</button>
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="darkmode-switch">
+                        <label for="darkmode-switch" class="toggle-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="toggle-ball"></span>
+                        </label>
+                    </div>
                     
                     <div class="user-actions">
                         <a href="cart.html" class="cart-btn">
@@ -69,6 +268,10 @@
                         <i class="fas fa-envelope"></i>
                         <p>info@altayer.com</p>
                     </div>
+                    <div class="info-item">
+                        <i class="fas fa-headset"></i>
+                        <p>24/7 Customer Support</p>
+                    </div>
                     <div class="business-hours">
                         <h3>Business Hours</h3>
                         <p>Monday - Friday: 9:00 AM - 9:00 PM</p>
@@ -79,20 +282,20 @@
                     <h2>Send Us a Message</h2>
                     <form>
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" required>
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" required>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject">
+                            <input type="text" id="subject" placeholder="What's this about?">
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
@@ -101,7 +304,7 @@
         </div>
     </section>
     
-   <!-- Footer -->
+    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
@@ -109,6 +312,8 @@
                     <h3 class="footer-title">Altayer</h3>
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
@@ -157,18 +362,6 @@
         </div>
     </footer>
 
-    <script src="darkmode.js"></script>
-    <script>
-        // Apply category filter if coming from category link
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const category = urlParams.get('category');
-            
-            if (category) {
-                // This would filter restaurants in a real implementation
-                console.log('Filtering by category:', category);
-            }
-        });
-    </script>
+    <script src="javascript/darkmode.js"></script>
 </body>
 </html>
