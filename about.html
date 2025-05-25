@@ -13,7 +13,22 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Additional elegant styles for about page */
+        /* Elegant about page styles */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .back-arrow {
+            color: var(--primary-color);
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .back-arrow:hover {
+            transform: translateX(-3px);
+        }
+
         .about-section {
             padding: 80px 0;
             background-color: var(--background-light);
@@ -165,10 +180,15 @@
     <header class="main-header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <a href="index.html" style="text-decoration: none;">
-                        <h1><i class="fas fa-utensils"></i> Altayer</h1>
+                <div class="logo-container">
+                    <a href="#" class="back-arrow" onclick="history.back()">
+                        <i class="fas fa-arrow-left"></i>
                     </a>
+                    <div class="logo">
+                        <a href="index.html" style="text-decoration: none;">
+                            <h1><i class="fas fa-utensils"></i> Altayer</h1>
+                        </a>
+                    </div>
                 </div>
                 <div class="header-right">
                     <div class="search-bar">
@@ -286,6 +306,6 @@
         </div>
     </footer>
 
-    <script src="darkmode.js"></script>
+    <script src="javascript/darkmode.js"></script>
 </body>
 </html>
