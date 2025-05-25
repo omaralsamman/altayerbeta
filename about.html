@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>About Altayer</title>
+    <title>About Altayer</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,153 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional elegant styles for about page */
+        .about-section {
+            padding: 80px 0;
+            background-color: var(--background-light);
+            transition: background-color 0.5s ease;
+        }
+
+        .page-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: var(--text-primary);
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .page-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .values-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .values-list li {
+            margin-bottom: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            color: var(--text-primary);
+        }
+
+        .values-list i {
+            color: var(--primary-color);
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .about-text, .about-image {
+                width: 100%;
+            }
+            
+            .page-title {
+                font-size: 36px;
+            }
+            
+            .about-text h2 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 60px 0;
+            }
+            
+            .page-title {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+            
+            .about-text p, .values-list li {
+                font-size: 16px;
+            }
+        }
+
+        /* Dark mode adjustments */
+        body.dark-mode .about-section {
+            background-color: var(--background-dark);
+        }
+        
+        body.dark-mode .about-image {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        body.dark-mode .about-image:hover {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -29,7 +176,14 @@
                         <input type="text" placeholder="Search for food, restaurants...">
                     </div>
                     
-                    <button id="darkmode-button" aria-label="Toggle dark mode">🌙</button>
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="darkmode-switch">
+                        <label for="darkmode-switch" class="toggle-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="toggle-ball"></span>
+                        </label>
+                    </div>
                     
                     <div class="user-actions">
                         <a href="cart.html" class="cart-btn">
@@ -49,25 +203,26 @@
                 </select>
             </div>
         </div>
-    </header>  
+    </header>
+    
     <section class="about-section">
         <div class="container">
-            <h1 class="page-title">About Altayer</h1>
+            <h1 class="page-title">Our Story</h1>
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Our Story</h2>
                     <p>Altayer was founded in 2023 with a simple mission: to connect people with the best local restaurants in their area. We believe in supporting local businesses while providing our customers with convenient, fast, and reliable food delivery.</p>
                     
                     <h2>Our Values</h2>
                     <ul class="values-list">
-                        <li><i class="fas fa-check"></i> Quality food from trusted restaurants</li>
-                        <li><i class="fas fa-check"></i> Fast and reliable delivery</li>
-                        <li><i class="fas fa-check"></i> Excellent customer service</li>
-                        <li><i class="fas fa-check"></i> Supporting local businesses</li>
+                        <li><i class="fas fa-check"></i> <strong>Quality First:</strong> We partner only with restaurants that meet our high standards for food quality and preparation</li>
+                        <li><i class="fas fa-check"></i> <strong>Fast Delivery:</strong> Our optimized delivery network ensures your food arrives fresh and hot</li>
+                        <li><i class="fas fa-check"></i> <strong>Customer Care:</strong> 24/7 support team ready to assist with any questions or concerns</li>
+                        <li><i class="fas fa-check"></i> <strong>Community Focus:</strong> We reinvest in local communities through various initiatives</li>
+                        <li><i class="fas fa-check"></i> <strong>Sustainability:</strong> Eco-friendly packaging and delivery options available</li>
                     </ul>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="Our team">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Our team enjoying a meal together">
                 </div>
             </div>
         </div>
@@ -81,6 +236,8 @@
                     <h3 class="footer-title">Altayer</h3>
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
@@ -129,18 +286,6 @@
         </div>
     </footer>
 
-    <script src="darkmode.js"></script>
-    <script>
-        // Apply category filter if coming from category link
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const category = urlParams.get('category');
-            
-            if (category) {
-                // This would filter restaurants in a real implementation
-                console.log('Filtering by category:', category);
-            }
-        });
-    </script>
+    <script src="javascript/darkmode.js"></script>
 </body>
 </html>
