@@ -386,9 +386,10 @@ h3 {
 
 .category-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.2rem;
     margin-top: 2rem;
+    justify-content: center;
 }
 
 .category-item {
@@ -402,17 +403,19 @@ h3 {
     overflow: hidden;
     cursor: pointer;
     border: 1px solid #f0f0f0;
-}
-
-.category-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .category-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 1rem;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 0.8rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -420,18 +423,15 @@ h3 {
     transition: all 0.3s ease;
 }
 
-.category-item:hover .category-icon {
-    transform: scale(1.1);
-}
-
 .category-item i {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .category-item p {
     font-weight: 600;
     margin: 0;
     color: #333;
+    font-size: 1rem;
 }
 
 .category-hover {
@@ -439,7 +439,7 @@ h3 {
     bottom: -50px;
     left: 0;
     right: 0;
-    background: linear-gradient(to right, #ff7b00, #ff0062);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     color: white;
     padding: 0.75rem;
     display: flex;
@@ -448,6 +448,13 @@ h3 {
     gap: 0.5rem;
     transition: all 0.3s ease;
     opacity: 0;
+    pointer-events: none;
+    border-radius: 0 0 16px 16px;
+}
+
+.category-item:hover p {
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 .category-item:hover .category-hover {
@@ -997,250 +1004,7 @@ body.dark-mode .download-text h2#di {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-    .container {
-        padding: 0 var(--spacing-md);
-    }
-    
-    .header-content {
-        flex-wrap: wrap;
-    }
-    
-    .search-bar input {
-        width: 200px;
-    }
-    
-    .restaurant-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .category-item {
-        width: calc(33.33% - var(--spacing-md));
-    }
-    
-    .featured-banners {
-        flex-direction: column;
-    }
-    
-    .featured-banner {
-        margin-bottom: var(--spacing-md);
-    }
-    
-    .download-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .download-text {
-        margin-bottom: var(--spacing-lg);
-    }
-    
-    .app-buttons {
-        justify-content: center;
-    }
-    
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-lg);
-    }
-}
-
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .logo {
-        margin-bottom: var(--spacing-md);
-    }
-    
-    .header-right {
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    
-    .search-bar {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: var(--spacing-md);
-    }
-    
-    .search-bar input {
-        width: 100%;
-    }
-    
-    .user-actions {
-        margin-left: auto;
-    }
-    
-    .restaurant-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-md);
-    }
-    
-    .restaurant-info h3 {
-        font-size: 16px;
-    }
-    
-    .restaurant-tags, .delivery-fee {
-        font-size: 12px;
-    }
-    
-    .category-item {
-        width: calc(50% - var(--spacing-md));
-    }
-    
-    .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .filter-options {
-        margin-top: var(--spacing-md);
-        width: 100%;
-    }
-    
-    .filter-options select {
-        width: 100%;
-    }
-    
-    .hero {
-        padding: 60px 0;
-    }
-    
-    .hero h2 {
-        font-size: 32px;
-    }
-    
-    .hero p {
-        font-size: 16px;
-    }
-    
-    .restaurant-img {
-        height: 150px;
-    }
-    
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .footer-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .social-links {
-        justify-content: center;
-    }
-    
-    .newsletter-form {
-        flex-direction: column;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    
-    .newsletter-form input {
-        width: 100%;
-        border-right: 1px solid var(--border-color);
-        border-radius: var(--border-radius-md);
-        margin-bottom: var(--spacing-sm);
-    }
-    
-    .newsletter-form button {
-        width: 100%;
-        border-radius: var(--border-radius-md);
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .footer-bottom p {
-        margin-bottom: var(--spacing-sm);
-    }
-    
-    .footer-bottom-links {
-        flex-direction: column;
-        gap: var(--spacing-sm);
-    }
-}
-
-@media (max-width: 480px) {
-    .category-item {
-        width: calc(50% - var(--spacing-md));
-    }
-    
-    .category-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-    }
-    
-    .section-title {
-        font-size: 24px;
-    }
-    
-    .dark-mode-toggle {
-        margin: 0 auto;
-        margin-bottom: var(--spacing-md);
-    }
-    
-    .user-actions {
-        width: 100%;
-        justify-content: space-between;
-    }
-    
-    .featured-banner h3 {
-        font-size: 20px;
-    }
-    
-    .restaurant-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .download-text h2 {
-        font-size: 24px;
-    }
-    
-    .download-text p {
-        font-size: 14px;
-    }
-    
-    .app-button {
-        width: 180px;
-    }
-    
-    .phone-outline {
-        width: 160px;
-        height: 320px;
-        border-width: 8px;
-    }
-    
-    .footer-title {
-        font-size: 16px;
-    }
-    
-    .footer-links li a, 
-    .footer-bottom-links a, 
-    .footer-bottom p {
-        font-size: 14px;
-    }
-    
-    .newsletter h4 {
-        font-size: 14px;
-    }
-    
-    .newsletter-form input,
-    .newsletter-form button {
-        padding: 6px 10px;
-        font-size: 14px;
-    }
-}/* Sign In Page Styles */
+/* Sign In Page Styles */
 .signin-section {
     padding: var(--spacing-xxl) 0;
     background-color: var(--background-light);
@@ -1771,8 +1535,194 @@ body.dark-mode .quantity-btn:hover {
     background-color: var(--primary-extra-light);
 }
 
-/* Responsive Styles for Sign In and Cart Pages */
+/* Language Switcher */
+.language-switcher {
+    margin: 0 15px;
+    position: relative;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 30px;
+    background-color: #f5f5f5;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.lang-btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.lang-btn i {
+    color: #3498db;
+    font-size: 16px;
+}
+
+.lang-code {
+    font-weight: 400;
+    color: #2c3e50;
+}
+
+.lang-text {
+    font-weight: 500;
+}
+
+/* Dark mode support */
+.dark-mode .lang-btn {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+.dark-mode .lang-code {
+    color: #ecf0f1;
+}
+
+.dark-mode .lang-btn:hover {
+    background-color: #34495e;
+}
+
+/* RTL Layout Adjustments */
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Elements that should stay LTR */
+[dir="rtl"] .logo,
+[dir="rtl"] .search-bar,
+[dir="rtl"] .dark-mode-toggle,
+[dir="rtl"] .user-actions,
+[dir="rtl"] .location-select,
+[dir="rtl"] .restaurant-tags,
+[dir="rtl"] .delivery-fee,
+[dir="rtl"] .delivery-time,
+[dir="rtl"] .price,
+[dir="rtl"] .btn,
+[dir="rtl"] .app-buttons,
+[dir="rtl"] .social-links,
+[dir="rtl"] .newsletter-form,
+[dir="rtl"] .lang-btn {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* Specific RTL adjustments */
+[dir="rtl"] .header-content,
+[dir="rtl"] .header-right,
+[dir="rtl"] .user-actions {
+    direction: ltr; /* Keep header LTR */
+}
+
+[dir="rtl"] .restaurant-meta {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .rating {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .rating i {
+    margin-left: 4px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .footer-links,
+[dir="rtl"] .footer-column {
+    text-align: right;
+}
+
+/* Filter Options */
+.filter-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.location-select, .sort-select {
+    position: relative;
+    display: inline-block;
+}
+
+.location-select i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.location-select select, .sort-select select {
+    padding: 8px 15px 8px 35px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background-color: white;
+    font-size: 14px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.location-select select {
+    padding-left: 35px;
+}
+
+.sort-select select {
+    padding-left: 15px;
+}
+
+/* Responsive Styles */
 @media (max-width: 992px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .header-content {
+        flex-wrap: wrap;
+    }
+    
+    .search-bar input {
+        width: 200px;
+    }
+    
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .featured-banners {
+        flex-direction: column;
+    }
+    
+    .featured-banner {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .download-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .download-text {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .app-buttons {
+        justify-content: center;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+    
     .signin-container {
         flex-direction: column;
     }
@@ -1792,6 +1742,124 @@ body.dark-mode .quantity-btn:hover {
 }
 
 @media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .header-right {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .search-bar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .search-bar input {
+        width: 100%;
+    }
+    
+    .user-actions {
+        margin-left: auto;
+    }
+    
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .restaurant-info h3 {
+        font-size: 16px;
+    }
+    
+    .restaurant-tags, .delivery-fee {
+        font-size: 12px;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filter-options {
+        margin-top: var(--spacing-md);
+        width: 100%;
+    }
+    
+    .filter-options select {
+        width: 100%;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero h2 {
+        font-size: 32px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .restaurant-img {
+        height: 150px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .newsletter-form input {
+        width: 100%;
+        border-right: 1px solid var(--border-color);
+        border-radius: var(--border-radius-md);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .newsletter-form button {
+        width: 100%;
+        border-radius: var(--border-radius-md);
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-bottom p {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
     .signin-form {
         padding: var(--spacing-xl);
     }
@@ -1833,6 +1901,71 @@ body.dark-mode .quantity-btn:hover {
 }
 
 @media (max-width: 480px) {
+    .category-list {
+        grid-template-columns: repeat(2, 160px);
+        gap: 0.8rem;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .dark-mode-toggle {
+        margin: 0 auto;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .user-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .featured-banner h3 {
+        font-size: 20px;
+    }
+    
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .download-text h2 {
+        font-size: 24px;
+    }
+    
+    .download-text p {
+        font-size: 14px;
+    }
+    
+    .app-button {
+        width: 180px;
+    }
+    
+    .phone-outline {
+        width: 160px;
+        height: 320px;
+        border-width: 8px;
+    }
+    
+    .footer-title {
+        font-size: 16px;
+    }
+    
+    .footer-links li a, 
+    .footer-bottom-links a, 
+    .footer-bottom p {
+        font-size: 14px;
+    }
+    
+    .newsletter h4 {
+        font-size: 14px;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    
     .signin-form {
         padding: var(--spacing-lg);
     }
@@ -1861,255 +1994,48 @@ body.dark-mode .quantity-btn:hover {
         flex-direction: column;
     }
 }
-/* Extra Small Screens (Mobile Phones) - Below 480px */
-@media (max-width: 480px) {
-    /* General Mobile Adjustments */
-    .container {
-        padding: 0 var(--spacing-md);
-    }
-
-    /* Sign In Page Mobile Styles */
-    .signin-section {
-        padding: var(--spacing-lg) 0;
-    }
-
-    .signin-container {
-        border-radius: 0;
-        box-shadow: none;
-    }
-
-    .signin-form {
-        padding: var(--spacing-lg);
-    }
-
-    .form-header h2 {
-        font-size: 22px;
-    }
-
-    .form-header p {
-        font-size: 14px;
-    }
-
-    .input-group input {
-        padding: 10px 10px 10px 40px;
-        font-size: 14px;
-    }
-
-    .btn-social {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .btn-social i {
-        font-size: 16px;
-    }
-
-    /* Cart Page Mobile Styles */
-    .cart-section {
-        padding: var(--spacing-lg) 0;
-    }
-
-    .cart-header h2 {
-        font-size: 20px;
-    }
-
-    .cart-header .btn-light {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-
-    .restaurant-info-card {
-        flex-direction: column;
-        text-align: center;
-        gap: var(--spacing-sm);
-    }
-
-    .restaurant-logo {
-        width: 50px;
-        height: 50px;
-        margin: 0 auto;
-    }
-
-    .cart-item {
-        grid-template-columns: 50px 1fr;
-        grid-template-rows: repeat(3, auto);
-        gap: 8px;
-        padding: 12px 0;
-    }
-
-    .item-image {
-        width: 50px;
-        height: 50px;
-        grid-row: span 3;
-    }
-
-    .item-details h3 {
-        font-size: 14px;
-        margin-bottom: 4px;
-    }
-
-    .item-description {
-        font-size: 12px;
-    }
-
-    .item-price {
-        font-size: 14px;
-        grid-column: 2;
-        grid-row: 2;
-    }
-
-    .item-quantity {
-        grid-column: 2;
-        grid-row: 3;
-        justify-content: flex-start;
-    }
-
-    .quantity-btn {
-        width: 25px;
-        height: 25px;
-        font-size: 12px;
-    }
-
-    .item-total {
-        grid-column: 2;
-        grid-row: 1;
-        text-align: right;
-        font-size: 14px;
-    }
-
-    .item-remove {
-        position: absolute;
-        right: 0;
-        top: 12px;
-    }
-
-    .special-instructions h4 {
-        font-size: 14px;
-    }
-
-    .special-instructions textarea {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .summary-card {
-        padding: var(--spacing-lg);
-    }
-
-    .summary-card h3 {
-        font-size: 18px;
-    }
-
-    .summary-row {
-        font-size: 14px;
-    }
-
-    .summary-row.total {
-        font-size: 16px;
-    }
-
-    .promo-code h4 {
-        font-size: 14px;
-    }
-
-    .promo-input input {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    .btn-checkout {
-        padding: 12px;
-        font-size: 16px;
-    }
-
-    /* Quantity Controls Mobile Optimization */
-    .quantity-controls {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .quantity-btn {
-        width: 28px;
-        height: 28px;
-    }
-
-    /* Form Elements Mobile Optimization */
-    .form-group {
-        margin-bottom: var(--spacing-md);
-    }
-
-    /* Payment Methods Mobile View */
-    .payment-icons {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    /* Ensure buttons are tap-friendly */
-    .btn, .btn-social, .quantity-btn, .item-remove {
-        min-width: 44px;
-        min-height: 44px;
-    }
-
-    /* Adjust dark mode toggle for mobile */
-    .dark-mode-toggle {
-        margin: 0 auto var(--spacing-sm);
-    }
-
-    /* Cart count indicator */
-    .cart-count {
-        width: 18px;
-        height: 18px;
-        font-size: 10px;
-        top: -6px;
-        right: -6px;
-    }
-}
 
 /* Very Small Screens (Below 360px) */
 @media (max-width: 360px) {
-    /* Sign In Page Adjustments */
     .signin-form {
         padding: var(--spacing-md);
     }
-
+    
     .form-header h2 {
         font-size: 20px;
     }
-
+    
     .btn-social span {
         display: none;
     }
-
+    
     .btn-social {
         justify-content: center;
         padding: 10px;
     }
-
-    /* Cart Page Adjustments */
+    
     .cart-item {
         grid-template-columns: 40px 1fr;
     }
-
+    
     .item-image {
         width: 40px;
         height: 40px;
     }
-
+    
     .item-details h3 {
         font-size: 13px;
     }
-
+    
     .quantity-controls {
         gap: 5px;
     }
-
+    
     .quantity-btn {
         width: 24px;
         height: 24px;
     }
-
-    /* Summary Card Adjustments */
+    
     .summary-card {
         padding: var(--spacing-md);
     }
@@ -2117,21 +2043,36 @@ body.dark-mode .quantity-btn:hover {
 
 /* Mobile-Specific Enhancements */
 @media (hover: none) {
-    /* Remove hover effects on touch devices */
     .btn:hover, .btn-social:hover, .quantity-btn:hover {
         transform: none;
         box-shadow: none;
     }
-
-    /* Make interactive elements more touch-friendly */
+    
     .btn, .btn-social, .quantity-btn, .item-remove {
         -webkit-tap-highlight-color: transparent;
     }
-
-    /* Increase hit area for touch targets */
+    
     .input-group input, .promo-input input, .special-instructions textarea {
         padding: 12px 12px 12px 45px;
         min-height: 48px;
+    }
+    
+    .category-item {
+        padding-bottom: 2.5rem;
+    }
+    
+    .category-hover {
+        position: static;
+        opacity: 1;
+        margin-top: 0.8rem;
+        background: var(--primary-color);
+        border-radius: 6px;
+        transform: none !important;
+    }
+    
+    .category-item p {
+        opacity: 1 !important;
+        transform: none !important;
     }
 }
 
@@ -2140,11 +2081,11 @@ body.dark-mode .quantity-btn:hover {
     .signin-image {
         height: 180px;
     }
-
+    
     .image-overlay {
         padding: var(--spacing-md);
     }
-
+    
     .image-overlay h3 {
         font-size: 18px;
     }
@@ -2156,7 +2097,7 @@ body.dark-mode .quantity-btn:hover {
         max-height: 90vh;
         overflow-y: auto;
     }
-
+    
     .signin-form {
         padding: var(--spacing-lg);
     }
@@ -2168,1481 +2109,13 @@ body.dark-mode .quantity-btn:hover {
         padding-left: max(var(--spacing-md), env(safe-area-inset-left));
         padding-right: max(var(--spacing-md), env(safe-area-inset-right));
     }
-
+    
     .signin-form, .cart-items, .summary-card {
         padding-bottom: max(var(--spacing-md), env(safe-area-inset-bottom));
     }
 }
-/* Mobile Category Card Enhancements */
-@media (max-width: 768px) {
-    .categories {
-        padding: var(--spacing-lg) 0;
-    }
 
-    .section-title {
-        font-size: 24px;
-        margin-bottom: var(--spacing-lg);
-    }
-
-    .category-list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-sm);
-    }
-
-    .category-item {
-        padding: var(--spacing-md);
-        margin: 0;
-        min-height: 140px; /* Fixed height for consistency */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .category-icon {
-        width: 70px !important; /* Larger icons */
-        height: 70px !important;
-        margin-bottom: var(--spacing-sm);
-    }
-
-    .category-item i {
-        font-size: 1.8rem !important; /* Bigger icon size */
-    }
-
-    .category-item p {
-        font-size: 16px !important; /* Larger text */
-        font-weight: 600;
-        margin-top: 8px;
-        text-align: center;
-    }
-
-    .category-hover {
-        width: calc(100% - 20px);
-        left: 10px;
-        border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
-        padding: 10px;
-    }
-
-    .category-hover span {
-        font-size: 14px;
-    }
-
-    .category-hover i {
-        font-size: 14px;
-    }
-}
-
-/* Extra Small Phones (below 400px) */
-@media (max-width: 400px) {
-    .category-list {
-        gap: 8px;
-    }
-
-    .category-item {
-        min-height: 130px;
-        padding: 16px 8px;
-    }
-
-    .category-icon {
-        width: 60px !important;
-        height: 60px !important;
-    }
-
-    .category-item i {
-        font-size: 1.6rem !important;
-    }
-
-    .category-item p {
-        font-size: 15px !important;
-    }
-}
-
-/* Landscape Orientation */
-@media (max-width: 768px) and (orientation: landscape) {
-    .category-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .category-item {
-        min-height: 120px;
-    }
-}
-
-/* Tablet Size (larger mobile) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .category-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .category-icon {
-        width: 80px !important;
-        height: 80px !important;
-    }
-
-    .category-item i {
-        font-size: 2rem !important;
-    }
-
-    .category-item p {
-        font-size: 17px !important;
-    }
-}
-
-/* Touch Device Adjustments */
-@media (hover: none) {
-    .category-item {
-        transform: scale(1) !important;
-    }
-
-    .category-hover {
-        position: relative;
-        bottom: auto;
-        opacity: 1;
-        margin-top: var(--spacing-xs);
-        background: var(--primary-color);
-        color: white;
-        border-radius: var(--border-radius-sm);
-        transform: none;
-        width: 100%;
-        left: 0;
-    }
-}
-
-/* Dark Mode Adjustments */
-body.dark-mode .category-item {
-    background-color: var(--background-white);
-}
-
-body.dark-mode .category-hover {
-    background: linear-gradient(to right, var(--primary-dark), var(--primary-color));
-}
-/* Consistent Category Box Sizes */
-.category-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 1.2rem;
-    margin-top: 2rem;
-}
-
-.category-item {
-    position: relative;
-    background: white;
-    border-radius: 16px;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    cursor: pointer;
-    border: 1px solid #f0f0f0;
-    width: 160px; /* Fixed width */
-    height: 160px; /* Fixed height */
-    margin: 0 auto; /* Center the boxes */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.category-icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 0.8rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.category-item i {
-    font-size: 1.8rem;
-}
-
-.category-item p {
-    font-weight: 600;
-    margin: 0;
-    color: #333;
-    font-size: 1rem;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .category-list {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        justify-content: center;
-        gap: 1rem;
-        padding: 0 1rem;
-    }
-    
-    .category-item {
-        width: 160px;
-        height: 160px;
-    }
-}
-
-@media (max-width: 480px) {
-    .category-list {
-        grid-template-columns: repeat(2, 160px);
-        gap: 0.8rem;
-    }
-    
-    .category-item {
-        width: 160px;
-        height: 160px;
-    }
-}
-
-/* Very small phones */
-@media (max-width: 360px) {
-    .category-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .category-item {
-        width: calc(50vw - 1.5rem);
-        height: calc(50vw - 1.5rem);
-        max-width: 160px;
-        max-height: 160px;
-    }
-    
-    .category-icon {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .category-item i {
-        font-size: 1.6rem;
-    }
-    
-    .category-item p {
-        font-size: 0.9rem;
-    }
-}
-
-/* Landscape orientation */
-@media (max-width: 768px) and (orientation: landscape) {
-    .category-list {
-        grid-template-columns: repeat(3, 160px);
-    }
-}
-
-/* Touch device adjustments */
-@media (hover: none) {
-    .category-item {
-        transform: none !important;
-    }
-    
-    .category-hover {
-        position: static;
-        opacity: 1;
-        margin-top: 0.5rem;
-        background: var(--primary-color);
-        color: white;
-        border-radius: 8px;
-        padding: 0.5rem;
-    }
-}
-/* Base Category Styles */
-.category-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 1.2rem;
-    margin-top: 2rem;
-    justify-content: center;
-}
-
-.category-item {
-    position: relative;
-    background: white;
-    border-radius: 16px;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    cursor: pointer;
-    border: 1px solid #f0f0f0;
-    width: 160px;
-    height: 160px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.category-icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 0.8rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.category-item i {
-    font-size: 1.8rem;
-}
-
-.category-item p {
-    font-weight: 600;
-    margin: 0;
-    color: #333;
-    font-size: 1rem;
-}
-
-/* Hover Effect - Works for both mouse and touch */
-.category-hover {
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-    opacity: 0;
-}
-
-.category-item:hover .category-hover,
-.category-item:focus .category-hover,
-.category-item:active .category-hover {
-    bottom: 0;
-    opacity: 1;
-}
-
-.category-hover span {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.category-hover i {
-    font-size: 0.9rem;
-    color: white;
-}
-
-/* Mobile/Touch Device Adaptations */
-@media (hover: none) {
-    .category-item {
-        -webkit-tap-highlight-color: transparent;
-    }
-    
-    /* Show explore text by default on touch devices */
-    .category-hover {
-        position: static;
-        opacity: 1;
-        background: var(--primary-color);
-        margin-top: 0.5rem;
-        border-radius: 8px;
-        padding: 0.5rem;
-        transform: none !important;
-    }
-    
-    /* Pulse animation for touch feedback */
-    .category-item:active {
-        animation: pulse 0.3s ease;
-    }
-    
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(0.98); }
-        100% { transform: scale(1); }
-    }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .category-list {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 1rem;
-        padding: 0 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .category-list {
-        grid-template-columns: repeat(2, 160px);
-        gap: 0.8rem;
-    }
-}
-
-@media (max-width: 360px) {
-    .category-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .category-item {
-        width: calc(50vw - 1.5rem);
-        height: calc(50vw - 1.5rem);
-        max-width: 160px;
-        max-height: 160px;
-    }
-    
-    .category-icon {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .category-item i {
-        font-size: 1.6rem;
-    }
-    
-    .category-item p {
-        font-size: 0.9rem;
-    }
-    
-    .category-hover span {
-        font-size: 0.8rem;
-    }
-}
-
-/* Dark Mode Compatibility */
-body.dark-mode .category-item {
-    background-color: var(--background-white);
-    border-color: var(--border-color);
-}
-
-body.dark-mode .category-hover {
-    background: linear-gradient(to right, var(--primary-dark), var(--primary-color));
-}
-/* Improved Explore Pop-up for Small Screens */
-.category-hover {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-    transform: translateY(100%);
-    width: 100%; /* Ensure full width */
-    border-radius: 0 0 16px 16px; /* Match parent border radius */
-}
-
-.category-item:hover .category-hover,
-.category-item:focus .category-hover,
-.category-item:active .category-hover {
-    transform: translateY(0);
-}
-
-/* Mobile/Touch Device Adaptations */
-@media (max-width: 768px) {
-    .category-hover {
-        padding: 0.8rem; /* Slightly more padding */
-        font-size: 1rem; /* Larger text */
-    }
-    
-    .category-hover span {
-        font-size: 0.95rem; /* Larger text */
-        white-space: nowrap; /* Prevent text wrapping */
-    }
-    
-    .category-hover i {
-        font-size: 1rem; /* Larger icon */
-    }
-}
-
-@media (max-width: 480px) {
-    .category-hover {
-        padding: 0.7rem 0.5rem; /* Adjusted padding */
-        flex-direction: row; /* Ensure horizontal layout */
-    }
-    
-    .category-hover span {
-        font-size: 0.9rem;
-    }
-    
-    /* Full-width explore area on very small screens */
-    .category-item {
-        overflow: visible; /* Allow explore to extend */
-    }
-    
-    .category-hover {
-        left: -1px;
-        right: -1px;
-        width: calc(100% + 2px); /* Bleed to edges */
-    }
-}
-
-/* Very small phones (below 360px) */
-@media (max-width: 360px) {
-    .category-hover {
-        padding: 0.6rem 0.4rem;
-    }
-    
-    .category-hover span {
-        font-size: 0.85rem;
-    }
-}
-
-/* Touch Device Behavior */
-@media (hover: none) {
-    .category-hover {
-        position: static;
-        transform: none;
-        display: flex;
-        margin-top: 8px;
-        border-radius: 8px;
-        width: 100%;
-        left: auto;
-        right: auto;
-    }
-    
-    .category-item {
-        padding-bottom: 1rem; /* Add space for explore text */
-    }
-}
-/* Ensure category icons remain circular on all devices */
-.category-icon {
-    border-radius: 50%;
-    aspect-ratio: 1/1; /* Maintain 1:1 aspect ratio */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px; /* Fixed width */
-    height: 60px; /* Fixed height - will be overridden by aspect-ratio if supported */
-}
-
-/* Fallback for browsers that don't support aspect-ratio */
-@supports not (aspect-ratio: 1/1) {
-    .category-icon {
-        height: 60px !important;
-        width: 60px !important;
-    }
-}
-
-/* Adjust for smaller screens if needed */
-@media (max-width: 768px) {
-    .category-icon {
-        width: 50px;
-        height: 50px;
-    }
-}
-/* Green Themed Load More Button */
-.btn-load-more {
-    background: transparent;
-    color: #4CAF50; /* Green color matching your theme */
-    border: 2px solid #4CAF50;
-    padding: 10px 25px;
-    border-radius: 30px;
-    font-weight: 500;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn-load-more:hover {
-    background: #4CAF50;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-}
-
-.btn-load-more:active {
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-.btn-load-more i {
-    font-size: 0.9em;
-    transition: transform 0.3s ease;
-}
-
-.btn-load-more:hover i {
-    transform: translateY(2px);
-}
-/* Load More Button - Matching Sign In Button Style */
-/* Load More Button - Exact match to Sign In button */
-.btn-load-more {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 32px; /* Increased padding for bigger size */
-    border-radius: var(--border-radius-md);
-    font-weight: 600; /* Slightly bolder */
-    font-size: 16px; /* Larger font size */
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.5;
-    text-transform: uppercase; /* Optional: makes text stand out more */
-    letter-spacing: 0.5px; /* Better readability */
-    min-width: 200px; /* Ensures consistent width */
-}
-
-.btn-load-more:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-3px); /* More pronounced hover effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow */
-}
-
-.load-more {
-    text-align: center;
-    margin-top: var(--spacing-xl);
-    padding-bottom: var(--spacing-xl);
-}
-.signin-btn {
-    padding: 8px 16px; /* Matching this */
-    font-size: 14px; /* Matching this */
-    font-weight: 500; /* Already matching */
-    /* ... */
-}
-
-/* Fix for Featured section buttons in dark mode */
-body.dark-mode .featured-banner .btn-light {
-    color: #f5f5f5; /* Light gray text */
-    background-color: rgba(191, 14, 14, 0.1); /* Semi-transparent white */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-/* Dark mode button styles for Featured section */
-body.dark-mode .featured-banner .btn-light {
-    background-color: rgba(183, 165, 165, 0.2)ffff; /* Solid black */
-    color: #ffffff !important; /* White text */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-body.dark-mode .featured-banner .btn-light:hover {
-    background-color: #222222; /* Slightly lighter black on hover */
-    color: #ffffff !important; /* Maintain white text */
-    border-color: rgba(255, 255, 255, 0.7);
-}
-
-/* Specific styles for the dark banner (Join Now button) */
-body.dark-mode .featured-banner.banner-dark .btn-light {
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    color: #ffffff !important;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-body.dark-mode .featured-banner.banner-dark .btn-light:hover {
-    background-color: rgba(183, 165, 165, 0.2); /* Slightly more opaque */
-    color: #ffffff !important;
-    border-color: rgba(255, 255, 255, 0.7);
-}
-/* Keep Order Now button text white in dark mode */
-body.dark-mode .hero .btn-primary {
-    color: white !important;
-    -webkit-text-fill-color: white !important;
-}
-
-/* Optional: If you want to maintain the hover state */
-body.dark-mode .hero .btn-primary:hover {
-    background-color: var(--primary-dark);
-    color: white !important;
-    -webkit-text-fill-color: white !important;
-}
-/* Fix category text color in dark mode */
-body.dark-mode .category-item p {
-    color: #ffffff !important;
-}
-
-/* Optional: If you also want to ensure the hover state text stays visible */
-body.dark-mode .category-item:hover p {
-    color: #ffffff !important;
-}
-
-/* Fix the "Explore" text in the hover overlay if needed */
-body.dark-mode .category-hover span {
-    color: #ffffff !important;
-}
-/* Category hover effects */
-.category-item {
-    position: relative;
-    overflow: hidden;
-}
-
-.category-item p {
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.category-hover {
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-    opacity: 0;
-}
-
-.category-item:hover p {
-    opacity: 0;
-    transform: translateY(-10px);
-}
-
-.category-item:hover .category-hover {
-    bottom: 0;
-    opacity: 1;
-}
-
-/* Dark mode adjustments */
-body.dark-mode .category-hover {
-    background: linear-gradient(to right, var(--primary-dark), var(--secondary-color));
-}
-
-body.dark-mode .category-item:hover p {
-    color: transparent !important;
-}
-/* Base category styles */
-.category-item {
-  position: relative;
-  overflow: hidden;
-  min-height: 160px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-/* Category text */
-.category-item p {
-  transition: all 0.3s ease;
-}
-
-/* Explore popup - hidden by default */
-.category-hover {
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  color: white;
-  padding: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-  opacity: 0;
-}
-
-/* Desktop hover effects */
-@media (min-width: 769px) {
-  .category-item:hover p {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  
-  .category-item:hover .category-hover {
-    bottom: 0;
-    opacity: 1;
-  }
-}
-
-/* Mobile layout - show explore below without hover */
-@media (max-width: 768px) {
-  .category-item {
-    padding-bottom: 2rem; /* Make room for explore text */
-    overflow: visible; /* Allow explore to extend */
-  }
-  
-  .category-hover {
-    position: static;
-    opacity: 1;
-    margin-top: 0.5rem;
-    background: var(--primary-color);
-    border-radius: 8px;
-    transform: none !important;
-    bottom: auto;
-  }
-  
-  .category-item p {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-  
-  .category-icon {
-    margin-bottom: 0.5rem;
-  }
-}
-/* Base Category Styles */
-.category-item {
-  position: relative;
-  overflow: hidden;
-  min-height: 160px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-  padding: 1rem;
-}
-
-.category-icon {
-  margin-bottom: 0.8rem;
-}
-
-.category-item p {
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-/* Explore Popup - Hidden by Default */
-.category-hover {
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  color: white;
-  padding: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-  opacity: 0;
-  pointer-events: none; /* Prevent interaction when hidden */
-}
-
-/* Desktop Hover Effect */
-@media (min-width: 769px) {
-  .category-item:hover .category-hover {
-    bottom: 0;
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  .category-item:hover p {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-}
-
-/* Mobile Layout */
-@media (max-width: 768px) {
-  .category-item {
-    overflow: visible;
-    padding-bottom: 2.5rem;
-    min-height: 180px;
-  }
-  
-  .category-hover {
-    position: static;
-    opacity: 0; /* Keep hidden by default */
-    height: 0;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    transition: none;
-  }
-  
-  /* Only show when category is active/tapped */
-  .category-item.active .category-hover {
-    opacity: 1;
-    height: auto;
-    padding: 0.75rem;
-    margin-top: 0.5rem;
-    background: var(--primary-color);
-    border-radius: 8px;
-  }
-}
-/* Base Category Styles */
-.category-item {
-  position: relative;
-  min-height: 140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-
-.category-icon {
-  margin-bottom: 0.8rem;
-  transition: transform 0.3s ease;
-}
-
-.category-item p {
-  text-align: center;
-}
-
-/* Desktop Hover Effect - Simple lift animation */
-@media (min-width: 769px) {
-  .category-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .category-item:hover .category-icon {
-    transform: scale(1.1);
-  }
-}
-
-/* Mobile Layout */
-@media (max-width: 768px) {
-  .category-item {
-    min-height: 130px;
-  }
-}
-
-/* Dark Mode Text Color */
-body.dark-mode .category-item p {
-  color: white;
-}
-/* Cart Item Responsive Styles */
-.cart-item {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap on small screens */
-    padding: 15px;
-    margin-bottom: 15px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.item-image {
-    width: 80px;
-    height: 80px;
-    margin-right: 15px;
-    border-radius: 6px;
-    overflow: hidden;
-    flex-shrink: 0; /* Prevent image from shrinking */
-}
-
-.item-details {
-    flex: 1;
-    min-width: 150px; /* Prevent squeezing too much */
-}
-
-.item-name {
-    margin: 0 0 5px;
-    font-size: 16px;
-    font-weight: 600;
-    word-break: break-word; /* Prevent long names from breaking layout */
-}
-
-.item-restaurant {
-    margin: 0 0 8px;
-    font-size: 14px;
-    color: #666;
-}
-
-.item-price {
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 15px;
-    color: #333;
-}
-
-.item-quantity {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.item-remove {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    color: #ff4d4f;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-    .cart-layout {
-        flex-direction: column;
-    }
-    
-    .cart-items {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    
-    .cart-summary {
-        width: 100%;
-    }
-    
-    .cart-item {
-        padding: 12px;
-    }
-    
-    .item-image {
-        width: 70px;
-        height: 70px;
-        margin-right: 12px;
-    }
-    
-    .item-name {
-        font-size: 15px;
-        padding-right: 25px; /* Space for remove button */
-    }
-    
-    .item-price {
-        position: static; /* Move price back into normal flow */
-        margin-top: 5px;
-    }
-    
-    .item-quantity {
-        margin-top: 8px;
-    }
-}
-
-@media (max-width: 480px) {
-    .cart-item {
-        flex-direction: column;
-    }
-    
-    .item-image {
-        width: 100%;
-        height: auto;
-        max-height: 150px;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    
-    .item-details {
-        width: 100%;
-    }
-    
-    .item-remove {
-        top: 10px;
-        right: 10px;
-    }
-}
-/* Dark Mode Styles for Cart */
-.dark-mode .cart-item {
-    background-color: #2d2d2d;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.dark-mode .item-name,
-.dark-mode .item-price {
-    color: #f0f0f0;
-}
-
-.dark-mode .item-restaurant {
-    color: #b0b0b0;
-}
-
-.dark-mode .quantity-btn {
-    background-color: #3d3d3d;
-    border-color: #4d4d4d;
-    color: #f0f0f0;
-}
-
-.dark-mode .summary-card {
-    background-color: #2d2d2d;
-    color: #f0f0f0;
-}
-
-.dark-mode .summary-row {
-    border-bottom-color: #3d3d3d;
-}
-
-.dark-mode .btn-checkout {
-    background-color:#2ECC71;
-    color: white;
-}
-
-.dark-mode .empty-cart h3,
-.dark-mode .empty-cart p {
-    color: #e0e0e0;
-}
-
-.dark-mode .empty-cart-icon {
-    color: #555;
-}
-/* ============================================= */
-/* MOBILE-FRIENDLY EXPLORE POPUP FIXES */
-/* ============================================= */
-
-/* Base styles for all devices */
-.category-hover {
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  color: white;
-  padding: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-  opacity: 0;
-  pointer-events: none;
-  border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
-}
-
-/* Desktop hover effect */
-@media (hover: hover) {
-  .category-item:hover .category-hover {
-    bottom: 0;
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  .category-item:hover p {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-}
-
-/* Mobile touch devices - show explore text by default */
-@media (hover: none) {
-  .category-item {
-    padding-bottom: 2.5rem; /* Make space for explore text */
-    overflow: visible;
-  }
-  
-  .category-hover {
-    position: static;
-    opacity: 1;
-    margin-top: 0.8rem;
-    background: var(--primary-color);
-    border-radius: var(--border-radius-sm);
-    transform: none !important;
-    bottom: auto;
-    pointer-events: auto;
-    animation: none;
-  }
-  
-  .category-item p {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-  
-  /* Optional: Add tap feedback */
-  .category-item:active {
-    transform: scale(0.98);
-  }
-}
-
-/* Dark mode compatibility */
-body.dark-mode .category-hover {
-  background: linear-gradient(to right, var(--primary-dark), var(--primary-color));
-}
-
-/* Small screen adjustments */
-@media (max-width: 480px) {
-  .category-hover {
-    padding: 0.6rem;
-    font-size: 0.9rem;
-  }
-  
-  .category-hover i {
-    font-size: 0.9rem;
-  }
-}
-/* ============================================= */
-/* PERFECTLY SIZED MOBILE EXPLORE POPUP */
-/* ============================================= */
-
-/* Desktop hover effect (unchanged) */
-.category-item:hover .category-hover {
-  bottom: 0;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Mobile-specific styles (only affects touch devices) */
-@media (hover: none) {
-  .category-item {
-    padding-bottom: 2.2rem; /* Perfect space for explore text */
-  }
-  
-  .category-hover {
-    /* Mobile-specific properties */
-    position: static;
-    opacity: 1;
-    margin-top: 0.8rem;
-    padding: 0.7rem 0.5rem; /* Medium size */
-    min-height: auto; /* Natural height */
-    height: auto;
-    
-    /* Visual styling */
-    background: var(--primary-color);
-    border-radius: 6px;
-    box-shadow: none; /* Simpler look */
-    
-    /* Text styling */
-    font-size: 0.9rem;
-    line-height: 1.3;
-  }
-  
-  .category-hover span {
-    font-size: 0.9rem; /* Slightly smaller than desktop */
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  
-  .category-hover i {
-    font-size: 0.9rem; /* Matches text size */
-  }
-  
-  /* Ensure category icon doesn't overlap */
-  .category-icon {
-    margin-bottom: 0.5rem; /* Reduced space */
-  }
-}
-
-/* Small phone adjustments */
-@media (max-width: 400px) {
-  @media (hover: none) {
-    .category-hover {
-      padding: 0.6rem 0.4rem;
-    }
-    
-    .category-hover span,
-    .category-hover i {
-      font-size: 0.85rem;
-    }
-  }
-}
-
-/* Keep all desktop styles intact */
-@media (hover: hover) {
-  .category-hover {
-    /* Original desktop styles */
-    position: absolute;
-    bottom: -50px;
-    padding: 0.75rem;
-    min-height: 50px;
-    /* etc... (all your original desktop styles remain) */
-  }
-}
-/* ============================================= */
-/* PERFECTLY SIZED MOBILE ARROWS */
-/* ============================================= */
-
-/* Mobile arrow adjustment (768px and below) */
-@media (max-width: 768px) {
-  .category-item .category-hover .fa-arrow-right {
-    font-size: 14px !important; /* Slightly larger than before */
-    width: 14px !important;
-    height: 14px !important;
-    margin-left: 6px;
-    vertical-align: middle;
-  }
-  
-  .category-item .category-hover .fa-arrow-right:before {
-    font-size: 14px !important;
-    line-height: 1; /* Perfect alignment */
-  }
-}
-
-/* Small phone adjustment (480px and below) */
-@media (max-width: 480px) {
-  .category-item .category-hover .fa-arrow-right,
-  .category-item .category-hover .fa-arrow-right:before {
-    font-size: 12px !important; /* Slightly reduced for small screens */
-    width: 12px !important;
-    height: 12px !important;
-    margin-left: 5px;
-  }
-}
-
-/* Tiny phone adjustment (360px and below) */
-@media (max-width: 360px) {
-  .category-item .category-hover .fa-arrow-right,
-  .category-item .category-hover .fa-arrow-right:before {
-    font-size: 11px !important;
-  }
-}
-/* Add to your existing CSS */
-.language-switcher {
-  margin-left: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.lang-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 6px 10px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  color: var(--text-primary);
-}
-
-.lang-btn:hover {
-  background-color: rgba(52, 152, 219, 0.1);
-}
-
-/* For RTL (Arabic) version */
-[dir="rtl"] .lang-code {
-  font-family: 'Tahoma', 'Arial', sans-serif; /* Better Arabic support */
-}
-/* Language Switcher Button */
-.language-switcher {
-  margin-left: 15px;
-}
-
-.lang-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 6px 8px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  color: var(--text-primary);
-}
-
-/* Arabic-specific RTL rules ONLY for headings/large text */
-[lang="ar"] .section-title,
-[lang="ar"] h1, 
-[lang="ar"] h2,
-[lang="ar"] h3,
-[lang="ar"] .restaurant-info h3,
-[lang="ar"] .featured-banner h3 {
-  direction: rtl;
-  text-align: right;
-  font-family: 'Tahoma', 'Arial', sans-serif; /* Better Arabic support */
-}
-
-/* Force LTR for buttons and small text */
-[lang="ar"] .btn,
-[lang="ar"] .lang-btn,
-[lang="ar"] .restaurant-tags,
-[lang="ar"] .delivery-fee,
-[lang="ar"] .category-item p {
-  direction: ltr !important;
-  text-align: left !important;
-}
-/* Language Switcher */
-.language-switcher {
-  margin-left: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.lang-btn {
-  background: none;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  color: var(--text-primary);
-  transition: all 0.3s ease;
-}
-
-.lang-btn:hover {
-  background-color: rgba(52, 152, 219, 0.1);
-  border-color: var(--primary-color);
-}
-
-/* Arabic text styling */
-[lang="ar"] .section-title,
-[lang="ar"] h1, 
-[lang="ar"] h2,
-[lang="ar"] h3 {
-  direction: rtl;
-  text-align: right;
-  font-family: 'Tahoma', 'Arial', sans-serif;
-}
-/* Language Switcher */
-.language-switcher {
-  margin-left: 15px;
-  direction: ltr; /* Always LTR */
-}
-
-/* Protected Elements (won't flip) */
-.hero-content h2,
-.featured-banner h3,
-.download-text h2,
-.footer-grid,
-.logo {
-  direction: ltr !important;
-  text-align: left !important;
-}
-
-/* Restaurant Card RTL Styling */
-.rtl-content {
-  direction: rtl;
-  text-align: right;
-}
-
-.rtl-content .restaurant-meta {
-  flex-direction: row-reverse;
-}
-
-.rtl-content .rating {
-  flex-direction: row-reverse;
-}
-
-.rtl-content .rating i {
-  margin-left: 4px;
-  margin-right: 0;
-}
-
-/* Protected Text Elements */
-.restaurant-tags,
-.delivery-fee,
-.delivery-time,
-.download-app,
-.footer-links {
-  direction: ltr !important;
-}
-/* Add these to your existing CSS file */
-
-/* Language Switcher Styles */
-.language-switcher {
-    margin-left: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.lang-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 6px 10px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: var(--text-primary);
-}
-
-.lang-btn:hover {
-    background-color: rgba(52, 152, 219, 0.1);
-}
-
-/* RTL (Arabic) Styles */
+/* RTL text direction for Arabic content only */
 [lang="ar"] {
     direction: rtl;
     font-family: 'Tajawal', 'Poppins', sans-serif;
@@ -3704,252 +2177,31 @@ body.dark-mode .category-hover {
     direction: ltr !important;
     text-align: left !important;
 }
-
-/* Dark mode adjustments for language switcher */
-body.dark-mode .lang-btn {
-    color: var(--text-primary);
+.dark-mode .category-item p{
+    color:white;
 }
-/* Language Switcher */
-.language-switcher {
-    margin: 0 15px;
-    position: relative;
+body.dark-mode .category-item p {
+    color: white !important;
 }
 
-.lang-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 15px;
-    border-radius: 30px;
-    background-color: #f5f5f5;
-    transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+body.dark-mode .category-item:hover p {
+    color: transparent !important;
 }
-
-.lang-btn:hover {
-    background-color: #e0e0e0;
-    transform: scale(1.05);
+.dark-mode .btn-light:hover{
+    background-color: rgb(228, 228, 228);
+    color:#1e1d1d
 }
-
-.lang-btn i {
-    color: #3498db;
-    font-size: 16px;
+.cart-btn {
+    margin: 12px;
 }
-
-.lang-code {
-    font-weight: 400;
-    color: #2c3e50;
-}
-
-.lang-text {
-    font-weight: 500;
-}
-
-/* Dark mode support */
-.dark-mode .lang-btn {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-}
-
-.dark-mode .lang-code {
-    color: #ecf0f1;
-}
-
-.dark-mode .lang-btn:hover {
-    background-color: #34495e;
-}
-/* Language Switcher */
-.language-switcher {
-  margin: 0 15px;
-  position: relative;
-}
-
-.lang-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 15px;
-  border-radius: 30px;
-  background-color: #f5f5f5;
-  transition: all 0.3s ease;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-}
-
-.lang-btn:hover {
-  background-color: #e0e0e0;
-  transform: scale(1.05);
-}
-
-.lang-btn i {
-  color: #3498db;
-  font-size: 16px;
-}
-
-.lang-code {
-  font-weight: 400;
-  color: #2c3e50;
-}
-
-.lang-text {
-  font-weight: 500;
-}
-
-/* RTL Layout Adjustments */
-[dir="rtl"] {
-  direction: rtl;
-  text-align: right;
-}
-
-/* Elements that should stay LTR */
-[dir="rtl"] .logo,
-[dir="rtl"] .search-bar,
-[dir="rtl"] .dark-mode-toggle,
-[dir="rtl"] .user-actions,
-[dir="rtl"] .location-select,
-[dir="rtl"] .restaurant-tags,
-[dir="rtl"] .delivery-fee,
-[dir="rtl"] .delivery-time,
-[dir="rtl"] .price,
-[dir="rtl"] .btn,
-[dir="rtl"] .app-buttons,
-[dir="rtl"] .social-links,
-[dir="rtl"] .newsletter-form,
-[dir="rtl"] .lang-btn {
-  direction: ltr !important;
-  text-align: left !important;
-}
-
-/* Specific RTL adjustments */
-[dir="rtl"] .header-content,
-[dir="rtl"] .header-right,
-[dir="rtl"] .user-actions {
-  direction: ltr; /* Keep header LTR */
-}
-
-[dir="rtl"] .restaurant-meta {
-  flex-direction: row-reverse;
-}
-
-[dir="rtl"] .rating {
-  flex-direction: row-reverse;
-}
-
-[dir="rtl"] .rating i {
-  margin-left: 4px;
-  margin-right: 0;
-}
-
-[dir="rtl"] .footer-links,
-[dir="rtl"] .footer-column {
-  text-align: right;
-}
-
-/* Dark mode support */
-.dark-mode .lang-btn {
-  background-color: #2c3e50;
-  color: #ecf0f1;
-}
-
-.dark-mode .lang-code {
-  color: #ecf0f1;
-}
-
-.dark-mode .lang-btn:hover {
-  background-color: #34495e;
-}
-/* RTL text direction for Arabic content only */
-[lang="ar"] {
-  direction: rtl;
-}
-
-/* Force LTR for layout elements that shouldn't flip */
-[lang="ar"] .header-content,
-[lang="ar"] .header-right,
-[lang="ar"] .user-actions,
-[lang="ar"] .restaurant-grid,
-[lang="ar"] .category-list,
-[lang="ar"] .featured-banners,
-[lang="ar"] .footer-grid,
-[lang="ar"] .app-buttons,
-[lang="ar"] .btn,
-[lang="ar"] .restaurant-card,
-[lang="ar"] .category-item {
-  direction: ltr !important;
-}
-
-/* Specific RTL text alignment for Arabic */
-[lang="ar"] .section-title,
-[lang="ar"] h1, 
-[lang="ar"] h2,
-[lang="ar"] h3,
-[lang="ar"] p,
-[lang="ar"] .restaurant-info,
-[lang="ar"] .footer-column {
-  text-align: right;
-}
-
-/* Fix for restaurant meta info */
-[lang="ar"] .restaurant-meta {
-  flex-direction: row-reverse;
-}
-
-[lang="ar"] .rating {
-  flex-direction: row-reverse;
-}
-
-[lang="ar"] .rating i {
-  margin-left: 4px;
-  margin-right: 0;
-}
-/* RTL text direction for Arabic content only */
-[lang="ar"] {
-  direction: rtl;
-}
-
-/* Force LTR for layout elements that shouldn't flip */
-[lang="ar"] .header-content,
-[lang="ar"] .header-right,
-[lang="ar"] .user-actions,
-[lang="ar"] .restaurant-grid,
-[lang="ar"] .category-list,
-[lang="ar"] .featured-banners,
-[lang="ar"] .footer-grid,
-[lang="ar"] .app-buttons,
-[lang="ar"] .btn,
-[lang="ar"] .restaurant-card,
-[lang="ar"] .category-item {
-  direction: ltr !important;
-}
-
-/* Specific RTL text alignment for Arabic */
-[lang="ar"] .section-title,
-[lang="ar"] h1, 
-[lang="ar"] h2,
-[lang="ar"] h3,
-[lang="ar"] p,
-[lang="ar"] .restaurant-info,
-[lang="ar"] .footer-column {
-  text-align: right;
-}
-
-/* Fix for restaurant meta info */
-[lang="ar"] .restaurant-meta {
-  flex-direction: row-reverse;
-}
-
-[lang="ar"] .rating {
-  flex-direction: row-reverse;
-}
-
-[lang="ar"] .rating i {
-  margin-left: 4px;
-  margin-right: 0;
+.main-header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    padding: var(--spacing-sm) 0; /* Changed from md to sm */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}.btn-primary:hover{
+    color: white;
 }
