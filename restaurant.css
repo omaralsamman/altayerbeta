@@ -1105,3 +1105,8 @@ body.dark-mode .newsletter-form input {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+.back-button {
+    margin-right: 1rem;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
