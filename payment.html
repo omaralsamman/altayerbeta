@@ -341,8 +341,16 @@
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="delivery-instructions">Delivery Instructions (Optional)</label>
-                                <textarea id="delivery-instructions" rows="3" placeholder="Any special instructions for delivery"></textarea>
+                                <label for="delivery-instructions">Delivery Instructions </label>
+                                <div class="location-select">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <select>
+                            <option>Deliver to: Current Location</option>
+                            <option>New York, NY</option>
+                            <option>Los Angeles, CA</option>
+                            <option>Chicago, IL</option>
+                        </select>
+                    </div>
                             </div>
                         </div>
                         
@@ -430,7 +438,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Altayer. All rights reserved.</p>
+                <p>&copy; 2025 Altayer. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -440,7 +448,7 @@
         </div>
     </footer>
 
-    <script src="darkmode.js"></script>
+    <script src="javascript/darkmode.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Load cart and display order summary
