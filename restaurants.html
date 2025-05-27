@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants - Altayer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <div class="logo">
+                    <h1><i class="fas fa-utensils"></i> Altayer</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for food, restaurants...">
+                    </div>
+                    
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="darkmode-switch">
+                        <label for="darkmode-switch" class="toggle-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="toggle-ball"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="user-actions">
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <a href="signin.html" class="signin-btn">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Restaurants Section -->
+    <section class="restaurants">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">All Restaurants</h2>
+                <div class="filter-options">
+                    <div class="filter-tags">
+                        <button class="filter-tag active" data-category="all">All</button>
+                        <button class="filter-tag" data-category="burgers">Burgers</button>
+                        <button class="filter-tag" data-category="pizza">Pizza</button>
+                        <button class="filter-tag" data-category="asian">Asian</button>
+                        <button class="filter-tag" data-category="chicken">Chicken</button>
+                        <button class="filter-tag" data-category="desserts">Desserts</button>
+                        <button class="filter-tag" data-category="coffee">Coffee</button>
+                    </div>
+                    <select id="sort-options">
+                        <option value="recommended">Sort by: Recommended</option>
+                        <option value="delivery">Fastest Delivery</option>
+                        <option value="rating">Rating</option>
+                        <option value="distance">Distance</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="restaurant-grid" id="restaurant-grid">
+                <!-- Restaurant cards will be loaded here -->
+            </div>
+
+            <div class="load-more">
+                <button class="btn btn-load-more" id="load-more">Load More Restaurants</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">Altayer</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Get Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">How to Order</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Delivery Areas</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">For Restaurants</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Partner with Us</a></li>
+                        <li><a href="#">Restaurant Portal</a></li>
+                        <li><a href="#">Restaurant Success</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Subscribe to our newsletter</h4>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Altayer. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="darkmode.js"></script>
+    <script>
+        // Restaurant data
+        const restaurants = [
+            {
+                id: 1,
+                name: "Green Garden Salad Bar",
+                image: "https://static.vecteezy.com/system/resources/previews/007/774/305/non_2x/salad-bar-buffet-at-restaurant-fresh-salad-bar-buffet-for-lunch-or-dinner-healthy-food-fresh-green-and-purple-lettuce-in-white-plate-on-counter-catering-food-banquet-service-vegetarian-food-photo.jpg",
+                deliveryTime: "25-35 min",
+                rating: 4.8,
+                reviewCount: 200,
+                price: "$$",
+                tags: "Salads • Healthy • Vegan",
+                deliveryFee: "$0.99 Delivery Fee",
+                categories: ["healthy", "vegan"]
+            },
+            {
+                id: 2,
+                name: "Gourmet Burger House",
+                image: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+                deliveryTime: "15-25 min",
+                rating: 4.5,
+                reviewCount: 150,
+                price: "$$",
+                tags: "Burgers • Fast Food • American",
+                deliveryFee: "$1.49 Delivery Fee",
+                categories: ["burgers", "fast-food"]
+            },
+            {
+                id: 3,
+                name: "Napoli's Pizzeria",
+                image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1035&h=690&q=80",
+                deliveryTime: "20-30 min",
+                rating: 4.7,
+                reviewCount: 300,
+                price: "$$",
+                tags: "Pizza • Italian • Pasta",
+                deliveryFee: "$0.99 Delivery Fee",
+                categories: ["pizza", "italian"]
+            },
+            {
+                id: 4,
+                name: "Sushi Sensation",
+                image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c",
+                deliveryTime: "30-40 min",
+                rating: 4.9,
+                reviewCount: 400,
+                price: "$$$",
+                tags: "Sushi • Japanese • Asian",
+                deliveryFee: "$2.49 Delivery Fee",
+                categories: ["sushi", "asian", "japanese"]
+            },
+            {
+                id: 5,
+                name: "Taco Fiesta",
+                image: "https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c",
+                deliveryTime: "20-30 min",
+                rating: 4.6,
+                reviewCount: 180,
+                price: "$",
+                tags: "Mexican • Tacos • Burritos",
+                deliveryFee: "$1.99 Delivery Fee",
+                categories: ["mexican", "tacos"]
+            },
+            {
+                id: 6,
+                name: "Morning Brew Café",
+                image: "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg",
+                deliveryTime: "15-25 min",
+                rating: 4.7,
+                reviewCount: 200,
+                price: "$$",
+                tags: "Coffee • Breakfast • Pastries",
+                deliveryFee: "$0.99 Delivery Fee",
+                categories: ["coffee", "breakfast"]
+            },
+            {
+                id: 7,
+                name: "BBQ King",
+                image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+                deliveryTime: "30-45 min",
+                rating: 4.4,
+                reviewCount: 120,
+                price: "$$",
+                tags: "BBQ • American • Meat",
+                deliveryFee: "$1.99 Delivery Fee",
+                categories: ["bbq", "meat"]
+            },
+            {
+                id: 8,
+                name: "Pasta Palace",
+                image: "https://images.unsplash.com/photo-1608897013039-887f21d8c804",
+                deliveryTime: "25-35 min",
+                rating: 4.6,
+                reviewCount: 160,
+                price: "$$",
+                tags: "Pasta • Italian • Vegetarian",
+                deliveryFee: "$1.49 Delivery Fee",
+                categories: ["pasta", "italian"]
+            },
+            {
+                id: 9,
+                name: "Sweet Tooth",
+                image: "https://images.unsplash.com/photo-1551024506-0bccd828d307",
+                deliveryTime: "20-30 min",
+                rating: 4.8,
+                reviewCount: 90,
+                price: "$$",
+                tags: "Desserts • Cakes • Ice Cream",
+                deliveryFee: "$0.99 Delivery Fee",
+                categories: ["desserts", "cakes"]
+            },
+            {
+                id: 10,
+                name: "Chicken Express",
+                image: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143",
+                deliveryTime: "15-25 min",
+                rating: 4.3,
+                reviewCount: 140,
+                price: "$",
+                tags: "Chicken • Fast Food • American",
+                deliveryFee: "$1.49 Delivery Fee",
+                categories: ["chicken", "fast-food"]
+            },
+            {
+                id: 11,
+                name: "Veggie Delight",
+                image: "https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f",
+                deliveryTime: "25-35 min",
+                rating: 4.7,
+                reviewCount: 110,
+                price: "$$",
+                tags: "Vegetarian • Healthy • Vegan",
+                deliveryFee: "$0.99 Delivery Fee",
+                categories: ["vegetarian", "healthy"]
+            },
+            {
+                id: 12,
+                name: "Burger Barn",
+                image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+                deliveryTime: "15-25 min",
+                rating: 4.5,
+                reviewCount: 220,
+                price: "$$",
+                tags: "Burgers • Fast Food • American",
+                deliveryFee: "$1.49 Delivery Fee",
+                categories: ["burgers", "fast-food"]
+            }
+        ];
+
+        // DOM elements
+        const restaurantGrid = document.getElementById('restaurant-grid');
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const loadMoreBtn = document.getElementById('load-more');
+        const sortSelect = document.getElementById('sort-options');
+
+        // Initial variables
+        let currentCategory = 'all';
+        let visibleCount = 6;
+        const itemsPerLoad = 6;
+
+        // Function to render restaurants
+        function renderRestaurants(category = 'all', sortBy = 'recommended') {
+            // Filter by category
+            let filtered = restaurants;
+            if (category !== 'all') {
+                filtered = restaurants.filter(restaurant => 
+                    restaurant.categories.includes(category) || 
+                    restaurant.tags.toLowerCase().includes(category)
+                );
+            }
+
+            // Sort by selected option
+            switch(sortBy) {
+                case 'rating':
+                    filtered.sort((a, b) => b.rating - a.rating);
+                    break;
+                case 'delivery':
+                    filtered.sort((a, b) => 
+                        parseInt(a.deliveryTime) - parseInt(b.deliveryTime)
+                    );
+                    break;
+                case 'distance':
+                    // Simulate distance sorting
+                    filtered.sort(() => Math.random() - 0.5);
+                    break;
+                default:
+                    // Recommended (default) - could be any logic
+                    break;
+            }
+
+            // Clear the grid
+            restaurantGrid.innerHTML = '';
+
+            // Show only visible restaurants
+            const visibleRestaurants = filtered.slice(0, visibleCount);
+
+            // Render restaurants
+            visibleRestaurants.forEach(restaurant => {
+                const restaurantCard = document.createElement('a');
+                restaurantCard.href = `restaurantcard${restaurant.id}.html`;
+                restaurantCard.className = 'restaurant-card';
+                restaurantCard.innerHTML = `
+                    <div class="restaurant-img">
+                        <img src="${restaurant.image}" alt="${restaurant.name}">
+                        <div class="delivery-time">${restaurant.deliveryTime}</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>${restaurant.name}</h3>
+                        <div class="restaurant-meta">
+                            <span class="rating"><i class="fas fa-star"></i> ${restaurant.rating} (${restaurant.reviewCount}+)</span>
+                            <span class="price">${restaurant.price}</span>
+                        </div>
+                        <p class="restaurant-tags">${restaurant.tags}</p>
+                        <p class="delivery-fee">${restaurant.deliveryFee}</p>
+                    </div>
+                `;
+                restaurantGrid.appendChild(restaurantCard);
+            });
+
+            // Show/hide load more button
+            loadMoreBtn.style.display = visibleCount < filtered.length ? 'block' : 'none';
+        }
+
+        // Event listeners
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                // Update active class
+                filterTags.forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+                
+                // Update current category
+                currentCategory = tag.dataset.category;
+                
+                // Reset visible count
+                visibleCount = itemsPerLoad;
+                
+                // Render with new filter
+                renderRestaurants(currentCategory, sortSelect.value);
+            });
+        });
+
+        sortSelect.addEventListener('change', () => {
+            renderRestaurants(currentCategory, sortSelect.value);
+        });
+
+        loadMoreBtn.addEventListener('click', () => {
+            visibleCount += itemsPerLoad;
+            renderRestaurants(currentCategory, sortSelect.value);
+        });
+
+        // Check URL for category parameter
+        function checkUrlForCategory() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            
+            if (categoryParam) {
+                const matchingTag = Array.from(filterTags).find(
+                    tag => tag.dataset.category === categoryParam
+                );
+                
+                if (matchingTag) {
+                    matchingTag.click();
+                }
+            }
+        }
+
+        // Initial render
+        document.addEventListener('DOMContentLoaded', () => {
+            renderRestaurants();
+            checkUrlForCategory();
+        });
+    </script>
+</body>
+</html>
