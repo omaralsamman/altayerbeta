@@ -10,13 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    
 </head>
 <body>
     <!-- Header Section -->
@@ -59,7 +54,7 @@
                 <h2 style="color: white !important; -webkit-text-fill-color: white !important;">Food delivery in minutes</h2>
                 <p>Order food from the best local restaurants</p>
                 <div class="hero-cta">
-                    <a href="#restaurants" class="btn btn-primary">Order Now</a>
+                    <a href="restaurants.html" class="btn btn-primary">Order Now</a>
                 </div>
             </div>
         </div>
@@ -70,7 +65,7 @@
         <div class="container">
             <h2 class="section-title">Explore by Category</h2>
             <div class="category-list">
-                <div class="category-item">
+                <a href="restaurants.html?category=burgers" class="category-item">
                     <div class="category-icon" style="background-color: #FFE8D6;">
                         <i class="fas fa-hamburger" style="color: #CB997E;"></i>
                     </div>
@@ -79,8 +74,8 @@
                         <span>Explore</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="restaurants.html?category=pizza" class="category-item">
                     <div class="category-icon" style="background-color: #FFD6E0;">
                         <i class="fas fa-pizza-slice" style="color: #FF5D8F;"></i>
                     </div>
@@ -89,8 +84,8 @@
                         <span>Explore</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="restaurants.html?category=asian" class="category-item">
                     <div class="category-icon" style="background-color: #E2F3FB;">
                         <i class="fas fa-bowl-rice" style="color: #3D9BE9;"></i>
                     </div>
@@ -99,8 +94,8 @@
                         <span>Explore</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="restaurants.html?category=chicken" class="category-item">
                     <div class="category-icon" style="background-color: #FEEAFA;">
                         <i class="fas fa-drumstick-bite" style="color: #D47AE8;"></i>
                     </div>
@@ -109,9 +104,9 @@
                         <span>Explore</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
-                </div>
+                </a>
                 
-                <div class="category-item">
+                <a href="restaurants.html?category=desserts" class="category-item">
                     <div class="category-icon" style="background-color: #FFF5E6;">
                         <i class="fas fa-ice-cream" style="color: #FFA726;"></i>
                     </div>
@@ -120,8 +115,8 @@
                         <span>Explore</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="restaurants.html?category=coffee" class="category-item">
                     <div class="category-icon" style="background-color: #F5E9FF;">
                         <i class="fas fa-coffee" style="color: #9C27B0;"></i>
                     </div>
@@ -130,8 +125,7 @@
                         <span>Explore</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
-                </div>
-                
+                </a>
             </div>
         </div>
     </section>
@@ -144,7 +138,7 @@
                 <div class="featured-banner">
                     <div class="featured-content">
                         <h3>Free Delivery on Your First 3 Orders</h3>
-                        <a href="#restaurants" class="btn btn-light">Order Now</a>
+                        <a href="restaurants.html" class="btn btn-light">Order Now</a>
                     </div>
                 </div>
                 <div class="featured-banner banner-dark">
@@ -158,12 +152,11 @@
     </section>
 
     <!-- Restaurants Section -->
-    <section id="restaurants" class="restaurants">
+    <section class="restaurants">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Popular Restaurants</h2>
                 <div class="filter-options">
-                    
                     <select>
                         <option>Sort by: Recommended</option>
                         <option>Fastest Delivery</option>
@@ -196,7 +189,6 @@
                     <div class="restaurant-img burger-shop">
                         <div class="delivery-time">15-25 min</div>
                         <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="" style="display: flex;">
-
                     </div>
                     <div class="restaurant-info">
                         <h3>Gourmet Burger House</h3>
@@ -278,52 +270,48 @@
                 </a>
             </div>
 
-<div class="load-more">
-    <button class="btn btn-load-more">
-        Load More Restaurants
-    </button>
-</div>
+            <div class="load-more">
+                <a href="restaurants.html" class="btn btn-load-more">
+                    Load More Restaurants
+                </a>
+            </div>
         </div>
     </section>
 
-   <!-- Enhanced Download App Section -->
+    <!-- Download App Section -->
     <section class="download-app">
         <div class="container">
             <div class="download-content">
                 <div class="download-text">
-                    <h2>Experience Altayer on Mobile</h2>
-                    <p style="color: white;">Download our app for faster ordering, exclusive deals, and personalized recommendations.</p>
+                    <h2 id="di" style="color: var(--di-color) !important;">Download the Altayer App</h2>
+                    <p>Get exclusive offers and faster delivery. Order food you love on the go.</p>
                     <div class="app-buttons">
                         <a href="#" class="app-button">
                             <i class="fab fa-apple"></i>
                             <span>
                                 <small>Download on the</small>
-                                <strong>App Store</strong>
+                                App Store
                             </span>
                         </a>
                         <a href="#" class="app-button">
                             <i class="fab fa-google-play"></i>
                             <span>
                                 <small>GET IT ON</small>
-                                <strong>Google Play</strong>
+                                Google Play
                             </span>
                         </a>
                     </div>
                 </div>
                 <div class="app-mockup">
-                    <div class="phone-mockup">
-                        <div class="phone-notch"></div>
-                        <div class="phone-screen">
-    <div class="app-logo">
-        <i class="fas fa-utensils"></i> Altayer
-    </div>
-</div>
+                    <div class="phone-outline">
+                        <div class="phone-screen"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-   <!-- Footer -->
+
+    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
@@ -371,7 +359,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Altayer. All rights reserved.</p>
+                <p>&copy; 2023 Altayer. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -381,7 +369,6 @@
         </div>
     </footer>
     
-    <script src="darkmode.js "></script>
-    
+    <script src="darkmode.js"></script>
 </body>
 </html>
