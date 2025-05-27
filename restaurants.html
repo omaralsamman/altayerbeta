@@ -56,14 +56,16 @@
             <div class="section-header">
                 <h2 class="section-title">All Restaurants</h2>
                 <div class="filter-options">
-                    <div class="filter-tags">
-                        <button class="filter-tag active" data-category="all">All</button>
-                        <button class="filter-tag" data-category="burgers">Burgers</button>
-                        <button class="filter-tag" data-category="pizza">Pizza</button>
-                        <button class="filter-tag" data-category="asian">Asian</button>
-                        <button class="filter-tag" data-category="chicken">Chicken</button>
-                        <button class="filter-tag" data-category="desserts">Desserts</button>
-                        <button class="filter-tag" data-category="coffee">Coffee</button>
+                    <div class="filter-dropdown">
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="burgers">Burgers</option>
+                            <option value="pizza">Pizza</option>
+                            <option value="asian">Asian</option>
+                            <option value="chicken">Chicken</option>
+                            <option value="desserts">Desserts</option>
+                            <option value="coffee">Coffee</option>
+                        </select>
                     </div>
                     <select id="sort-options">
                         <option value="recommended">Sort by: Recommended</option>
@@ -294,7 +296,7 @@
 
         // DOM elements
         const restaurantGrid = document.getElementById('restaurant-grid');
-        const filterTags = document.querySelectorAll('.filter-tag');
+        const categoryFilter = document.getElementById('category-filter');
         const loadMoreBtn = document.getElementById('load-more');
         const sortSelect = document.getElementById('sort-options');
 
@@ -340,48 +342,45 @@
             const visibleRestaurants = filtered.slice(0, visibleCount);
 
             // Render restaurants
-            visibleRestaurants.forEach(restaurant => {
-                const restaurantCard = document.createElement('a');
-                restaurantCard.href = `restaurantcard${restaurant.id}.html`;
-                restaurantCard.className = 'restaurant-card';
-                restaurantCard.innerHTML = `
-                    <div class="restaurant-img">
-                        <img src="${restaurant.image}" alt="${restaurant.name}">
-                        <div class="delivery-time">${restaurant.deliveryTime}</div>
-                    </div>
-                    <div class="restaurant-info">
-                        <h3>${restaurant.name}</h3>
-                        <div class="restaurant-meta">
-                            <span class="rating"><i class="fas fa-star"></i> ${restaurant.rating} (${restaurant.reviewCount}+)</span>
-                            <span class="price">${restaurant.price}</span>
-                        </div>
-                        <p class="restaurant-tags">${restaurant.tags}</p>
-                        <p class="delivery-fee">${restaurant.deliveryFee}</p>
+            if (visibleRestaurants.length === 0) {
+                restaurantGrid.innerHTML = `
+                    <div class="no-results">
+                        <p>No restaurants found in this category. Try another filter.</p>
                     </div>
                 `;
-                restaurantGrid.appendChild(restaurantCard);
-            });
+            } else {
+                visibleRestaurants.forEach(restaurant => {
+                    const restaurantCard = document.createElement('a');
+                    restaurantCard.href = `restaurantcard${restaurant.id}.html`;
+                    restaurantCard.className = 'restaurant-card';
+                    restaurantCard.innerHTML = `
+                        <div class="restaurant-img">
+                            <img src="${restaurant.image}" alt="${restaurant.name}">
+                            <div class="delivery-time">${restaurant.deliveryTime}</div>
+                        </div>
+                        <div class="restaurant-info">
+                            <h3>${restaurant.name}</h3>
+                            <div class="restaurant-meta">
+                                <span class="rating"><i class="fas fa-star"></i> ${restaurant.rating} (${restaurant.reviewCount}+)</span>
+                                <span class="price">${restaurant.price}</span>
+                            </div>
+                            <p class="restaurant-tags">${restaurant.tags}</p>
+                            <p class="delivery-fee">${restaurant.deliveryFee}</p>
+                        </div>
+                    `;
+                    restaurantGrid.appendChild(restaurantCard);
+                });
+            }
 
             // Show/hide load more button
             loadMoreBtn.style.display = visibleCount < filtered.length ? 'block' : 'none';
         }
 
         // Event listeners
-        filterTags.forEach(tag => {
-            tag.addEventListener('click', () => {
-                // Update active class
-                filterTags.forEach(t => t.classList.remove('active'));
-                tag.classList.add('active');
-                
-                // Update current category
-                currentCategory = tag.dataset.category;
-                
-                // Reset visible count
-                visibleCount = itemsPerLoad;
-                
-                // Render with new filter
-                renderRestaurants(currentCategory, sortSelect.value);
-            });
+        categoryFilter.addEventListener('change', () => {
+            currentCategory = categoryFilter.value;
+            visibleCount = itemsPerLoad;
+            renderRestaurants(currentCategory, sortSelect.value);
         });
 
         sortSelect.addEventListener('change', () => {
@@ -399,13 +398,8 @@
             const categoryParam = urlParams.get('category');
             
             if (categoryParam) {
-                const matchingTag = Array.from(filterTags).find(
-                    tag => tag.dataset.category === categoryParam
-                );
-                
-                if (matchingTag) {
-                    matchingTag.click();
-                }
+                categoryFilter.value = categoryParam;
+                currentCategory = categoryParam;
             }
         }
 
