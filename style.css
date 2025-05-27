@@ -2790,3 +2790,247 @@ body.dark-mode .phone-screen {
     font-size: 30px;
     color: var(--primary-color);
 }
+/* Elegant Download App Section */
+.download-app {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--background-light);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+.download-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.download-text {
+    flex: 1;
+    padding-right: var(--spacing-xxl);
+}
+
+.download-text h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.3;
+    color: var(--text-primary);
+}
+
+.download-text p {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-lg);
+    max-width: 500px;
+    color: var(--text-secondary);
+}
+
+.app-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.app-button {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-white);
+    color: var(--text-primary);
+    border-radius: var(--border-radius-md);
+    padding: 10px 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.app-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.app-button i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.app-button span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.app-button small {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.app-button strong {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.app-mockup {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.phone-mockup {
+    width: 240px;
+    height: 480px;
+    background: var(--background-white);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 10px solid var(--border-color);
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-extra-light) 0%, var(--background-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.phone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 20px;
+    background: var(--border-color);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 2;
+}
+
+/* Dark mode specific styles */
+body.dark-mode .download-app {
+    background-color: var(--background-dark);
+}
+
+body.dark-mode .phone-mockup {
+    border-color: #444;
+}
+
+body.dark-mode .phone-notch {
+    background: #444;
+}
+
+body.dark-mode .phone-screen {
+    background: linear-gradient(135deg, #1a3a2a 0%, #121212 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .download-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .download-text {
+        padding-right: 0;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .app-buttons {
+        justify-content: center;
+    }
+    
+    .phone-mockup {
+        margin-top: var(--spacing-xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .download-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .download-text p {
+        font-size: 0.9rem;
+    }
+    
+    .app-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .phone-mockup {
+        width: 200px;
+        height: 400px;
+        border-radius: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .download-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .phone-mockup {
+        width: 160px;
+        height: 320px;
+    }
+}
+
+.phone-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Altayer logo inside phone */
+.app-logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-logo i {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+/* Calm and subtle green background for Download App section */
+.download-app {
+    background: linear-gradient(135deg,  #1c8f4c, #77d286); /* Soft, calming green gradient */
+    padding: var(--spacing-xxl) 0;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.5s ease;
+}
+
+/* Optional: add a subtle overlay pattern for more depth */
+.download-app:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.2;
+    z-index: 1;
+}
