@@ -3329,3 +3329,11 @@ body.dark-mode .phone-screen {
     background-color: #333;
     color: #333;
 }
+.phone-mockup {
+    border: 12px solid #333 !important; /* Dark gray border that stays consistent */
+}
+
+/* Dark mode specific adjustment - ensure it stays dark gray */
+body.dark-mode .phone-mockup {
+    border-color: #333 !important;
+}
