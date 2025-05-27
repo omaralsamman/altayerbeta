@@ -3040,5 +3040,52 @@ body.dark-mode .phone-screen {
 .dark-mode .download-text{
     color: white;
 }
+/* Filter Options */
+.filter-options {
+    display: flex;
+    gap: var(--spacing-md);
+}
 
+.filter-options select {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-options select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* No Results Message */
+.no-results {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: var(--background-white);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-xl);
+    display: none;
+}
+
+.no-results p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .filter-options select {
+    background-color: var(--background-white);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .no-results {
+    background-color: var(--background-dark);
+}
 
