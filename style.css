@@ -3034,3 +3034,11 @@ body.dark-mode .phone-screen {
     opacity: 0.2;
     z-index: 1;
 }
+.download-text h2{
+    color: #ffffff;
+}
+.dark-mode .download-text{
+    color: white;
+}
+
+
