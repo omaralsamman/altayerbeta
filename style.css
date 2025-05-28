@@ -5461,3 +5461,67 @@ body.dark-mode .wave-top svg path {
   fill: url(#waveGradient);
 }
 
+/* Search Results Styles */
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--background-white);
+    border: 1px solid var(--border-color);
+    border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+}
+
+.search-result-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.search-result-item:hover {
+    background-color: var(--primary-extra-light);
+}
+
+.search-result-item i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.search-result-category {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.search-result-restaurant {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.search-result-text {
+    flex: 1;
+}
+
+.search-result-type {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 2px;
+}
+
+/* Dark mode styles */
+body.dark-mode .search-results {
+    background-color: var(--background-white);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .search-result-item:hover {
+    background-color: var(--primary-extra-light);
+}
