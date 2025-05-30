@@ -5525,3 +5525,10 @@ body.dark-mode .search-results {
 body.dark-mode .search-result-item:hover {
     background-color: var(--primary-extra-light);
 }
+.legal-links{
+    
+    padding: 10px;
+}
+.footer-legal{
+    padding: 10px;
+}
