@@ -5460,7 +5460,6 @@ body.dark-mode .wave-top svg path {
 .wave-top svg path {
   fill: url(#waveGradient);
 }
-
 /* Search Results Styles */
 .search-results {
     position: absolute;
@@ -5530,5 +5529,798 @@ body.dark-mode .search-result-item:hover {
     padding: 10px;
 }
 .footer-legal{
-    padding: 10px;
+    padding: 10px;
+}
+/* plus.css */
+.plus-hero {
+    background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+    color: white;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.plus-hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plus-hero-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.plus-hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.plus-hero-text .subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.plus-hero-image {
+    flex: 1;
+    position: relative;
+}
+
+.plus-hero-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.plus-benefits {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background: #f0fff4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #2e8b57;
+    font-size: 1.5rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.benefit-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.plus-pricing {
+    padding: 80px 0;
+    background: white;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.pricing-card.featured {
+    border: 2px solid #2e8b57;
+    transform: scale(1.02);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #2e8b57;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.pricing-header {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-header h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pricing-header .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2e8b57;
+}
+
+.pricing-header .price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+}
+
+.pricing-header .billing-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.pricing-features {
+    margin-bottom: 30px;
+}
+
+.pricing-features li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    color: #555;
+}
+
+.pricing-features li i {
+    color: #2e8b57;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.plus-faq-preview {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.faq-preview-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-preview-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.faq-preview-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.faq-preview-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.faq-preview-questions {
+    flex: 1;
+}
+
+.faq-question {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.faq-question h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.faq-question p {
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .plus-hero-content, .faq-preview-content {
+        flex-direction: column;
+    }
+    
+    .plus-hero-text, .faq-preview-text {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+}
+/* faqs.css */
+.faqs-hero {
+    background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+    color: white;
+    padding: 100px 0 80px;
+    text-align: center;
+}
+
+.faqs-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.faqs-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.search-faqs {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.search-faqs input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-faqs button {
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    padding: 0 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-faqs button:hover {
+    background: #222;
+}
+
+.faqs-content {
+    padding: 80px 0;
+}
+
+.faqs-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.category-btn {
+    padding: 10px 20px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.category-btn:hover {
+    background: #e0e0e0;
+}
+
+.category-btn.active {
+    background: #2e8b57;
+    color: white;
+}
+
+.faqs-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px 25px;
+    background: white;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.faq-question:hover {
+    background: #f9f9f9;
+}
+
+.faq-question i {
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    background: #f9f9f9;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 0 25px 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-question {
+    background: #f0fff4;
+    color: #2e8b57;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+}
+
+.faqs-contact {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background: #f0fff4;
+    border-radius: 10px;
+}
+
+.faqs-contact h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.faqs-contact p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .faqs-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .faqs-hero p {
+        font-size: 1rem;
+    }
+    
+    .faq-question {
+        font-size: 1rem;
+        padding: 15px 20px;
+    }
+}
+/* track-order.css */
+.track-hero {
+    background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+    color: white;
+    padding: 100px 0 80px;
+    text-align: center;
+}
+
+.track-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.track-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+.track-content {
+    padding: 80px 0;
+}
+
+.track-form {
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.form-container {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #2e8b57;
+    outline: none;
+}
+
+.order-status {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.status-intro h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.status-intro p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.status-steps {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.status-steps::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #ddd;
+    z-index: 1;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    border: 3px solid #ddd;
+    color: #999;
+    font-size: 1.2rem;
+}
+
+.track-faq {
+    background: #f0fff4;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+.track-faq h3 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.faq-items {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h4 {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.faq-item h4 i {
+    margin-right: 10px;
+    color: #2e8b57;
+}
+
+.faq-item p {
+    color: #666;
+    padding-left: 30px;
+}
+
+@media (max-width: 768px) {
+    .track-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .track-hero p {
+        font-size: 1rem;
+    }
+    
+    .status-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .status-steps::before {
+        display: none;
+    }
+    
+    .step {
+        margin-bottom: 30px;
+    }
+    
+    .step:last-child {
+        margin-bottom: 0;
+    }
+}
+/* payment-options.css */
+.payment-hero {
+    background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+    color: white;
+    padding: 100px 0 80px;
+    text-align: center;
+}
+
+.payment-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.payment-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+.payment-content {
+    padding: 80px 0;
+}
+
+.payment-methods {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.payment-method {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.method-icon {
+    width: 60px;
+    height: 60px;
+    background: #f0fff4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #2e8b57;
+    font-size: 1.5rem;
+}
+
+.method-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.method-details p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-brands {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.card-brands img {
+    height: 30px;
+    width: auto;
+    opacity: 0.8;
+}
+
+.card-brands span {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.payment-faq {
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.payment-faq h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.faq-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.faq-item {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.faq-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.payment-security {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.payment-security h2 {
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.security-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    background: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: #2e8b57;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feature p {
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .payment-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .payment-hero p {
+        font-size: 1rem;
+    }
+    
+    .payment-methods, .faq-items {
+        grid-template-columns: 1fr;
+    }
 }
