@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options - Altayer Food Delivery</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="payment-options.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><h1><i class="fas fa-utensils"></i> Altayer</h1></a>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for food, restaurants..." id="search-input">
+                        <div class="search-results" id="search-results"></div>
+                    </div>
+                    
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="darkmode-switch">
+                        <label for="darkmode-switch" class="toggle-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="toggle-ball"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="user-actions">
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <a href="signin.html" class="signin-btn">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Payment Options Hero -->
+    <section class="payment-hero">
+        <div class="container">
+            <h1>Payment Options</h1>
+            <p>Secure and convenient ways to pay for your orders</p>
+        </div>
+    </section>
+
+    <!-- Payment Options Main Content -->
+    <section class="payment-content">
+        <div class="container">
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <div class="method-icon">
+                        <i class="far fa-credit-card"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>Credit/Debit Cards</h3>
+                        <p>We accept all major credit and debit cards including Visa, MasterCard, American Express, and Discover. All transactions are securely processed with 256-bit encryption.</p>
+                        <div class="card-brands">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visa/visa-original.svg" alt="Visa">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mastercard/mastercard-original.svg" alt="MasterCard">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="American Express" style="filter: brightness(0.8);">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="method-icon">
+                        <i class="fab fa-paypal"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>PayPal</h3>
+                        <p>Pay quickly and securely with your PayPal account. No need to enter card details - just log in to your PayPal account to complete your payment.</p>
+                        <div class="card-brands">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/paypal/paypal-original.svg" alt="PayPal">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="method-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>Mobile Wallets</h3>
+                        <p>Use Apple Pay, Google Pay, or Samsung Pay for faster checkout. Just authorize with your fingerprint or face ID for instant payment.</p>
+                        <div class="card-brands">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="Apple Pay">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google Pay">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="method-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>Cash on Delivery</h3>
+                        <p>Available in select areas. Pay with cash when your order arrives at your doorstep. Please have exact change ready for the driver.</p>
+                        <div class="card-brands">
+                            <span>Available in limited regions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-faq">
+                <h2>Payment FAQs</h2>
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <h3>Is it safe to enter my payment details?</h3>
+                        <p>Yes, we use industry-standard SSL encryption to protect your payment information. We don't store your full card details on our servers.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Why was my payment declined?</h3>
+                        <p>This could be due to insufficient funds, incorrect card details, or your bank's security measures. Contact your bank or try a different payment method.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I use multiple payment methods?</h3>
+                        <p>Currently, we only accept one payment method per order. However, you can use Altayer Cash (from gift cards or credits) along with another payment method.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How do I get a refund?</h3>
+                        <p>Refunds are processed to the original payment method within 5-7 business days. For issues with your order, please contact customer support.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-security">
+                <h2>Payment Security</h2>
+                <div class="security-features">
+                    <div class="feature">
+                        <i class="fas fa-lock"></i>
+                        <h3>256-bit Encryption</h3>
+                        <p>All transactions are protected with bank-level security.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>PCI DSS Compliant</h3>
+                        <p>We meet the highest standards for payment security.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Fraud Protection</h3>
+                        <p>Advanced systems monitor for suspicious activity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="altayer-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>Altayer</span>
+                    </div>
+                    <p class="footer-tagline">Delivering happiness one meal at a time</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-title">Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="plus.html">Altayer Plus</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-title">Help</h4>
+                        <ul class="footer-links">
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="track-order.html">Track Order</a></li>
+                            <li><a href="payment-options.html">Payment Options</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 Altayer. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bar.js"></script>
+    <script src="darkmode.js"></script>
+</body>
+</html>
