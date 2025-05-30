@@ -156,18 +156,29 @@
     <!-- Restaurants Section -->
     <section class="restaurants">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Popular Restaurants</h2>
-                <div class="filter-options">
-                    <select>
-                        <option>Sort by: Recommended</option>
-                        <option>Fastest Delivery</option>
-                        <option>Rating</option>
-                        <option>Distance</option>
-                    </select>
-                </div>
-            </div>
-
+           <!-- In the section-header div of the restaurants section in index.html -->
+<div class="section-header">
+    <h2 class="section-title">Popular Restaurants</h2>
+    <div class="filter-options">
+        <div class="filter-dropdown">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="burgers">Burgers</option>
+                <option value="pizza">Pizza</option>
+                <option value="asian">Asian</option>
+                <option value="chicken">Chicken</option>
+                <option value="desserts">Desserts</option>
+                <option value="coffee">Coffee</option>
+            </select>
+        </div>
+        <select id="sort-options">
+            <option value="recommended">Sort by: Recommended</option>
+            <option value="delivery">Fastest Delivery</option>
+            <option value="rating">Rating</option>
+            <option value="distance">Distance</option>
+        </select>
+    </div>
+</div>
             <div class="restaurant-grid">
                 <!-- Restaurant Card 1 -->
                 <a href="restaurantcard1.html" class="restaurant-card">
@@ -411,7 +422,8 @@
                         <ul class="footer-links">
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="contact.html">Contact</a></li>
-                            <li><a href="#">Altayer Plus</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
                         </ul>
                     </div>
 
@@ -419,20 +431,31 @@
                         <h4 class="footer-title">Help</h4>
                         <ul class="footer-links">
                             <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Delivery Info</a></li>
                             <li><a href="#">Track Order</a></li>
                             <li><a href="#">Payment Options</a></li>
                         </ul>
                     </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-title">For Restaurants</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Partner With Us</a></li>
+                            <li><a href="#">Merchant Portal</a></li>
+                            <li><a href="#">Business Solutions</a></li>
+                        </ul>
                     </div>
+
+                   
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <div class="footer-legal">
-                    <p>&copy; 2025 Altayer All rights reserved.</p>
+                    <p>&copy; 2025 Altayer. All rights reserved.</p>
                     <div class="legal-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
+                        <a href="#"></a>Privacy Policy</a>
+                        <a href="#">Terms of Service</a><br>
                         <a href="#">Cookie Policy</a>
                     </div>
                 </div>
@@ -443,3 +466,168 @@
     <script src="darkmode.js"></script>
 </body>
 </html>
+<script>
+    // Restaurant data for index page
+    const indexRestaurants = [
+        {
+            id: 1,
+            name: "Green Garden Salad Bar",
+            image: "https://static.vecteezy.com/system/resources/previews/007/774/305/non_2x/salad-bar-buffet-at-restaurant-fresh-salad-bar-buffet-for-lunch-or-dinner-healthy-food-fresh-green-and-purple-lettuce-in-white-plate-on-counter-catering-food-banquet-service-vegetarian-food-photo.jpg",
+            deliveryTime: "25-35 min",
+            rating: 4.8,
+            reviewCount: 200,
+            price: "$$",
+            tags: "Salads • Healthy • Vegan",
+            deliveryFee: "$0.99 Delivery Fee",
+            categories: ["healthy", "vegan"]
+        },
+        {
+            id: 2,
+            name: "Gourmet Burger House",
+            image: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+            deliveryTime: "15-25 min",
+            rating: 4.5,
+            reviewCount: 150,
+            price: "$$",
+            tags: "Burgers • Fast Food • American",
+            deliveryFee: "$1.49 Delivery Fee",
+            categories: ["burgers", "fast-food"]
+        },
+        {
+            id: 3,
+            name: "Napoli's Pizzeria",
+            image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1035&h=690&q=80",
+            deliveryTime: "20-30 min",
+            rating: 4.7,
+            reviewCount: 300,
+            price: "$$",
+            tags: "Pizza • Italian • Pasta",
+            deliveryFee: "$0.99 Delivery Fee",
+            categories: ["pizza", "italian"]
+        },
+        {
+            id: 4,
+            name: "Sushi Sensation",
+            image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c",
+            deliveryTime: "30-40 min",
+            rating: 4.9,
+            reviewCount: 400,
+            price: "$$$",
+            tags: "Sushi • Japanese • Asian",
+            deliveryFee: "$2.49 Delivery Fee",
+            categories: ["sushi", "asian", "japanese"]
+        },
+        {
+            id: 5,
+            name: "Taco Fiesta",
+            image: "https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c",
+            deliveryTime: "20-30 min",
+            rating: 4.6,
+            reviewCount: 180,
+            price: "$",
+            tags: "Mexican • Tacos • Burritos",
+            deliveryFee: "$1.99 Delivery Fee",
+            categories: ["mexican", "tacos"]
+        },
+        {
+            id: 6,
+            name: "Morning Brew Café",
+            image: "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg",
+            deliveryTime: "15-25 min",
+            rating: 4.7,
+            reviewCount: 200,
+            price: "$$",
+            tags: "Coffee • Breakfast • Pastries",
+            deliveryFee: "$0.99 Delivery Fee",
+            categories: ["coffee", "breakfast"]
+        }
+    ];
+
+    // DOM elements
+    const restaurantGrid = document.querySelector('.restaurant-grid');
+    const categoryFilter = document.getElementById('category-filter');
+    const sortSelect = document.getElementById('sort-options');
+
+    // Initial variables
+    let currentCategory = 'all';
+
+    // Function to render restaurants
+    function renderRestaurants(category = 'all', sortBy = 'recommended') {
+        // Filter by category
+        let filtered = indexRestaurants;
+        if (category !== 'all') {
+            filtered = indexRestaurants.filter(restaurant => 
+                restaurant.categories.includes(category) || 
+                restaurant.tags.toLowerCase().includes(category)
+            );
+        }
+
+        // Sort by selected option
+        switch(sortBy) {
+            case 'rating':
+                filtered.sort((a, b) => b.rating - a.rating);
+                break;
+            case 'delivery':
+                filtered.sort((a, b) => 
+                    parseInt(a.deliveryTime) - parseInt(b.deliveryTime)
+                );
+                break;
+            case 'distance':
+                // Simulate distance sorting
+                filtered.sort(() => Math.random() - 0.5);
+                break;
+            default:
+                // Recommended (default) - could be any logic
+                break;
+        }
+
+        // Clear the grid
+        restaurantGrid.innerHTML = '';
+
+        // Render restaurants
+        if (filtered.length === 0) {
+            restaurantGrid.innerHTML = `
+                <div class="no-results">
+                    <p>No restaurants found in this category. Try another filter.</p>
+                </div>
+            `;
+        } else {
+            filtered.forEach(restaurant => {
+                const restaurantCard = document.createElement('a');
+                restaurantCard.href = `restaurantcard${restaurant.id}.html`;
+                restaurantCard.className = 'restaurant-card';
+                restaurantCard.innerHTML = `
+                    <div class="restaurant-img">
+                        <img src="${restaurant.image}" alt="${restaurant.name}">
+                        <div class="delivery-time">${restaurant.deliveryTime}</div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>${restaurant.name}</h3>
+                        <div class="restaurant-meta">
+                            <span class="rating"><i class="fas fa-star"></i> ${restaurant.rating} (${restaurant.reviewCount}+)</span>
+                            <span class="price">${restaurant.price}</span>
+                        </div>
+                        <p class="restaurant-tags">${restaurant.tags}</p>
+                        <p class="delivery-fee">${restaurant.deliveryFee}</p>
+                    </div>
+                `;
+                restaurantGrid.appendChild(restaurantCard);
+            });
+        }
+    }
+
+    // Event listeners
+    categoryFilter.addEventListener('change', () => {
+        currentCategory = categoryFilter.value;
+        renderRestaurants(currentCategory, sortSelect.value);
+    });
+
+    sortSelect.addEventListener('change', () => {
+        renderRestaurants(currentCategory, sortSelect.value);
+    });
+
+    // Initial render
+    document.addEventListener('DOMContentLoaded', () => {
+        renderRestaurants();
+    });
+</script>
