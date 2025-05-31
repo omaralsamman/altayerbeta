@@ -6324,3 +6324,208 @@ body.dark-mode .search-result-item:hover {
         grid-template-columns: 1fr;
     }
 }
+/* Filter options styling */
+.filter-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.filter-dropdown select, 
+.filter-options select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-dropdown select:hover, 
+.filter-options select:hover {
+    border-color: #2e8b57;
+}
+
+.filter-dropdown {
+    position: relative;
+}
+
+.filter-dropdown::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666;
+    font-size: 12px;
+}
+
+/* No results message */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+/* ===== Elegant App Features ===== */
+.app-features {
+    display: flex;
+    gap: 18px;
+    margin: 40px 0;
+    justify-content: center;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 20px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.08),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 60%
+    );
+    transform: rotate(30deg);
+    pointer-events: none;
+}
+
+.feature:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-4px);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.12),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.feature-icon {
+    background: linear-gradient(135deg, #2e8b57, #4bc389);
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 17px;
+    box-shadow: 
+        0 4px 12px rgba(46, 139, 87, 0.3),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover .feature-icon {
+    transform: scale(1.05);
+}
+
+.feature p {
+    margin: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .app-features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature {
+        width: 100%;
+        max-width: 280px;
+        justify-content: flex-start;
+    }
+}
+.feature {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.feature p {
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    position: relative;
+    padding-left: 0;
+}
+
+.feature p::before {
+    content: "•";
+    color: #4bc389;
+    margin-right: 12px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+/* Remove icon-specific styles */
+.feature-icon {
+    display: none; /* Completely hides the icon container */
+}
+
+/* OR if keeping empty space: */
+.feature-icon {
+    background: transparent;
+    box-shadow: none;
+    width: 0;
+    height: 0;
+}
+
+/* Adjust feature alignment */
+.feature {
+    justify-content: center; /* Centers text */
+    padding: 20px 28px; /* Slightly reduce padding */
+    gap: 0; /* Remove gap between non-existent icon and text */
+}
+.feature {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.feature p {
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    position: relative;
+    padding-left: 0;
+}
+
+.feature p::before {
+    content: "•";
+    color: #4bc389;
+    margin-right: 12px;
+    font-size: 20px;
+    vertical-align: middle;
+}
