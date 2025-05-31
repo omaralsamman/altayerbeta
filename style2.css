@@ -1,0 +1,1029 @@
+/* Reset and Base Styles */
+:root {
+    /* Main color palette - Green theme */
+    --primary-color: #2ecc71;
+    --primary-dark: #27ae60;
+    --primary-light: #a9dfbf;
+    --primary-extra-light: #eafaf1;
+    --secondary-color: #1abc9c;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-light: #999999;
+    --background-light: #f9f9f9;
+    --background-white: #ffffff;
+    --background-dark: #333333;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --error-color: #e74c3c;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --info-color: #3498db;
+    
+    /* Layout variables */
+    --header-height: 80px;
+    --container-max-width: 1200px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* Header Styles (unchanged as requested) */
+.main-header {
+    background-color: var(--background-white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    padding: var(--spacing-md) 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 i {
+    margin-right: var(--spacing-sm);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px 15px 10px 40px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    width: 300px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: var(--background-white);
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.search-bar i {
+    position: absolute;
+    left: 15px;
+    color: var(--text-light);
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.cart-btn {
+    font-size: 20px;
+    color: var(--text-primary);
+    transition: transform 0.3s ease;
+}
+
+.cart-btn:hover {
+    transform: translateY(-2px);
+    color: var(--primary-color);
+}
+
+.signin-btn {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.signin-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: relative;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
+    width: 50px;
+    height: 24px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-label i {
+    font-size: 12px;
+    color: var(--text-secondary);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.toggle-label .fa-moon {
+    margin-right: 10px;
+}
+
+.toggle-label .fa-sun {
+    margin-left: 10px;
+    color: #f39c12;
+}
+
+.toggle-ball {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    background-color: var(--background-white);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#darkmode-switch {
+    display: none;
+}
+
+#darkmode-switch:checked + .toggle-label {
+    background-color: #444;
+}
+
+#darkmode-switch:checked + .toggle-label .toggle-ball {
+    transform: translateX(26px);
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-primary);
+    position: relative;
+}
+
+.section-title:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin-top: 8px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-light {
+    background-color: var(--background-white);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-light:hover {
+    background-color: var(--background-light);
+}
+
+/* Track Order Page Styles */
+.track-hero {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-xxl) 0;
+    text-align: center;
+}
+
+.track-hero h1 {
+    font-size: 36px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.track-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.track-content {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--background-light);
+}
+
+.track-form {
+    background-color: var(--background-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    margin-bottom: var(--spacing-xl);
+}
+
+.track-form h2 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.order-status {
+    background-color: var(--background-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    margin-bottom: var(--spacing-xl);
+}
+
+.status-intro h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.status-intro p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.status-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.step {
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-extra-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.step p {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.track-faq {
+    background-color: var(--background-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.track-faq h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.faq-items {
+    display: grid;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.faq-item {
+    background-color: var(--background-light);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h4 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.faq-item h4 i {
+    color: var(--primary-color);
+}
+
+.faq-item p {
+    color: var(--text-secondary);
+}
+
+/* Footer */
+.altayer-footer {
+    background-color: var(--background-dark);
+    color: white;
+    padding: var(--spacing-xxl) 0 var(--spacing-lg);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-logo i {
+    color: var(--primary-color);
+}
+
+.footer-tagline {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.footer-social {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-link {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.footer-col h4:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-top: 8px;
+}
+
+.footer-links li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.legal-links {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.legal-links a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: white;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --primary-color: #2ecc71;
+    --primary-dark: #27ae60;
+    --primary-light: #1a3a2a;
+    --primary-extra-light: #0d1f15;
+    --secondary-color: #1abc9c;
+    --text-primary: #f0f0f0;
+    --text-secondary: #cccccc;
+    --text-light: #999999;
+    --background-light: #121212;
+    --background-white: #1e1e1e;
+    --background-dark: #252525;
+    --border-color: #444444;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .main-header {
+    background-color: var(--background-dark);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .search-bar input {
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .search-bar i {
+    color: var(--text-light);
+}
+
+body.dark-mode .cart-btn {
+    color: var(--text-primary);
+}
+
+body.dark-mode .cart-btn:hover {
+    color: var(--primary-color);
+}
+
+body.dark-mode .toggle-label {
+    background-color: #444;
+}
+
+body.dark-mode .toggle-label i {
+    color: var(--text-light);
+}
+
+body.dark-mode .track-hero {
+    background-color: var(--primary-dark);
+}
+
+body.dark-mode .track-form,
+body.dark-mode .order-status,
+body.dark-mode .track-faq,
+body.dark-mode .faq-item {
+    background-color: var(--background-white);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .track-form h2,
+body.dark-mode .status-intro h3,
+body.dark-mode .track-faq h3,
+body.dark-mode .faq-item h4 {
+    color: var(--text-primary);
+}
+
+body.dark-mode .form-group label,
+body.dark-mode .status-intro p,
+body.dark-mode .faq-item p,
+body.dark-mode .step p {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .faq-item {
+    background-color: var(--background-dark);
+}
+
+body.dark-mode .btn-light {
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .btn-light:hover {
+    background-color: var(--primary-dark);
+    color: white;
+    border-color: var(--primary-dark);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .search-bar {
+        margin-right: 0;
+        width: 100%;
+    }
+    
+    .search-bar input {
+        width: 100%;
+    }
+    
+    .status-steps {
+        grid-template-columns: 1fr;
+    }
+}
+/* Footer */
+.altayer-footer {
+    background-color: var(--background-dark);
+    color: white;
+    padding: var(--spacing-xxl) 0 var(--spacing-lg);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Changed to create two main columns */
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+/* New grid container for Company and Help sections */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: var(--spacing-xl);
+}
+
+.footer-col {
+    /* No changes needed to the column styles */
+}
+
+/* Rest of your existing footer styles remain the same */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-logo i {
+    color: var(--primary-color);
+}
+
+.footer-tagline {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.footer-social {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-link {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.footer-col h4:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-top: 8px;
+}
+
+.footer-links li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.legal-links {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.legal-links a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: white;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-lg);
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+    gap: var(--spacing-md); /* Add spacing between elements */
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.legal-links {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: center; /* Center the links */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* Remove this if it exists as it's no longer needed */
+.footer-bottom > p {
+    margin-bottom: var(--spacing-sm);
+}
+/* Add these styles to your existing CSS */
+
+/* Footer Links Hover Effect (matches index.html) */
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.footer-links a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+/* Legal Links Hover Effect */
+.legal-links a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.legal-links a:hover {
+    color: white;
+    transform: translateX(3px);
+}
+
+.legal-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.legal-links a:hover::after {
+    width: 100%;
+}
+/* Dark Mode Toggle - Final Fixed Version */
+.dark-mode-toggle {
+    position: relative;
+    margin-left: var(--spacing-md);
+}
+
+#darkmode-switch {
+    display: none;
+}
+
+.toggle-label {
+    display: block; /* Changed from flex to block */
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+/* Position icons absolutely within the label */
+.toggle-label i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #555;
+    transition: color 0.3s ease;
+    z-index: 1; /* Place above background but below ball */
+}
+
+.toggle-label .fa-moon {
+    left: 8px;
+}
+
+.toggle-label .fa-sun {
+    right: 8px;
+    color: #f39c12;
+}
+
+/* Toggle ball - will cover the icons */
+.toggle-ball {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    z-index: 2; /* Higher than icons */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Dark mode states */
+#darkmode-switch:checked + .toggle-label {
+    background-color: #333;
+}
+
+#darkmode-switch:checked + .toggle-label .toggle-ball {
+    transform: translateX(30px);
+}
+
+/* Dark mode specific styles */
+body.dark-mode .toggle-label {
+    background-color: #444;
+}
+
+body.dark-mode .toggle-label i {
+    color: var(--text-light);
+}
+
+body.dark-mode .toggle-label .fa-sun {
+    color: #f39c12;
+}
+
+body.dark-mode .toggle-label .fa-moon {
+    color: #bbb;
+}
+/* Dark Mode Toggle - White Ball Version */
+.dark-mode-toggle {
+    position: relative;
+    margin-left: var(--spacing-md);
+}
+
+#darkmode-switch {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-label i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #555;
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+
+.toggle-label .fa-moon {
+    left: 8px;
+}
+
+.toggle-label .fa-sun {
+    right: 8px;
+    color: #f39c12;
+}
+
+.toggle-ball {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: white; /* Changed from var(--primary-color) to white */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Dark mode states */
+#darkmode-switch:checked + .toggle-label {
+    background-color: #333;
+}
+
+#darkmode-switch:checked + .toggle-label .toggle-ball {
+    transform: translateX(30px);
+}
+
+/* Dark mode specific styles */
+body.dark-mode .toggle-label {
+    background-color: #444;
+}
+
+body.dark-mode .toggle-label i {
+    color: var(--text-light);
+}
+
+body.dark-mode .toggle-label .fa-sun {
+    color: #f39c12;
+}
+
+body.dark-mode .toggle-label .fa-moon {
+    color: #bbb;
+}
