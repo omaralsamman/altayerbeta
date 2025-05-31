@@ -6529,3 +6529,60 @@ body.dark-mode .search-result-item:hover {
     font-size: 20px;
     vertical-align: middle;
 }
+/* Add these styles to your existing CSS */
+
+/* Footer Links Hover Effect (matches index.html) */
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.footer-links a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+/* Legal Links Hover Effect */
+.legal-links a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.legal-links a:hover {
+    color: white;
+    transform: translateX(3px);
+}
+
+.legal-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.legal-links a:hover::after {
+    width: 100%;
+}
