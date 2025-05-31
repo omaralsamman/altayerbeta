@@ -1,0 +1,771 @@
+/* plus.css - Premium Gold Gradient Theme with Dark Mode Support */
+:root {
+  /* Light Mode Colors */
+  --light-bg: #ffffff;
+  --light-card: #f9f9f9;
+  --light-text: #333333;
+  --light-muted: #666666;
+  
+  /* Dark Mode Colors */
+  --dark-bg: #1a1a1a;
+  --darker-bg: #121212;
+  --card-bg: #242424;
+  --text-light: #f5f5f5;
+  --text-muted: #aaaaaa;
+  
+  /* Gold Colors (works in both modes) */
+  --gold-gradient: linear-gradient(135deg, #FFD700, #D4AF37, #FFDF00, #F9D423);
+  --gold-light: linear-gradient(135deg, #FFFA8A, #FFFF95);
+  --gold-accent: #FFD700;
+  --gold-text: #FFDF00;
+  --gold-border: rgba(212, 175, 55, 0.3);
+}
+
+/* Base Styles */
+body {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  position: relative;
+  z-index: 1;
+}
+
+.toggle-label {
+  background: var(--light-card);
+  border: 1px solid var(--gold-border);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .toggle-label {
+  background: var(--card-bg);
+}
+
+.toggle-ball {
+  background: var(--gold-gradient);
+  transition: transform 0.3s ease;
+}
+
+/* Header */
+.main-header {
+  background-color: var(--light-bg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--gold-border);
+  transition: all 0.5s ease;
+}
+
+body.dark-mode .main-header {
+  background-color: var(--darker-bg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo h1 {
+  color: var(--light-text);
+  transition: color 0.5s ease;
+}
+
+body.dark-mode .logo h1 {
+  color: var(--text-light);
+}
+
+.logo i {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--gold-gradient);
+  color: #000000;
+  border: none;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.2) 0%, 
+    rgba(255, 255, 255, 0) 50%);
+}
+
+/* Sign In Button */
+.signin-btn {
+  background: var(--gold-gradient);
+  color: #000000 !important;
+  border: none;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+.signin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+}
+
+/* Hero Section */
+.plus-hero {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+              url('https://images.unsplash.com/photo-1606787366850-de6330128bfc') center/cover;
+  padding: 100px 0;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+body.dark-mode .plus-hero {
+  background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)), 
+              url('https://images.unsplash.com/photo-1606787366850-de6330128bfc') center/cover;
+}
+
+.plus-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, 
+    rgba(212, 175, 55, 0.1) 0%, 
+    rgba(255, 223, 0, 0.05) 50%, 
+    rgba(255, 215, 0, 0.1) 100%);
+}
+
+.plus-hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+.plus-hero-text .subtitle {
+  color: var(--light-muted);
+  transition: color 0.5s ease;
+}
+
+body.dark-mode .plus-hero-text .subtitle {
+  color: var(--text-muted);
+}
+
+/* Benefits Section */
+.plus-benefits {
+  background-color: var(--light-card);
+  padding: 80px 0;
+  transition: all 0.5s ease;
+}
+
+body.dark-mode .plus-benefits {
+  background-color: var(--darker-bg);
+}
+
+.benefit-card {
+  background-color: var(--light-bg);
+  border-radius: 12px;
+  padding: 40px 30px;
+  border: 1px solid var(--gold-border);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+body.dark-mode .benefit-card {
+  background-color: var(--card-bg);
+}
+
+.benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gold-gradient);
+}
+
+.benefit-card h3 {
+  color: var(--light-text);
+  transition: color 0.5s ease;
+}
+
+body.dark-mode .benefit-card h3 {
+  color: var(--gold-text);
+}
+
+.benefit-card p {
+  color: var(--light-muted);
+  transition: color 0.5s ease;
+}
+
+body.dark-mode .benefit-card p {
+  color: var(--text-muted);
+}
+
+/* Pricing Section */
+.plus-pricing {
+  padding: 80px 0;
+  background-color: var(--light-bg);
+  transition: all 0.5s ease;
+}
+
+body.dark-mode .plus-pricing {
+  background-color: var(--dark-bg);
+}
+
+.pricing-card {
+  background-color: var(--light-card);
+  transition: all 0.5s ease;
+}
+
+body.dark-mode .pricing-card {
+  background-color: var(--card-bg);
+}
+
+.pricing-features li {
+  color: var(--light-muted);
+  transition: color 0.5s ease;
+}
+
+body.dark-mode .pricing-features li {
+  color: var(--text-muted);
+}
+
+/* FAQ Section */
+.plus-faq-preview {
+  background-color: var(--light-card);
+  transition: all 0.5s ease;
+}
+
+body.dark-mode .plus-faq-preview {
+  background-color: var(--darker-bg);
+}
+
+.faq-question h3 {
+  color: var(--light-text);
+  transition: color 0.5s ease;
+}
+
+body.dark-mode .faq-question h3 {
+  color: var(--gold-text);
+}
+
+.faq-question p {
+  color: var(--light-muted);
+  transition: color 0.5s ease;
+}
+
+body.dark-mode .faq-question p {
+  color: var(--text-muted);
+}
+
+/* Footer */
+.altayer-footer {
+  background-color: var(--light-bg);
+  border-top: 1px solid var(--gold-border);
+  transition: all 0.5s ease;
+}
+
+body.dark-mode .altayer-footer {
+  background-color: var(--darker-bg);
+}
+
+.footer-tagline {
+  color: var(--light-muted);
+  transition: color 0.5s ease;
+}
+
+body.dark-mode .footer-tagline {
+  color: var(--text-muted);
+}
+
+.footer-links a {
+  color: var(--light-muted);
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .footer-links a {
+  color: var(--text-muted);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--gold-border);
+}
+
+/* Search Bar */
+.search-bar {
+  border: 1px solid var(--gold-border);
+  background-color: var(--light-card);
+  transition: all 0.5s ease;
+}
+
+body.dark-mode .search-bar {
+  background-color: var(--card-bg);
+}
+
+/* Cart Button */
+.cart-btn {
+  color: var(--light-text);
+  transition: color 0.5s ease;
+}
+
+body.dark-mode .cart-btn {
+  color: var(--gold-text);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .plus-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .plus-hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .signin-btn {
+    padding: 6px 15px;
+    font-size: 0.9rem;
+  }
+}
+/* plus.css - Complete Gold Theme */
+:root {
+  /* Gold Color Palette */
+  --gold-primary: #FFD700;
+  --gold-secondary: #D4AF37;
+  --gold-accent: #FFDF00;
+  --gold-light: #F9D423;
+  --gold-gradient: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary), var(--gold-accent), var(--gold-light));
+  
+  /* Dark Mode Colors */
+  --dark-bg: #1a1a1a;
+  --darker-bg: #121212;
+  --card-bg: #242424;
+  --text-light: #f5f5f5;
+  --text-muted: #aaaaaa;
+  
+  /* Light Mode Colors */
+  --light-bg: #ffffff;
+  --light-card: #f9f9f9;
+  --light-text: #333333;
+  --light-muted: #666666;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  transition: all 0.5s ease;
+}
+
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+}
+
+/* ===== Gold Replacement for All Elements ===== */
+
+/* 1. Icons */ 
+.fa-check,
+.fa-utensils, 
+.fa-search, 
+.fa-moon, 
+.fa-sun, 
+.fa-shopping-cart,
+.fa-arrow-left,
+.fa-arrow-right,
+.fa-star {
+  color: var(--gold-primary) !important;
+}
+
+/* 2. Buttons */
+.btn-primary {
+  background: var(--gold-gradient);
+  color: #000;
+}
+.btn-secondary {
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+}
+.signin-btn {
+  background: var(--gold-gradient);
+  color: #000 !important;
+}
+
+/* 3. Pricing Section */
+.pricing-badge {
+  background: var(--gold-gradient);
+  color: #000;
+}
+.price {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.pricing-card.featured {
+  border-color: var(--gold-primary);
+}
+
+/* 4. Benefits Section */
+.benefit-icon {
+  background: var(--gold-gradient);
+  color: #000;
+}
+.benefit-card::before {
+  background: var(--gold-gradient);
+}
+
+/* 5. Footer Elements */
+.footer-logo i {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer-title {
+  color: var(--gold-primary);
+}
+.social-link:hover,
+.footer-links a:hover,
+.legal-links a:hover {
+  color: var(--gold-primary) !important;
+}
+
+/* 6. Interactive Elements */
+a:hover, 
+button:hover {
+  color: var(--gold-primary) !important;
+}
+input:focus, 
+select:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+/* 7. Special Offers */
+.special-offer-badge {
+  background: var(--gold-gradient);
+  color: #000;
+}
+.discount-tag {
+  color: var(--gold-primary);
+}
+
+/* ===== Dark Mode Adjustments ===== */
+body.dark-mode {
+  /* Adjust gold tones for better visibility */
+  --gold-primary: #FFDF00;
+  --gold-secondary: #FFD700;
+}
+
+body.dark-mode .benefit-card h3,
+body.dark-mode .faq-question h3 {
+  color: var(--gold-primary);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .benefit-icon,
+  .pricing-badge {
+    background: var(--gold-gradient);
+  }
+}
+/* plus.css - Ultimate Gold & Dark Mode Theme */
+:root {
+  /* Gold Color Spectrum */
+  --gold-1: #FFD700; /* Vibrant gold */
+  --gold-2: #D4AF37; /* Metallic gold */
+  --gold-3: #FFDF00; /* Bright gold */
+  --gold-4: #F9D423; /* Light gold */
+  --gold-gradient: linear-gradient(135deg, var(--gold-1), var(--gold-2), var(--gold-3), var(--gold-4));
+  
+  /* Dark Mode */
+  --dark-bg: #1a1a1a;
+  --darker-bg: #121212;
+  --card-bg: #242424;
+  --text-light: #ffffff; /* Pure white text */
+  --text-muted: #cccccc;
+  
+  /* Light Mode */
+  --light-bg: #ffffff;
+  --light-card: #f9f9f9;
+  --light-text: #333333;
+  --light-muted: #666666;
+}
+
+/* ===== Universal Changes ===== */
+
+/* 1. Convert ALL white buttons to gold */
+button,
+.btn,
+.btn-light,
+.btn-load-more,
+.btn-outline,
+.newsletter-form button,
+[class*="btn-"]:not(.btn-secondary) {
+  background: var(--gold-gradient) !important;
+  color: #000000 !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3) !important;
+}
+
+/* Button hover states */
+button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.5) !important;
+}
+
+/* 2. Dark mode text corrections */
+body.dark-mode {
+  color: var(--text-light) !important;
+}
+
+/* Force white text in dark mode for these elements */
+body.dark-mode .restaurant-info,
+body.dark-mode .restaurant-meta,
+body.dark-mode .restaurant-tags,
+body.dark-mode .delivery-fee,
+body.dark-mode .section-title,
+body.dark-mode .section-header,
+body.dark-mode .pricing-features,
+body.dark-mode .pricing-header,
+body.dark-mode .faq-question p,
+body.dark-mode .footer-links a,
+body.dark-mode .footer-legal p {
+  color: var(white) !important;
+}
+
+/* ===== Component-Specific Gold Styling ===== */
+
+/* Icons */
+[class^="fa-"] {
+  color: var(--gold-1) !important;
+}
+
+/* Pricing section */
+.pricing-badge {
+  background: var(--gold-gradient);
+  color: #000 !important;
+}
+
+/* Benefits cards */
+.benefit-card h3 {
+  color: var(--gold-2);
+}
+
+/* Footer accents */
+.footer-title {
+  color: var(--gold-1);
+}
+
+/* ===== Dark Mode Enhancements ===== */
+/*body.dark-mode {
+  /* Slightly brighter gold for dark mode */
+ /* --gold-1: #FFDF00;
+  --gold-2: #FFD700;
+}*/
+
+/* Search bar in dark mode */
+body.dark-mode .search-bar {
+  background-color: var(--darker-bg);
+  color: var(--text-light);
+}
+
+/* ===== Responsive Considerations ===== */
+@media (max-width: 768px) {
+  /* Adjust gold buttons on mobile */
+  button, .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+body.dark-mode h3{
+    color: white;
+}
+body.dark-mode .section-title{
+    color: white;
+    
+}
+.dark-mode .section-title {
+    color: white ;
+} 
+.dark-mode .faq-question{
+    background-color: #242424;
+}.dark-mode .faq-question :hover{
+    background-color: #242424;
+}.dark-mode .faq-question :hover{
+    background-color: #242424;
+}.dark-mode .plus-faq-preview{
+    background-color: #242424;
+}
+.dark-mode h2{
+    color: white;
+}
+/* plus.css - Elegant Gold Theme Update */
+:root {
+  /* Gold Color Palette */
+  --gold-1: #FFD700;
+  --gold-2: #D4AF37;
+  --gold-3: #FFDF00;
+  --gold-4: #F9D423;
+  --gold-gradient: linear-gradient(135deg, var(--gold-1), var(--gold-2), var(--gold-3), var(--gold-4));
+  
+  /* Dark Mode */
+  --dark-bg: #1a1a1a;
+  --darker-bg: #121212;
+  --card-bg: #242424;
+  --text-light: #ffffff;
+  --text-muted: #cccccc;
+  
+  /* Light Mode */
+  --light-bg: #ffffff;
+  --light-card: #f9f9f9;
+  --light-text: #333333;
+  --light-muted: #666666;
+}
+
+/* ===== Hero Section Update ===== */
+.plus-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover;
+  padding: 120px 0;
+  position: relative;
+}
+
+.plus-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.plus-hero-text {
+  flex: 1;
+  padding: 40px;
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border-left: 4px solid var(--gold-1);
+}
+
+.plus-hero-image {
+  flex: 1;
+  position: relative;
+}
+
+.plus-hero-image img {
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+/* ===== Section Title Accents ===== */
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: var(--gold-gradient);
+  border-radius: 2px;
+}
+
+/* Benefits Section Update */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.benefit-card {
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
+}
+
+/* FAQ Section Update */
+.faq-question {
+  transition: all 0.3s ease;
+  border-left: 3px solid var(--gold-1);
+}
+
+.faq-question:hover {
+  background: rgba(212, 175, 55, 0.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .plus-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .plus-hero-text {
+    backdrop-filter: none;
+    background: rgba(26, 26, 26, 0.8);
+  }
+  
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.footer-title::after{
+
+    background-color: var(--gold-2);
+}
+.social-link:hover{
+    background-color: (var(--text-light));
+}
+.dark-mode .btn-secondary :hover{
+   color: black;
+}
