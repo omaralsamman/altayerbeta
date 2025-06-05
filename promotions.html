@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions & Deals - Altayer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="promotions.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><h1><i class="fas fa-utensils"></i> Altayer</h1></a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="plus.html">Plus</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for food, restaurants..." id="search-input">
+                        <div class="search-results" id="search-results"></div>
+                    </div>
+                    
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="darkmode-switch">
+                        <label for="darkmode-switch" class="toggle-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="toggle-ball"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="user-actions">
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <a href="signin.html" class="signin-btn">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Promotions Hero Section -->
+    <section class="promotions-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Exclusive Promotions & Deals</h1>
+                <p>Save on your favorite meals with these limited-time offers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Promotions -->
+    <section class="current-promotions">
+        <div class="container">
+            <h2 class="section-title">Current Promotions</h2>
+            <div class="promotions-grid">
+                <div class="promotion-card">
+                    <div class="promotion-badge">Limited Time</div>
+                    <div class="promotion-image" style="background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd');">
+                        <div class="promotion-overlay">
+                            <span class="discount">30% OFF</span>
+                        </div>
+                    </div>
+                    <div class="promotion-content">
+                        <h3>Healthy Eating Week</h3>
+                        <p>30% off all salads and healthy meals from participating restaurants</p>
+                        <div class="promotion-meta">
+                            <span class="valid-until">Valid until: June 30, 2025</span>
+                            <a href="restaurants.html?category=healthy" class="btn btn-small">Redeem Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="promotion-card">
+                    <div class="promotion-badge">New User</div>
+                    <div class="promotion-image" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd');">
+                        <div class="promotion-overlay">
+                            <span class="discount">$10 OFF</span>
+                        </div>
+                    </div>
+                    <div class="promotion-content">
+                        <h3>First Order Discount</h3>
+                        <p>$10 off your first order of $25 or more</p>
+                        <div class="promotion-meta">
+                            <span class="valid-until">For new customers only</span>
+                            <a href="signin.html" class="btn btn-small">Sign Up Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="promotion-card">
+                    <div class="promotion-badge">Plus Exclusive</div>
+                    <div class="promotion-image" style="background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc');">
+                        <div class="promotion-overlay">
+                            <span class="discount">FREE DELIVERY</span>
+                        </div>
+                    </div>
+                    <div class="promotion-content">
+                        <h3>Plus Member Special</h3>
+                        <p>Free delivery on all orders for Plus members, no minimum required</p>
+                        <div class="promotion-meta">
+                            <span class="valid-until">Plus members only</span>
+                            <a href="plus.html" class="btn btn-small">Join Plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Deals -->
+    <section class="restaurant-deals">
+        <div class="container">
+            <h2 class="section-title">Restaurant Specials</h2>
+            <div class="deals-grid">
+                <div class="deal-card">
+                    <div class="deal-restaurant">
+                        <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330" alt="Gourmet Burger House">
+                        <h3>Gourmet Burger House</h3>
+                    </div>
+                    <div class="deal-content">
+                        <h4>Buy One Get One Free</h4>
+                        <p>Buy any premium burger and get a second one free (of equal or lesser value)</p>
+                        <div class="deal-meta">
+                            <span class="deal-code">Code: BURGERBOGO</span>
+                            <span class="deal-expires">Expires: 6/15/2025</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-restaurant">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Napoli's Pizzeria">
+                        <h3>Napoli's Pizzeria</h3>
+                    </div>
+                    <div class="deal-content">
+                        <h4>Family Meal Deal</h4>
+                        <p>Large pizza, garlic bread, and 2 drinks for just $24.99 (regular $32.99)</p>
+                        <div class="deal-meta">
+                            <span class="deal-code">Code: FAMILYPIZZA</span>
+                            <span class="deal-expires">Expires: 6/30/2025</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-restaurant">
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c" alt="Sushi Sensation">
+                        <h3>Sushi Sensation</h3>
+                    </div>
+                    <div class="deal-content">
+                        <h4>Weekend Sushi Special</h4>
+                        <p>20% off all sushi rolls on weekends (Friday-Sunday)</p>
+                        <div class="deal-meta">
+                            <span class="deal-code">Code: WEEKENDSUSHI</span>
+                            <span class="deal-expires">Ongoing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="altayer-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>Altayer</span>
+                    </div>
+                    <p class="footer-tagline">Delivering happiness one meal at a time</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-title">Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="plus.html">Altayer Plus</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-title">Help</h4>
+                        <ul class="footer-links">
+                            <li><a href="track-order.html">Track Order</a></li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="payment-options.html">Payment Options</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 Altayer. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bar.js"></script>
+    <script src="darkmode.js"></script>
+</body>
+</html>
