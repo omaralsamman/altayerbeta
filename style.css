@@ -32,6 +32,19 @@
     --spacing-xl: 32px;
     --spacing-xxl: 48px;
 }
+:root {
+    --primary-color: #2e8b57;
+    --primary-dark: #1f6b3d;
+    --primary-light: #e8f5e9;
+    --background-white: #ffffff;
+    --background-light: #f5f5f5;
+    --background-dark: #1a1a1a;
+    --background-darker: #121212;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --border-color: #e0e0e0;
+    --border-dark: #333333;
+}
 
 * {
     margin: 0;
@@ -6529,60 +6542,253 @@ body.dark-mode .search-result-item:hover {
     font-size: 20px;
     vertical-align: middle;
 }
-/* Add these styles to your existing CSS */
-
-/* Footer Links Hover Effect (matches index.html) */
-.footer-links a {
-    color: rgba(255, 255, 255, 0.8);
-    transition: all 0.3s ease;
-    position: relative;
-    padding-bottom: 2px;
-}
-
-.footer-links a:hover {
+/* Promotions Page Styles */
+.promotions-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+    background-size: cover;
+    background-position: center;
     color: white;
-    transform: translateX(5px);
+    padding: 100px 0;
+    text-align: center;
 }
 
-.footer-links a::after {
-    content: '';
+.promotions-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.promotions-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.current-promotions {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.promotions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.promotion-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.promotion-card:hover {
+    transform: translateY(-5px);
+}
+
+.promotion-badge {
     position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease;
-}
-
-.footer-links a:hover::after {
-    width: 100%;
-}
-
-/* Legal Links Hover Effect */
-.legal-links a {
-    color: rgba(255, 255, 255, 0.6);
-    transition: all 0.3s ease;
-    position: relative;
-    padding-bottom: 2px;
-}
-
-.legal-links a:hover {
+    top: 15px;
+    right: 15px;
+    background: #ff4757;
     color: white;
-    transform: translateX(3px);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
 }
 
-.legal-links a::after {
-    content: '';
+.promotion-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.promotion-overlay {
     position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: 0;
+    top: 0;
     left: 0;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.legal-links a:hover::after {
-    width: 100%;
+.discount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.promotion-content {
+    padding: 20px;
+}
+
+.promotion-content h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.promotion-content p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.promotion-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.valid-until {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.restaurant-deals {
+    padding: 60px 0;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.deal-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-5px);
+}
+
+.deal-restaurant {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.deal-restaurant img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.deal-restaurant h3 {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.deal-content {
+    padding: 20px;
+}
+
+.deal-content h4 {
+    color: #2e8b57;
+    margin-bottom: 10px;
+}
+
+.deal-content p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.deal-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.btn-small {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .promotions-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .promotions-grid,
+    .deals-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Main Navigation Styles */
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #2e8b57;
+}
+
+/* Header layout adjustments */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.main-nav {
+    flex-grow: 1;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Dark mode adjustments */
+.dark-mode .main-nav a {
+    color: #f0f0f0;
+}
+
+.dark-mode .main-nav a:hover {
+    color: #4CAF50;
+}
+
+@media (max-width: 992px) {
+    .main-nav {
+        display: none;
+    position: absolute;
+        /* Add responsive styles as needed */
+    }
+    
+    /* You might want to implement a mobile menu for smaller screens */
 }
