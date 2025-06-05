@@ -14,41 +14,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="main-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h1><i class="fas fa-utensils"></i> Altayer</h1>
+   <!-- Header Section -->
+<header class="main-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <h1><i class="fas fa-utensils"></i> Altayer</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="plus.html">Plus</a></li>
+                    <li><a href="promotions.html">Promotions</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for food, restaurants..." id="search-input">
+                    <div class="search-results" id="search-results"></div>
                 </div>
-                <div class="header-right">
-                   <!-- In the header section of index.html -->
-<div class="search-bar">
-    <i class="fas fa-search"></i>
-    <input type="text" placeholder="Search for food, restaurants..." id="search-input">
-    <div class="search-results" id="search-results"></div>
-</div>
-                    
-                    <div class="dark-mode-toggle">
-                        <input type="checkbox" id="darkmode-switch">
-                        <label for="darkmode-switch" class="toggle-label">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                            <span class="toggle-ball"></span>
-                        </label>
-                    </div>
-                    
-                    <div class="user-actions">
-                        <a href="cart.html" class="cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                        <a href="signin.html" class="signin-btn">Sign in</a>
-                    </div>
+                
+                <div class="dark-mode-toggle">
+                    <input type="checkbox" id="darkmode-switch">
+                    <label for="darkmode-switch" class="toggle-label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+                
+                <div class="user-actions">
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <a href="signin.html" class="signin-btn">Sign in</a>
                 </div>
             </div>
         </div>
-    </header>
-
+    </div>
+</header>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -356,6 +361,7 @@
     <script src="track-order.js"></script>
      <script src="bar.js"></script>
     <script src="darkmode.js"></script>
+     <script src="promotions.html"></script>
     <script>
     // Restaurant data (same as in restaurants.html)
     const restaurants = [
