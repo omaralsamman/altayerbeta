@@ -6792,3 +6792,164 @@ body.dark-mode .search-result-item:hover {
     
     /* You might want to implement a mobile menu for smaller screens */
 }
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.dark-mode .main-header {
+    background-color: #222;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .faqs-hero {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.dark-mode .faqs-content {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.dark-mode .faq-item {
+    background-color: #2a2a2a;
+    border-color: #444;
+}
+
+.dark-mode .faq-question {
+    color: #fff;
+    background-color: #333;
+}
+
+.dark-mode .faq-answer {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+.dark-mode .category-btn {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .category-btn.active {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.dark-mode .search-faqs input {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+.dark-mode .search-faqs button {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode .altayer-footer {
+    background-color: #222;
+    color: #ddd;
+}
+
+.dark-mode .footer-links a {
+    color: #ddd;
+}
+
+.dark-mode .footer-links a:hover {
+    color: #4CAF50;
+}
+
+.dark-mode .footer-legal {
+    border-top: 1px solid #444;
+}
+
+.dark-mode .footer-legal a {
+    color: #aaa;
+}
+/* Dark Mode Styles for FAQs Page */
+body.dark-mode .faqs-hero {
+    background: linear-gradient(135deg, var(--background-dark) 0%, #2a2a2a 100%); /* Darker gradient for hero */
+}
+
+body.dark-mode .faqs-hero h1,
+body.dark-mode .faqs-hero p {
+    color: var(--text-primary); /* Ensure text is light in dark mode hero */
+}
+
+body.dark-mode .search-faqs input {
+    background-color: #333; /* Dark background for search input */
+    color: var(--text-primary); /* Light text color */
+    border-color: var(--border-color); /* Darker border */
+}
+
+body.dark-mode .search-faqs button {
+    background-color: var(--primary-dark); /* Darker button for search */
+    color: white;
+}
+
+body.dark-mode .search-faqs button:hover {
+    background-color: #1a1a1a; /* Even darker on hover */
+}
+
+body.dark-mode .faqs-content {
+    background-color: var(--background-dark); /* Dark background for content section */
+}
+
+body.dark-mode .faqs-categories .category-btn {
+    background-color: var(--background-white); /* Dark background for category buttons */
+    color: var(--text-secondary); /* Lighter text for inactive buttons */
+    border: 1px solid var(--border-color); /* Darker border */
+}
+
+body.dark-mode .faqs-categories .category-btn:hover {
+    background-color: var(--background-light); /* Darker on hover */
+}
+
+body.dark-mode .faqs-categories .category-btn.active {
+    background-color: var(--primary-color); /* Primary color for active button */
+    color: white; /* White text for active button */
+    border-color: var(--primary-color); /* Primary border color */
+}
+
+body.dark-mode .faqs-accordion .faq-item {
+    background-color: var(--background-white); /* Dark background for FAQ items */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+body.dark-mode .faq-question {
+    background-color: var(--background-white); /* Dark background for question button */
+    color: var(--text-primary); /* Light text color */
+    border-bottom: 1px solid var(--border-color); /* Darker border for separator */
+}
+
+body.dark-mode .faq-question:hover {
+    background-color: var(--background-light); /* Darker on hover */
+}
+
+body.dark-mode .faq-question i {
+    color: var(--text-secondary); /* Light icon color */
+}
+
+body.dark-mode .faq-item.active .faq-question {
+    background-color: var(--primary-extra-light); /* Lighter dark background for active question */
+    color: var(--primary-color); /* Primary color for active question text */
+}
+
+body.dark-mode .faq-answer {
+    background-color: var(--background-light); /* Darker background for answer section */
+    color: var(--text-secondary); /* Lighter text for answer */
+}
+
+body.dark-mode .faqs-contact {
+    background-color: var(--background-white); /* Dark background for contact section */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+body.dark-mode .faqs-contact h3,
+body.dark-mode .faqs-contact p {
+    color: var(--text-primary); /* Ensure text is light */
+}
