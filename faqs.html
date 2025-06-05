@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQs - Altayer Food Delivery</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="faqs.css">
+    <link rel="stylesheet" href="faqs-elegant.css"> 
 </head>
 <body>
     
-    <!-- Header Section -->
     <header class="main-header">
         <div class="container">
             <div class="header-content">
@@ -50,23 +46,21 @@
         </div>
     </header>
 
-    <!-- FAQs Hero Section -->
     <section class="faqs-hero">
         <div class="container">
             <h1>Frequently Asked Questions</h1>
             <p>Find answers to common questions about our food delivery service</p>
             <div class="search-faqs">
-                <input type="text" placeholder="Search FAQs...">
-                <button><i class="fas fa-search"></i></button>
+                <input type="text" id="faq-search-input" placeholder="Search FAQs...">
+                <button id="faq-search-btn"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </section>
 
-    <!-- FAQs Main Content -->
     <section class="faqs-content">
         <div class="container">
             <div class="faqs-categories">
-                <button class="category-btn active" data-category="all">All Questions</button>
+                <button class="category-btn active" data-category="all">All</button>
                 <button class="category-btn" data-category="ordering">Ordering</button>
                 <button class="category-btn" data-category="delivery">Delivery</button>
                 <button class="category-btn" data-category="payments">Payments</button>
@@ -77,7 +71,7 @@
             <div class="faqs-accordion">
                 <div class="faq-item" data-category="ordering">
                     <button class="faq-question">
-                        How do I place an order?
+                        <span>How do I place an order?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -87,7 +81,7 @@
 
                 <div class="faq-item" data-category="delivery">
                     <button class="faq-question">
-                        How long does delivery take?
+                        <span>How long does delivery take?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -97,7 +91,7 @@
 
                 <div class="faq-item" data-category="payments">
                     <button class="faq-question">
-                        What payment methods do you accept?
+                        <span>What payment methods do you accept?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -107,7 +101,7 @@
 
                 <div class="faq-item" data-category="account">
                     <button class="faq-question">
-                        How do I reset my password?
+                        <span>How do I reset my password?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -117,7 +111,7 @@
 
                 <div class="faq-item" data-category="plus">
                     <button class="faq-question">
-                        What are the benefits of Altayer Plus?
+                        <span>What are the benefits of Altayer Plus?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -127,7 +121,7 @@
 
                 <div class="faq-item" data-category="ordering">
                     <button class="faq-question">
-                        Can I modify or cancel my order?
+                        <span>Can I modify or cancel my order?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -137,7 +131,7 @@
 
                 <div class="faq-item" data-category="delivery">
                     <button class="faq-question">
-                        What if my order is late or incorrect?
+                        <span>What if my order is late or incorrect?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -147,13 +141,17 @@
 
                 <div class="faq-item" data-category="account">
                     <button class="faq-question">
-                        How do I update my account information?
+                        <span>How do I update my account information?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>You can update your account information by logging in and navigating to your account settings. Here you can change your email, password, delivery addresses, and payment methods.</p>
                     </div>
                 </div>
+                 </div>
+            
+            <div id="no-results-message" style="display: none; text-align: center; margin-top: 30px; color: var(--text-secondary);">
+                <p>No FAQs found matching your search.</p>
             </div>
 
             <div class="faqs-contact">
@@ -164,7 +162,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="altayer-footer">
         <div class="container">
             <div class="footer-content">
@@ -227,7 +224,7 @@
 
     <script src="bar.js"></script>
     <script src="darkmode.js"></script>
-    <script src="faqs.js"></script>
+    <script src="faqs.js"></script> 
      <script src="sidebar.js"></script>
 </body>
 </html>
