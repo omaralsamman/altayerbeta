@@ -769,3 +769,50 @@ body.dark-mode .section-title{
 .dark-mode .btn-secondary :hover{
    color: black;
 }
+.plus-hero-image img {
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(212, 175, 55, 0.3); /* subtle gold border */
+}
+/* ================================================= */
+/* === FIX FOR BUTTON HOVER EFFECTS ON PLUS PAGE === */
+/* ================================================= */
+
+/* This targets the 'Get Started' buttons with the gold border */
+.pricing-card a.btn-secondary:hover {
+    background-color: var(--gold-accent) !important; /* Sets background to gold on hover */
+    color: #000000 !important; /* Sets text to black on hover */
+    border-color: var(--gold-accent) !important;
+}
+
+/* This targets the main gold 'Get Started' button */
+.pricing-card a.btn-primary:hover {
+    color: #000000 !important; /* FORCES the text color to stay black */
+    filter: brightness(1.1); /* Makes the existing gold gradient slightly brighter for feedback */
+}
+
+/* This ensures the base secondary button style is correct for the gold theme */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--gold-accent);
+    border: 2px solid var(--gold-accent);
+    font-weight: 600;
+}
+/* --- Add this to the end of plus.css --- */
+
+/* This makes the pricing cards flex containers */
+.pricing-card {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+}
+
+/* This makes the features list grow to fill any extra space */
+.pricing-features {
+    flex-grow: 1;
+}
+/* --- Add this to the end of plus.css --- */
+
+/* Fix for Sign In button hover effect */
+.signin-btn:hover {
+    color: #000000 !important; /* Forces the text to remain black on hover */
+}
