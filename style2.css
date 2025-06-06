@@ -1027,3 +1027,25 @@ body.dark-mode .toggle-label .fa-sun {
 body.dark-mode .toggle-label .fa-moon {
     color: #bbb;
 }
+/* In your faqs.css or main dark mode stylesheet */
+
+/* Styling for the non-active category buttons in dark mode */
+body.dark-mode .faqs-categories .category-btn {
+    background-color: #333333;  /* This is a common dark gray color */
+    color: #cccccc;             /* Light gray text for readability */
+    border: 1px solid #444444;  /* A slightly different dark gray for the border */
+    /* Other properties like padding, border-radius should be inherited */
+}
+
+/* Hover state for non-active category buttons in dark mode */
+body.dark-mode .faqs-categories .category-btn:hover {
+    background-color: #454545;  /* A slightly lighter dark gray on hover */
+    color: #ffffff;             /* White text on hover */
+}
+
+/* Styling for the ACTIVE category button in dark mode (to ensure it remains distinct) */
+body.dark-mode .faqs-categories .category-btn.active {
+    background-color: var(--primary-color); /* Use your theme's primary color */
+    color: white;                           /* White text for the active button */
+    border-color: var(--primary-color);     /* Border matching the primary color, or none if you prefer */
+}
