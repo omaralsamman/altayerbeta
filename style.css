@@ -7271,3 +7271,966 @@ body.dark-mode .faqs-contact .btn-primary:hover {
 body.dark-mode #no-results-message {
     color: var(--text-muted);
 }
+/* track-order-styles.css */
+
+/* Hero Section */
+.track-hero {
+    background: linear-gradient(135deg, var(--primary-color, #2ecc71) 0%, var(--secondary-color, #1abc9c) 100%);
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.track-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.track-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Main Content Area */
+.track-content {
+    padding: 40px 0;
+    background-color: var(--background-light, #f9f9f9);
+}
+
+/* Form Styling */
+.track-form .form-container {
+    background-color: var(--background-white, #ffffff);
+    padding: 30px;
+    border-radius: var(--border-radius-lg, 16px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    margin-bottom: 30px;
+}
+
+.track-form h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--text-primary, #333333);
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    color: var(--text-secondary, #666666);
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: var(--border-radius-md, 8px);
+    font-size: 1rem;
+    background-color: var(--background-white, #ffffff);
+    color: var(--text-primary, #333333);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color, #2ecc71);
+    box-shadow: 0 0 0 3px var(--primary-light, #a9dfbf);
+}
+
+/* Order Status Section (Initial and Populated) */
+.order-status {
+    background-color: var(--background-white, #ffffff);
+    padding: 30px;
+    border-radius: var(--border-radius-lg, 16px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    margin-bottom: 30px;
+    color: var(--text-primary, #333333);
+}
+
+.status-intro h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-primary, #333333);
+}
+
+.status-intro p {
+    text-align: center;
+    color: var(--text-secondary, #666666);
+    margin-bottom: 25px;
+}
+
+.status-steps-visual {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.step-visual {
+    text-align: center;
+    flex: 1;
+    max-width: 100px; /* Control width of step */
+}
+.step-visual-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-extra-light, #eafaf1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    border: 2px solid var(--primary-color, #2ecc71);
+    color: var(--primary-color, #2ecc71);
+    font-size: 1.2rem;
+}
+.step-visual p {
+    font-size: 0.9rem;
+    color: var(--text-secondary, #666666);
+}
+.step-visual-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: var(--border-color, #e0e0e0);
+    margin: 25px 5px 0; /* Align with middle of icon */
+}
+
+
+/* Styles for JS-populated order status */
+.status-loading {
+    text-align: center;
+    padding: 20px;
+}
+.spinner {
+    border: 4px solid var(--primary-extra-light, #eafaf1);
+    border-top: 4px solid var(--primary-color, #2ecc71);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.status-loading p {
+    font-size: 1rem;
+    color: var(--text-secondary, #666666);
+}
+
+.status-details { /* Main container for order details */
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: var(--border-radius-md, 8px);
+}
+.status-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color, #e0e0e0);
+}
+.status-icon {
+    font-size: 2rem;
+    margin-right: 20px;
+    color: var(--primary-color, #2ecc71);
+    width: 50px;
+    text-align: center;
+}
+.status-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: var(--text-primary, #333333);
+}
+.status-text p {
+    font-size: 0.9rem;
+    color: var(--text-secondary, #666666);
+}
+
+/* Progress Steps */
+.status-progress {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color, #e0e0e0);
+}
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+}
+.progress-steps .step {
+    text-align: center;
+    position: relative;
+    flex: 1;
+}
+.progress-steps .step-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--border-color, #e0e0e0);
+    color: var(--text-light, #999999);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+.progress-steps .step.active .step-icon {
+    background-color: var(--primary-color, #2ecc71);
+    color: white;
+}
+.progress-steps .step p {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #666666);
+}
+.progress-steps .step.active p {
+    color: var(--primary-color, #2ecc71);
+    font-weight: 500;
+}
+/* Add connecting lines for progress steps if desired */
+.progress-steps .step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 20px; /* Half of icon height */
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--border-color, #e0e0e0);
+    z-index: -1;
+    transform: translateX( calc(-50% + 25px) ); /* Offset to start after icon */
+}
+.progress-steps .step.active:not(:last-child)::after {
+    background-color: var(--primary-color, #2ecc71);
+}
+
+
+.order-info {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.info-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-primary, #333333);
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-color, #e0e0e0);
+}
+.order-items { list-style: none; padding-left: 0; }
+.order-items li {
+    margin-bottom: 5px;
+    color: var(--text-secondary, #666666);
+    font-size: 0.9rem;
+}
+.order-total {
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--text-primary, #333333);
+}
+.info-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-secondary, #666666);
+}
+.driver-details { display: flex; align-items: center; }
+.driver-avatar {
+    width: 50px; height: 50px; border-radius: 50%;
+    background-color: var(--primary-extra-light, #eafaf1);
+    color: var(--primary-color, #2ecc71);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; margin-right: 15px;
+}
+.driver-text p { margin-bottom: 3px; }
+.driver-text a { color: var(--primary-color, #2ecc71); text-decoration: none; }
+.driver-text a:hover { text-decoration: underline; }
+
+
+/* FAQ Section on Track Page */
+.track-faq {
+    background-color: var(--background-white, #ffffff);
+    padding: 30px;
+    border-radius: var(--border-radius-lg, 16px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    text-align: center;
+}
+.track-faq h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-primary, #333333);
+}
+.faq-items { text-align: left; max-width: 700px; margin: 0 auto 25px; }
+.faq-item {
+    background-color: var(--background-light, #f9f9f9);
+    padding: 15px;
+    border-radius: var(--border-radius-md, 8px);
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color, #e0e0e0);
+}
+.faq-item h4 {
+    font-size: 1.1rem;
+    color: var(--text-primary, #333333);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+.faq-item h4 i {
+    color: var(--primary-color, #2ecc71);
+    margin-right: 10px;
+}
+.faq-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary, #666666);
+    line-height: 1.6;
+}
+.track-faq .btn-light {
+    border-color: var(--primary-color, #2ecc71);
+    color: var(--primary-color, #2ecc71);
+}
+.track-faq .btn-light:hover {
+    background-color: var(--primary-color, #2ecc71);
+    color: white;
+}
+
+
+/* --- Dark Mode Styles --- */
+body.dark-mode .track-content {
+    background-color: var(--background-dark, #252525);
+}
+
+body.dark-mode .track-form .form-container,
+body.dark-mode .order-status,
+body.dark-mode .track-faq,
+body.dark-mode .faq-item {
+    background-color: var(--background-white, #1e1e1e);
+    border-color: var(--border-dark, #333333);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .track-form h2,
+body.dark-mode .status-intro h3,
+body.dark-mode .status-text h3,
+body.dark-mode .info-section h4,
+body.dark-mode .order-total,
+body.dark-mode .track-faq h3,
+body.dark-mode .faq-item h4 {
+    color: var(--text-primary, #f0f0f0);
+}
+
+body.dark-mode .form-group label,
+body.dark-mode .status-intro p,
+body.dark-mode .status-loading p,
+body.dark-mode .status-text p,
+body.dark-mode .progress-steps .step p,
+body.dark-mode .order-items li,
+body.dark-mode .info-section p,
+body.dark-mode .faq-item p {
+    color: var(--text-secondary, #cccccc);
+}
+
+body.dark-mode .form-group input[type="text"] {
+    background-color: var(--background-dark, #252525);
+    color: var(--text-primary, #f0f0f0);
+    border-color: var(--border-dark, #333333);
+}
+body.dark-mode .form-group input[type="text"]:focus {
+    border-color: var(--primary-color, #2ecc71);
+    box-shadow: 0 0 0 3px var(--primary-light, #1a3a2a); /* Darker primary light */
+}
+
+body.dark-mode .step-visual-icon {
+    background-color: var(--primary-extra-light, #0d1f15);
+    border-color: var(--primary-color, #2ecc71);
+    color: var(--primary-color, #2ecc71);
+}
+body.dark-mode .step-visual-line {
+    background-color: var(--border-dark, #333333);
+}
+body.dark-mode .progress-steps .step-icon {
+    background-color: var(--border-dark, #333333);
+    color: var(--text-light, #999999);
+}
+body.dark-mode .progress-steps .step.active .step-icon {
+    background-color: var(--primary-color, #2ecc71);
+    color: white;
+}
+body.dark-mode .progress-steps .step.active p {
+    color: var(--primary-color, #2ecc71);
+}
+body.dark-mode .progress-steps .step:not(:last-child)::after {
+    background-color: var(--border-dark, #333333);
+}
+body.dark-mode .progress-steps .step.active:not(:last-child)::after {
+    background-color: var(--primary-color, #2ecc71);
+}
+
+
+body.dark-mode .status-details,
+body.dark-mode .status-header,
+body.dark-mode .status-progress,
+body.dark-mode .info-section h4 {
+    border-color: var(--border-dark, #333333);
+}
+
+body.dark-mode .driver-avatar {
+    background-color: var(--primary-extra-light, #0d1f15);
+    color: var(--primary-color, #2ecc71);
+}
+body.dark-mode .driver-text a {
+    color: var(--primary-light, #a9dfbf); /* Lighter link for dark mode */
+}
+
+body.dark-mode .track-faq .btn-light {
+    background-color: var(--background-darker, #121212);
+    border-color: var(--primary-dark, #27ae60);
+    color: var(--primary-light, #a9dfbf);
+}
+body.dark-mode .track-faq .btn-light:hover {
+    background-color: var(--primary-dark, #27ae60);
+    color: white;
+}
+/* payment-options-styles.css */
+
+/* Hero Section Styling */
+.payment-hero {
+    background: linear-gradient(135deg, var(--primary-dark, #27ae60) 0%, var(--secondary-color, #1abc9c) 100%);
+    color: white;
+    padding: 50px 20px; /* Adjusted padding */
+    text-align: center;
+    border-bottom: 4px solid var(--primary-color, #2ecc71);
+}
+
+.payment-hero h1 {
+    font-size: 2.6rem; /* Adjusted size */
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+}
+
+.payment-hero p {
+    font-size: 1.1rem; /* Adjusted size */
+    opacity: 0.95;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Main Content Area */
+.payment-content {
+    padding: 40px 20px; /* Adjusted padding */
+    background-color: var(--background-light, #f8f9fa); /* Slightly different light background */
+    transition: background-color 0.3s ease;
+}
+
+.payment-content h2 {
+    text-align: center;
+    font-size: 1.9rem; /* Adjusted size */
+    font-weight: 600;
+    color: var(--text-primary, #333);
+    margin-bottom: 35px; /* Adjusted margin */
+}
+
+/* Grid for Payment Method Cards */
+.payment-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 25px; /* Space between cards */
+    max-width: 1100px;
+    margin: 0 auto 40px; /* Centering and bottom margin */
+}
+
+.payment-method-card {
+    background: var(--background-white, #ffffff);
+    border-radius: var(--border-radius-lg, 12px); /* Consistent border radius */
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07); /* Softer shadow */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color, #e9ecef); /* Subtle border */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.payment-method-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 28px rgba(0, 0, 0, 0.09);
+}
+
+.method-icon-wrapper { /* Changed from .method-icon for clarity */
+    width: 50px;
+    height: 50px;
+    background: var(--primary-extra-light, #eafaf1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    color: var(--primary-color, #2ecc71);
+    font-size: 1.3rem; /* Adjusted icon size */
+}
+
+.method-details h3 {
+    font-size: 1.3rem; /* Adjusted size */
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-primary, #333);
+}
+
+.method-details p {
+    color: var(--text-secondary, #555); /* Slightly darker secondary text */
+    line-height: 1.65;
+    margin-bottom: 18px;
+    font-size: 0.9rem; /* Adjusted size */
+    flex-grow: 1; /* Allows p to take space if card heights vary */
+}
+
+.card-brands {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logos */
+    margin-top: auto; /* Pushes logos to the bottom */
+}
+
+.card-brands img {
+    height: 24px; /* Adjusted logo size */
+    width: auto;
+    opacity: 0.9;
+}
+.card-brands .card-brand-amex {
+    filter: brightness(0.9); /* Slight adjustment for default Amex logo */
+}
+
+.card-brands .availability-note {
+    font-size: 0.8rem;
+    color: var(--text-light, #777);
+    font-style: italic;
+}
+
+/* Section Divider */
+.section-divider {
+    height: 1px;
+    background-color: var(--border-color, #dee2e6); /* Softer divider */
+    max-width: 700px;
+    margin: 45px auto; /* Adjusted margin */
+}
+
+/* Payment FAQs Section */
+.payment-faq-section { /* Changed from .payment-faq for clarity */
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.faq-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); /* Responsive columns */
+    gap: 20px;
+}
+
+.faq-item-card {
+    background: var(--background-white, #ffffff);
+    border-radius: var(--border-radius-md, 10px); /* Consistent border radius */
+    padding: 20px;
+    border: 1px solid var(--border-color, #e9ecef);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+.faq-item-card h3 {
+    font-size: 1.1rem; /* Adjusted size */
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary, #333);
+}
+
+.faq-item-card p {
+    color: var(--text-secondary, #555);
+    line-height: 1.6;
+    font-size: 0.85rem; /* Adjusted size */
+}
+
+/* Payment Security Section */
+.payment-security-section { /* Changed from .payment-security for clarity */
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.security-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Responsive columns */
+    gap: 25px;
+}
+
+.security-feature-card {
+    background: var(--primary-extra-light, #eafaf1); /* Using theme color for these cards */
+    border-radius: var(--border-radius-lg, 12px);
+    padding: 25px 20px;
+    border: 1px solid var(--primary-light, #a9dfbf); /* Border matching theme */
+}
+
+.feature-icon-wrapper { /* New wrapper for icon */
+    width: 55px;
+    height: 55px;
+    background-color: var(--background-white, #fff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: var(--primary-dark, #27ae60);
+    font-size: 1.5rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.security-feature-card h3 {
+    font-size: 1.2rem; /* Adjusted size */
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-dark, #27ae60); /* Theme color for heading */
+}
+
+.security-feature-card p {
+    color: var(--text-secondary, #555);
+    font-size: 0.85rem; /* Adjusted size */
+    line-height: 1.5;
+}
+
+/* --- Dark Mode Styles --- */
+body.dark-mode .payment-content {
+    background-color: var(--background-dark, #1a1a1a); /* Darker page background */
+}
+
+body.dark-mode .payment-hero {
+    border-bottom-color: var(--primary-dark, #27ae60);
+}
+
+body.dark-mode .payment-content h2 {
+    color: var(--text-primary, #e0e0e0);
+}
+
+body.dark-mode .payment-method-card,
+body.dark-mode .faq-item-card {
+    background: var(--background-white, #2c2c2c); /* Dark card background */
+    border-color: var(--border-dark, #444);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+body.dark-mode .payment-method-card:hover {
+    box-shadow: 0 7px 28px rgba(0,0,0,0.3);
+}
+
+
+body.dark-mode .method-icon-wrapper {
+    background: var(--background-dark, #1a1a1a); /* Darker icon background */
+    color: var(--primary-light, #a9dfbf); /* Lighter icon color */
+}
+
+body.dark-mode .method-details h3,
+body.dark-mode .faq-item-card h3 {
+    color: var(--text-primary, #e0e0e0);
+}
+
+body.dark-mode .method-details p,
+body.dark-mode .faq-item-card p {
+    color: var(--text-secondary, #b0b0b0); /* Lighter secondary text */
+}
+
+body.dark-mode .card-brands img {
+    filter: brightness(0.85) invert(0.9) hue-rotate(180deg); /* General filter for logos on dark */
+}
+body.dark-mode .card-brands .card-brand-amex {
+    filter: brightness(0) invert(1); /* Specific for Amex, often needs full invert */
+}
+body.dark-mode .card-brands img[alt="PayPal"] {
+    filter:  brightness(0) invert(1) hue-rotate(180deg) contrast(1.2); /* Paypal needs adjustment too */
+}
+
+
+body.dark-mode .card-brands .availability-note {
+    color: var(--text-light, #888);
+}
+
+body.dark-mode .section-divider {
+    background-color: var(--border-dark, #444);
+}
+
+body.dark-mode .security-feature-card {
+    background: var(--background-white, #2c2c2c); /* Dark card background */
+    border-color: var(--border-dark, #444);
+}
+
+body.dark-mode .feature-icon-wrapper {
+    background-color: var(--background-dark, #1a1a1a);
+    color: var(--primary-light, #a9dfbf);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .security-feature-card h3 {
+    color: var(--primary-light, #a9dfbf); /* Lighter theme color for heading */
+}
+
+body.dark-mode .security-feature-card p {
+    color: var(--text-secondary, #b0b0b0);
+}
+/* payment-options-styles.css */
+
+/* Hero Section Styling */
+.payment-hero {
+    background: linear-gradient(135deg, var(--primary-dark, #27ae60) 0%, var(--secondary-color, #1abc9c) 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--primary-color, #2ecc71);
+}
+
+.payment-hero h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+}
+
+.payment-hero p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Main Content Area */
+.payment-content {
+    padding: 50px 20px;
+    background-color: var(--background-light, #f8f9fa);
+    transition: background-color 0.3s ease;
+}
+
+.payment-content h2 { /* Titles for FAQ and Security sections */
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--text-primary, #333);
+    margin-bottom: 35px;
+}
+
+/* Payment Methods Grid */
+.payment-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+.payment-method-card {
+    background: var(--background-white, #ffffff);
+    border-radius: var(--border-radius-lg, 12px);
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color, #e9ecef);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.payment-method-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 28px rgba(0, 0, 0, 0.09);
+}
+
+.method-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-extra-light, #eafaf1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    color: var(--primary-color, #2ecc71);
+    font-size: 1.3rem;
+}
+
+.method-details h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-primary, #333);
+}
+
+.method-details p {
+    color: var(--text-secondary, #555);
+    line-height: 1.65;
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.card-brands {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased gap for icons */
+    margin-top: auto;
+    font-size: 2rem; /* Adjust size of Font Awesome icons */
+    color: var(--text-secondary, #555); /* Default color for icons */
+}
+
+.card-brands .fab { /* Target Font Awesome brand icons */
+    transition: color 0.3s ease;
+}
+.card-brands .fa-cc-visa { color: #1A1F71; }
+.card-brands .fa-cc-mastercard { color: #EB001B; }
+.card-brands .fa-cc-amex { color: #2E77BC; }
+.card-brands .fa-cc-discover { color: #FF6600; }
+.card-brands .fa-paypal { color: #00457C; }
+.card-brands .fa-apple-pay { color: #000000; }
+.card-brands .fa-google-pay { color: #5F6368; } /* Approximation */
+
+
+.card-brands .availability-note {
+    font-size: 0.8rem;
+    color: var(--text-light, #777);
+    font-style: italic;
+}
+
+/* Section Divider */
+.section-divider {
+    height: 1px;
+    background-color: var(--border-color, #dee2e6);
+    max-width: 700px;
+    margin: 45px auto;
+}
+
+/* Payment FAQs Section (Removed as per request) */
+.payment-faq-section {
+    /* display: none; If you decide to keep the HTML but hide it */
+    /* Or simply ensure no styles if HTML is removed */
+}
+
+
+/* Payment Security Section */
+.payment-security-section {
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.security-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.security-feature-card {
+    background: var(--primary-extra-light, #eafaf1);
+    border-radius: var(--border-radius-lg, 12px);
+    padding: 25px 20px;
+    border: 1px solid var(--primary-light, #a9dfbf);
+}
+
+.feature-icon-wrapper {
+    width: 55px;
+    height: 55px;
+    background-color: var(--background-white, #fff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: var(--primary-dark, #27ae60);
+    font-size: 1.5rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.security-feature-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-dark, #27ae60);
+}
+
+.security-feature-card p {
+    color: var(--text-secondary, #555);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* --- Dark Mode Styles --- */
+body.dark-mode .payment-content {
+    background-color: var(--background-dark, #1a1a1a);
+}
+
+body.dark-mode .payment-hero {
+    border-bottom-color: var(--primary-dark, #27ae60);
+}
+
+body.dark-mode .payment-content h2 {
+    color: var(--text-primary, #e0e0e0);
+}
+
+body.dark-mode .payment-method-card {
+    background: var(--background-white, #2c2c2c);
+    border-color: var(--border-dark, #444);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+body.dark-mode .payment-method-card:hover {
+    box-shadow: 0 7px 28px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .method-icon-wrapper {
+    background: var(--background-dark, #1a1a1a);
+    color: var(--primary-light, #a9dfbf);
+}
+
+body.dark-mode .method-details h3 {
+    color: var(--text-primary, #e0e0e0);
+}
+
+body.dark-mode .method-details p {
+    color: var(--text-secondary, #b0b0b0);
+}
+
+body.dark-mode .card-brands {
+    color: var(--text-light, #999999); /* Fallback color for icons */
+}
+/* Dark mode colors for Font Awesome payment icons */
+body.dark-mode .card-brands .fa-cc-visa { color: #6F9EFF; } /* Lighter Visa blue */
+body.dark-mode .card-brands .fa-cc-mastercard { color: #FF9F0A; } /* MasterCard orange part */
+body.dark-mode .card-brands .fa-cc-amex { color: #68A0D9; } /* Lighter Amex blue */
+body.dark-mode .card-brands .fa-cc-discover { color: #FF8C00; } /* Lighter Discover orange */
+body.dark-mode .card-brands .fa-paypal { color: #009CDE; } /* Lighter PayPal blue */
+body.dark-mode .card-brands .fa-apple-pay { color: #B0B0B0; } /* Light gray for Apple Pay */
+body.dark-mode .card-brands .fa-google-pay { color: #7CB342; } /* Google Pay green (can vary) */
+
+
+body.dark-mode .card-brands .availability-note {
+    color: var(--text-light, #888);
+}
+
+body.dark-mode .section-divider {
+    background-color: var(--border-dark, #444);
+}
+
+body.dark-mode .security-feature-card {
+    background: var(--background-white, #2c2c2c);
+    border-color: var(--border-dark, #444);
+}
+
+body.dark-mode .feature-icon-wrapper {
+    background-color: var(--background-dark, #1a1a1a);
+    color: var(--primary-light, #a9dfbf);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .security-feature-card h3 {
+    color: var(--primary-light, #a9dfbf);
+}
+
+body.dark-mode .security-feature-card p {
+    color: var(--text-secondary, #b0b0b0);
+}
+body.dark-mode .method-icon-wrapper{
+    color:#1c8f4c;
+}
+body.dark-mode .feature-icon-wrapper{
+    color:#1c8f4c;
+}
+/* Dark Mode Fix: Make security feature headings white */
+body.dark-mode .security-feature-card h3 {
+    color: var(--text-primary, #ffffff);
+}
+body.dark-mode .btn-light {
+    color: #1abc9c;
+}
