@@ -8234,3 +8234,1355 @@ body.dark-mode .security-feature-card h3 {
 body.dark-mode .btn-light {
     color: #1abc9c;
 }
+/* restaurant-page.css */
+
+/* === Hero Section === */
+.restaurant-hero {
+    margin-top: 0; /* Aligns with the bottom of the sticky header */
+}
+.restaurant-banner {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.banner-overlay {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+    padding: 30px 0;
+}
+.restaurant-info h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.meta-details, .delivery-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.95rem;
+    color: #f0f0f0;
+}
+.meta-details span, .delivery-details span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.meta-details .rating i {
+    color: var(--warning-color);
+}
+
+/* === Main Menu Section === */
+.restaurant-menu {
+    background-color: var(--background-light);
+}
+.menu-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Menu Sidebar */
+.menu-sidebar {
+    flex: 0 0 250px;
+    position: sticky;
+    top: 100px; /* Offset for sticky header */
+    background-color: var(--background-white);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+}
+.menu-navigation h3 {
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+.category-list li a {
+    display: block;
+    padding: 10px;
+    color: var(--text-secondary);
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+.category-list li a:hover {
+    background-color: var(--primary-extra-light);
+    color: var(--primary-dark);
+}
+.category-list li.active a {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Menu Content */
+.menu-content { flex: 1; }
+.menu-category { margin-bottom: 40px; scroll-margin-top: 100px; }
+.menu-category h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--text-primary);
+}
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.menu-item {
+    background: var(--background-white);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+}
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.menu-item-info { padding: 20px; flex-grow: 1; }
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+.menu-item-header h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+.price { font-weight: 600; color: var(--primary-dark); }
+.description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+/* === Dark Mode Fixes === */
+body.dark-mode .restaurant-menu {
+    background-color: var(--background-dark);
+}
+body.dark-mode .menu-sidebar {
+    background-color: var(--background-white);
+    border-color: var(--border-dark);
+}
+body.dark-mode .menu-navigation h3,
+body.dark-mode .menu-category h2 {
+    color: var(--text-primary);
+    border-color: var(--border-dark);
+}
+body.dark-mode .menu-category h2 {
+    border-color: var(--primary-color);
+}
+body.dark-mode .category-list li a {
+    color: var(--text-secondary);
+}
+body.dark-mode .category-list li a:hover {
+    background-color: var(--background-darker);
+    color: var(--primary-light);
+}
+body.dark-mode .category-list li.active a {
+    background-color: var(--primary-color);
+    color: white;
+}
+body.dark-mode .menu-item {
+    background-color: var(--background-white);
+    border-color: var(--border-dark);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+body.dark-mode .menu-item-header h3 {
+    color: var(--text-primary);
+}
+body.dark-mode .price {
+    color: var(--primary-light);
+}
+body.dark-mode .description {
+    color: var(--text-secondary);
+}
+/* restaurant-page.css */
+
+/* === Hero Section === */
+.restaurant-hero {
+    margin-top: 0;
+}
+.restaurant-banner {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.banner-overlay {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+    padding: 30px 0;
+}
+.restaurant-info h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.meta-details, .delivery-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.95rem;
+    color: #f0f0f0;
+}
+.meta-details span, .delivery-details span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.meta-details .rating i {
+    color: var(--warning-color);
+}
+.price-range {
+    font-weight: 600;
+}
+
+/* === Main Menu Section === */
+.restaurant-menu {
+    background-color: var(--background-light);
+    padding: 40px 0;
+}
+.menu-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Menu Sidebar */
+.menu-sidebar {
+    flex: 0 0 250px;
+    position: sticky;
+    top: 100px; /* Offset for sticky header */
+    background-color: var(--background-white);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.menu-navigation h3 {
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+.category-list li a {
+    display: block;
+    padding: 10px;
+    color: var(--text-secondary);
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+.category-list li a:hover {
+    background-color: var(--primary-extra-light);
+    color: var(--primary-dark);
+}
+.category-list li.active a {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Menu Content */
+.menu-content { flex: 1; }
+.menu-category { margin-bottom: 40px; scroll-margin-top: 100px; }
+.menu-category h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--text-primary);
+}
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout for this design */
+    gap: 20px;
+}
+.menu-item {
+    background: var(--background-white);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.menu-item-info { 
+    padding: 20px; 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.menu-item-image {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--border-radius-md);
+    margin: 15px;
+}
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+.menu-item-header h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+.price { font-weight: 600; color: var(--primary-dark); }
+.description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+.add-to-cart-btn {
+    align-self: flex-start;
+}
+.add-to-cart-btn.added {
+    background-color: var(--success-color);
+}
+
+
+/* === Dark Mode Styles === */
+
+body.dark-mode .restaurant-menu {
+    background-color: var(--background-dark);
+}
+body.dark-mode .menu-sidebar {
+    background-color: var(--background-white);
+    border-color: var(--border-dark);
+}
+body.dark-mode .menu-navigation h3,
+body.dark-mode .menu-category h2 {
+    color: var(--text-primary);
+    border-color: var(--border-dark);
+}
+body.dark-mode .menu-category h2 {
+    border-color: var(--primary-color);
+}
+body.dark-mode .category-list li a {
+    color: var(--text-secondary);
+}
+body.dark-mode .category-list li a:hover {
+    background-color: var(--background-darker);
+    color: var(--primary-light);
+}
+body.dark-mode .category-list li.active a {
+    background-color: var(--primary-color);
+    color: white;
+}
+body.dark-mode .menu-item {
+    background-color: var(--background-white);
+    border-color: var(--border-dark);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+body.dark-mode .menu-item:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+body.dark-mode .menu-item-header h3 {
+    color: var(--text-primary);
+}
+body.dark-mode .price {
+    color: var(--primary-light);
+}
+body.dark-mode .description {
+    color: var(--text-secondary);
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+    .menu-layout { flex-direction: column; }
+    .menu-sidebar { position: static; flex: auto; max-height: none; }
+}
+@media (max-width: 768px) {
+    .menu-items-grid { grid-template-columns: 1fr; }
+    .restaurant-info h1 { font-size: 2rem; }
+    .menu-item { flex-direction: column-reverse; }
+    .menu-item-image { width: 100%; height: 180px; margin: 0; border-radius: 0; }
+}
+/* ============================================= */
+/* ==   Redesigned Styles for Restaurant Page == */
+/* ============================================= */
+
+
+/* === Hero Section (Unchanged) === */
+.restaurant-hero {
+    margin-top: 0; 
+}
+.restaurant-banner {
+    height: 300px;
+    background-size: cover;
+    background-position: center 40%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.banner-overlay {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 40%, transparent 100%);
+    padding: 30px 0;
+}
+.restaurant-info {
+    color: white;
+}
+.restaurant-info h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+.meta-details, .delivery-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 0.9rem;
+    color: #f0f0f0;
+}
+.meta-details span, .delivery-details span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 12px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+}
+.meta-details .rating i {
+    color: var(--warning-color);
+}
+.price-range {
+    font-weight: 600;
+}
+
+/* === Main Menu Area === */
+.menu-container {
+    background-color: var(--background-light);
+    padding: 40px 0;
+}
+
+.menu-category {
+    margin-bottom: 50px;
+}
+.menu-category h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--text-primary);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+}
+
+/* NEW: Menu Grid & Cards - Styled to be identical to restaurant cards */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.menu-item-card {
+    background-color: var(--background-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+.menu-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item-image {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-item-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Makes this block take up available space */
+    min-height: 180px; /* Ensures a consistent minimum height for the text area */
+}
+
+.menu-item-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    flex-grow: 1; /* Pushes the footer down */
+    margin-bottom: 16px;
+}
+
+.menu-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Ensures it stays at the bottom */
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.add-to-cart-btn {
+    padding: 8px 20px;
+}
+.add-to-cart-btn.added {
+    background-color: var(--success-color);
+}
+
+/* === Dark Mode Styles === */
+body.dark-mode .menu-container {
+    background-color: var(--background-dark);
+}
+body.dark-mode .menu-category h2 {
+    color: var(--text-primary);
+    border-color: var(--primary-color);
+}
+body.dark-mode .menu-item-card {
+    background-color: var(--background-white);
+    border-color: var(--border-dark);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+body.dark-mode .menu-item-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+body.dark-mode .menu-item-content h3 {
+    color: var(--text-primary);
+}
+body.dark-mode .price {
+    color: var(--primary-light);
+}
+body.dark-mode .description {
+    color: var(--text-secondary);
+}
+body.dark-mode .meta-details span, 
+body.dark-mode .delivery-details span {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* === Responsive Styles === */
+@media (max-width: 992px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+@media (max-width: 768px) {
+    .restaurant-info h1 {
+        font-size: 2rem;
+    }
+    .restaurant-banner {
+        height: 250px;
+    }
+}
+@media (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* restaurant-page.css */
+
+/* === Hero Section Styling === */
+/* Ensures the hero section aligns perfectly below the sticky header */
+.restaurant-hero {
+    margin-top: 0; 
+}
+/* Styles for the banner image and its overlay */
+.restaurant-banner {
+    height: 350px; /* Fixed height for the banner */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* Aligns content to the bottom of the banner */
+}
+/* Gradient overlay to ensure text readability over the banner image */
+.banner-overlay {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+    padding: 30px 0;
+}
+/* Styling for the restaurant name in the banner */
+.restaurant-info h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Adds a subtle shadow for better contrast */
+}
+/* General styling for meta details (rating, price range, categories) and delivery details */
+.meta-details, .delivery-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 20px; /* Spacing between meta items */
+    font-size: 0.95rem;
+    color: #f0f0f0; /* Light text color for readability over dark overlay */
+}
+/* Styling for individual span elements within meta/delivery details */
+.meta-details span, .delivery-details span {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Spacing between icon and text */
+}
+/* Specific color for the star icon in the rating */
+.meta-details .rating i {
+    color: var(--warning-color);
+}
+/* Styling for the price range text */
+.price-range {
+    font-weight: 600;
+}
+
+/* === Main Menu Section Styling === */
+.restaurant-menu {
+    background-color: var(--background-light); /* Light background for the menu area */
+    padding: 40px 0;
+}
+/* Layout for the menu, using flexbox for sidebar and content */
+.menu-layout {
+    display: flex;
+    gap: 30px; /* Spacing between sidebar and menu content */
+    align-items: flex-start; /* Aligns content to the top */
+}
+
+/* === Menu Sidebar Styling === */
+.menu-sidebar {
+    flex: 0 0 250px; /* Fixed width for the sidebar */
+    position: sticky; /* Makes the sidebar stick during scroll */
+    top: 100px; /* Offset from the top (adjust based on header height) */
+    background-color: var(--background-white); /* White background for the sidebar */
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s, border-color 0.3s;
+    height: fit-content; /* Ensures sidebar wraps its content */
+}
+/* Styling for the menu navigation title */
+.menu-navigation h3 {
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color); /* Separator line */
+    color: var(--text-primary);
+}
+/* Styling for individual category links in the sidebar */
+.category-list li a {
+    display: block;
+    padding: 10px;
+    color: var(--text-secondary);
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+/* Hover effect for category links */
+.category-list li a:hover {
+    background-color: var(--primary-extra-light); /* Light primary color on hover */
+    color: var(--primary-dark);
+}
+/* Styling for the active category link */
+.category-list li.active a {
+    background-color: var(--primary-color); /* Primary color for active link */
+    color: white;
+}
+
+/* === Menu Content Styling === */
+.menu-content { 
+    flex: 1; /* Allows menu content to take remaining space */
+}
+/* Styling for each menu category section (e.g., "Signature Burgers", "Sides") */
+.menu-category { 
+    margin-bottom: 40px; 
+    scroll-margin-top: 100px; /* Ensures sticky header doesn't hide section titles on scroll */
+}
+/* Styling for category titles within the menu content */
+.menu-category h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color); /* Prominent separator line */
+    color: var(--text-primary);
+}
+/* Grid layout for menu items within each category */
+.menu-items-grid {
+    display: grid;
+    /* Responsive grid: 3 columns on larger screens, adjusts down */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Spacing between menu item cards */
+}
+
+/* === Menu Item Card Styling (Redesigned to mimic restaurant-card) === */
+.menu-item {
+    background: var(--background-white); /* White background */
+    border-radius: var(--border-radius-lg); /* Larger rounded corners for elegant look */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Soft shadow */
+    border: 1px solid var(--border-color); /* Subtle border */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    display: flex;
+    flex-direction: column; /* Stack image on top of info */
+}
+/* Hover effect for menu item cards */
+.menu-item:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Enhanced shadow on hover */
+}
+/* Styling for the menu item image */
+.menu-item-image {
+    width: 100%; /* Image fills the width of its container */
+    height: 200px; /* Fixed height for consistency */
+    background-size: cover;
+    background-position: center;
+    border-radius: 0; /* No individual border-radius, it's on the parent card */
+    margin: 0; /* Remove any external margins */
+}
+/* Styling for the content area of the menu item card */
+.menu-item-info { 
+    padding: 20px; /* Consistent padding inside the card */
+    flex-grow: 1; /* Allows content to expand and push button down */
+    display: flex;
+    flex-direction: column;
+    min-height: 120px; /* Ensures a minimum height for consistent card size */
+}
+/* Header within the menu item, containing title and price */
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+/* Styling for the menu item title */
+.menu-item-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+/* Styling for the price */
+.price { 
+    font-weight: 700;
+    color: var(--primary-dark); 
+    font-size: 1.2rem;
+}
+/* Styling for the menu item description */
+.description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows description to grow and push button to bottom */
+    line-height: 1.5;
+}
+/* Styling for the "Add to Cart" button */
+.add-to-cart-btn {
+    align-self: flex-end; /* Aligns button to the bottom-right of the info section */
+    width: auto; /* Button width adjusts to content */
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    margin-top: auto; /* Pushes button to the very bottom of the card */
+}
+/* Styling for the button once an item is added to cart (e.g., changes color) */
+.add-to-cart-btn.added {
+    background-color: var(--success-color);
+}
+
+
+/* === Dark Mode Styles === */
+/* Adjusts background of the menu section in dark mode */
+body.dark-mode .restaurant-menu {
+    background-color: var(--background-dark);
+}
+/* Adjusts sidebar appearance in dark mode */
+body.dark-mode .menu-sidebar {
+    background-color: var(--background-white);
+    border-color: var(--border-dark);
+}
+/* Adjusts category and menu titles in dark mode */
+body.dark-mode .menu-navigation h3,
+body.dark-mode .menu-category h2 {
+    color: var(--text-primary);
+    border-color: var(--border-dark);
+}
+/* Specific border color for menu category titles in dark mode */
+body.dark-mode .menu-category h2 {
+    border-color: var(--primary-color);
+}
+/* Adjusts color of inactive category links in dark mode */
+body.dark-mode .category-list li a {
+    color: var(--text-secondary);
+}
+/* Adjusts hover effect for category links in dark mode */
+body.dark-mode .category-list li a:hover {
+    background-color: var(--background-darker);
+    color: var(--primary-light);
+}
+/* Ensures active category link remains primary color in dark mode */
+body.dark-mode .category-list li.active a {
+    background-color: var(--primary-color);
+    color: white;
+}
+/* Adjusts menu item card appearance in dark mode */
+body.dark-mode .menu-item {
+    background-color: var(--background-white);
+    border-color: var(--border-dark);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+/* Adjusts hover shadow for menu item cards in dark mode */
+body.dark-mode .menu-item:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+/* Adjusts title color of menu items in dark mode */
+body.dark-mode .menu-item-header h3 {
+    color: var(--text-primary);
+}
+/* Adjusts price color of menu items in dark mode */
+body.dark-mode .price {
+    color: var(--primary-light);
+}
+/* Adjusts description color of menu items in dark mode */
+body.dark-mode .description {
+    color: var(--text-secondary);
+}
+/* Adjusts background of meta/delivery details spans in dark mode */
+body.dark-mode .meta-details span,
+body.dark-mode .delivery-details span {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* === Responsive Adjustments === */
+/* Tablet and larger mobile landscape screens */
+@media (max-width: 992px) {
+    .menu-layout { 
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+    .menu-sidebar { 
+        position: static; /* Remove sticky behavior on smaller screens */
+        flex: auto; 
+        max-height: none; 
+        width: 100%; /* Make sidebar full width */
+        margin-bottom: 20px; /* Add space below sidebar */
+    }
+    .menu-items-grid {
+        /* On medium screens, show 2 columns for menu items */
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+/* Smaller tablet and large mobile screens */
+@media (max-width: 768px) {
+    .restaurant-info h1 { 
+        font-size: 2rem; /* Reduce hero title size */
+    }
+    .restaurant-banner { 
+        height: 250px; /* Reduce banner height */
+    }
+    .menu-items-grid { 
+        /* On small screens, switch to single column for menu items */
+        grid-template-columns: 1fr; 
+    }
+    .menu-item-image { 
+        height: 180px; /* Adjust image height for single column layout */
+    }
+}
+/* Smallest mobile screens */
+@media (max-width: 480px) {
+    .restaurant-banner { 
+        height: 200px; /* Further reduce banner height */
+    }
+    .restaurant-info h1 { 
+        font-size: 1.8rem; /* Further reduce hero title size */
+    }
+    .menu-item-info { 
+        padding: 15px; /* Reduce padding inside menu item cards */
+    }
+    .menu-item-header h3 { 
+        font-size: 1.1rem; /* Reduce menu item title size */
+    }
+    .price { 
+        font-size: 1.1rem; /* Reduce price text size */
+    }
+    .description { 
+        font-size: 0.85rem; /* Reduce description text size */
+    }
+    .add-to-cart-btn { 
+        padding: 8px 15px; /* Adjust button padding */
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+}
+/* restaurant-page.css */
+
+/* === Hero Section Styling === */
+/* Ensures the hero section aligns perfectly below the sticky header */
+.restaurant-hero {
+    margin-top: 0; 
+}
+/* Styles for the banner image and its overlay */
+.restaurant-banner {
+    height: 350px; /* Fixed height for the banner */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* Aligns content to the bottom of the banner */
+}
+/* Gradient overlay to ensure text readability over the banner image */
+.banner-overlay {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+    padding: 30px 0;
+}
+/* Styling for the restaurant name in the banner */
+.restaurant-info h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Adds a subtle shadow for better contrast */
+}
+/* General styling for meta details (rating, price range, categories) and delivery details */
+.meta-details, .delivery-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 20px; /* Spacing between meta items */
+    font-size: 0.95rem;
+    color: #f0f0f0; /* Light text color for readability over dark overlay */
+}
+/* Styling for individual span elements within meta/delivery details */
+.meta-details span, .delivery-details span {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Spacing between icon and text */
+}
+/* Specific color for the star icon in the rating */
+.meta-details .rating i {
+    color: var(--warning-color);
+}
+/* Styling for the price range text */
+.price-range {
+    font-weight: 600;
+}
+
+/* === Main Menu Section Styling === */
+.restaurant-menu {
+    background-color: var(--background-light); /* Light background for the menu area */
+    padding: 40px 0;
+}
+/* Layout for the menu, using flexbox for sidebar and content */
+.menu-layout {
+    display: flex;
+    gap: 30px; /* Spacing between sidebar and menu content */
+    align-items: flex-start; /* Aligns content to the top */
+}
+
+/* === Menu Sidebar Styling === */
+.menu-sidebar {
+    flex: 0 0 250px; /* Fixed width for the sidebar */
+    position: sticky; /* Makes the sidebar stick during scroll */
+    top: 100px; /* Offset from the top (adjust based on header height) */
+    background-color: var(--background-white); /* White background for the sidebar */
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s, border-color 0.3s;
+    height: fit-content; /* Ensures sidebar wraps its content */
+}
+/* Styling for the menu navigation title */
+.menu-navigation h3 {
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color); /* Separator line */
+    color: var(--text-primary);
+}
+/* Styling for individual category links in the sidebar */
+.category-list li a {
+    display: block;
+    padding: 10px;
+    color: var(--text-secondary);
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+/* Hover effect for category links */
+.category-list li a:hover {
+    background-color: var(--primary-extra-light); /* Light primary color on hover */
+    color: var(--primary-dark);
+}
+/* Styling for the active category link */
+.category-list li.active a {
+    background-color: var(--primary-color); /* Primary color for active link */
+    color: white;
+}
+
+/* === Menu Content Styling === */
+.menu-content { 
+    flex: 1; /* Allows menu content to take remaining space */
+}
+/* Styling for each menu category section (e.g., "Signature Burgers", "Sides") */
+.menu-category { 
+    margin-bottom: 40px; 
+    scroll-margin-top: 100px; /* Ensures sticky header doesn't hide section titles on scroll */
+}
+/* Styling for category titles within the menu content */
+.menu-category h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color); /* Prominent separator line */
+    color: var(--text-primary);
+}
+/* Grid layout for menu items within each category */
+.menu-items-grid {
+    display: grid;
+    /* Responsive grid: 3 columns on larger screens, adjusts down */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Spacing between menu item cards */
+}
+
+/* === Menu Item Card Styling (Redesigned to mimic restaurant-card) === */
+.menu-item {
+    background: var(--background-white); /* White background */
+    border-radius: var(--border-radius-lg); /* Larger rounded corners for elegant look */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Soft shadow */
+    border: 1px solid var(--border-color); /* Subtle border */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    display: flex;
+    flex-direction: column; /* Stack image on top of info */
+}
+/* Hover effect for menu item cards */
+.menu-item:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Enhanced shadow on hover */
+}
+/* Styling for the menu item image */
+.menu-item-image {
+    width: 100%; /* Image fills the width of its container */
+    height: 200px; /* Fixed height for consistency */
+    background-size: cover;
+    background-position: center;
+    border-radius: 0; /* No individual border-radius, it's on the parent card */
+    margin: 0; /* Remove any external margins */
+}
+/* Styling for the content area of the menu item card */
+.menu-item-info { 
+    padding: 20px; /* Consistent padding inside the card */
+    flex-grow: 1; /* Allows content to expand and push button down */
+    display: flex;
+    flex-direction: column;
+    min-height: 120px; /* Ensures a minimum height for consistent card size */
+}
+/* Header within the menu item, containing title and price */
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+/* Styling for the menu item title */
+.menu-item-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+/* Styling for the price */
+.price { 
+    font-weight: 700;
+    color: var(--primary-dark); 
+    font-size: 1.2rem;
+}
+/* Styling for the menu item description */
+.description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows description to grow and push button to bottom */
+    line-height: 1.5;
+}
+/* Styling for the "Add to Cart" button's container */
+.menu-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Ensures it stays at the bottom */
+}
+.add-to-cart-btn {
+    /* Aligns button to the bottom-right of the info section */
+    /* Adjust as needed if button should span full width or be left-aligned */
+    align-self: flex-end; 
+    width: auto; /* Button width adjusts to content */
+    padding: 10px 20px;
+    font-size: 0.95rem;
+}
+/* Styling for the button once an item is added to cart (e.g., changes color) */
+.add-to-cart-btn.added {
+    background-color: var(--success-color);
+}
+
+
+/* === Dark Mode Styles === */
+/* Adjusts background of the menu section in dark mode */
+body.dark-mode .restaurant-menu {
+    background-color: var(--background-dark);
+}
+/* Adjusts sidebar appearance in dark mode */
+body.dark-mode .menu-sidebar {
+    background-color: var(--background-white);
+    border-color: var(--border-dark);
+}
+/* Adjusts category and menu titles in dark mode */
+body.dark-mode .menu-navigation h3,
+body.dark-mode .menu-category h2 {
+    color: var(--text-primary);
+    border-color: var(--border-dark);
+}
+/* Specific border color for menu category titles in dark mode */
+body.dark-mode .menu-category h2 {
+    border-color: var(--primary-color);
+}
+/* Adjusts color of inactive category links in dark mode */
+body.dark-mode .category-list li a {
+    color: var(--text-secondary);
+}
+/* Adjusts hover effect for category links in dark mode */
+body.dark-mode .category-list li a:hover {
+    background-color: var(--background-darker);
+    color: var(--primary-light);
+}
+/* Ensures active category link remains primary color in dark mode */
+body.dark-mode .category-list li.active a {
+    background-color: var(--primary-color);
+    color: white;
+}
+/* Adjusts menu item card appearance in dark mode */
+body.dark-mode .menu-item {
+    background-color: var(--background-white);
+    border-color: var(--border-dark);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+/* Adjusts hover shadow for menu item cards in dark mode */
+body.dark-mode .menu-item:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+/* Adjusts title color of menu items in dark mode */
+body.dark-mode .menu-item-header h3 {
+    color: var(--text-primary);
+}
+/* Fix: Price color should remain bright green in dark mode */
+body.dark-mode .price {
+    color: var(--primary-dark); /* Forces it to use the primary-dark color for consistency */
+}
+/* Adjusts description color of menu items in dark mode */
+body.dark-mode .description {
+    color: var(--text-secondary);
+}
+/* Adjusts background of meta/delivery details spans in dark mode */
+body.dark-mode .meta-details span,
+body.dark-mode .delivery-details span {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* === Responsive Adjustments === */
+/* Tablet and larger mobile landscape screens */
+@media (max-width: 992px) {
+    .menu-layout { 
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+    .menu-sidebar { 
+        position: static; /* Remove sticky behavior on smaller screens */
+        flex: auto; 
+        max-height: none; 
+        width: 100%; /* Make sidebar full width */
+        margin-bottom: 20px; /* Add space below sidebar */
+    }
+    .menu-items-grid {
+        /* On medium screens, show 2 columns for menu items */
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+/* Smaller tablet and large mobile screens */
+@media (max-width: 768px) {
+    .restaurant-info h1 { 
+        font-size: 2rem; /* Reduce hero title size */
+    }
+    .restaurant-banner { 
+        height: 250px; /* Reduce banner height */
+    }
+    .menu-items-grid { 
+        /* On small screens, switch to single column for menu items */
+        grid-template-columns: 1fr; 
+    }
+    .menu-item-image { 
+        height: 180px; /* Adjust image height for single column layout */
+    }
+    /* On small screens, stack menu item image on top of info for better readability */
+    .menu-item {
+        flex-direction: column;
+    }
+    .menu-item-image {
+        width: 100%;
+        height: 180px;
+        border-radius: var(--border-radius-md) var(--border-radius-md) 0 0; /* Apply rounded corners only to top */
+        margin: 0;
+    }
+    .menu-item-info {
+        padding: 15px; /* Adjust padding for smaller cards */
+    }
+}
+/* Smallest mobile screens */
+@media (max-width: 480px) {
+    .restaurant-banner { 
+        height: 200px; /* Further reduce banner height */
+    }
+    .restaurant-info h1 { 
+        font-size: 1.8rem; /* Further reduce hero title size */
+    }
+    .menu-item-info { 
+        padding: 15px; /* Reduce padding inside menu item cards */
+    }
+    .menu-item-header h3 { 
+        font-size: 1.1rem; /* Reduce menu item title size */
+    }
+    .price { 
+        font-size: 1.1rem; /* Reduce price text size */
+    }
+    .description { 
+        font-size: 0.85rem; /* Reduce description text size */
+    }
+    .add-to-cart-btn { 
+        padding: 8px 15px; /* Adjust button padding */
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+}
+/* restaurant-page.css */
+
+/* ... (previous CSS remains unchanged) ... */
+
+/* === Main Menu Section Styling === */
+.restaurant-menu {
+    background-color: var(--background-light); /* Light background for the menu area */
+    padding: 40px 0; /* Keep top/bottom padding for the whole section */
+}
+
+/* Updated: Menu Content area for rounded corners and internal padding */
+.menu-content {
+    flex: 1;
+    background-color: var(--background-white); /* Background for the content block */
+    border-radius: var(--border-radius-lg); /* Apply border-radius to the entire content block */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Add a subtle shadow */
+    overflow: hidden; /* Ensure content and shadows are clipped by radius */
+    padding: 30px; /* Add internal padding to push content (including titles) away from the edges */
+    border: 1px solid var(--border-color); /* Add a subtle border */
+}
+
+/* Ensure category titles have proper left spacing within the padded menu-content */
+.menu-category h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--text-primary);
+    /* No need for specific left padding here, as it's handled by .menu-content's padding */
+    /* Remove 'display: inline-block;' if it's causing layout issues or you want full-width border */
+    /* display: block; */ /* Consider changing to block if the border is not full width */
+}
+
+/* ... (rest of your CSS, including Dark Mode styles, remains unchanged) ... */
+
+
+/* === Dark Mode Styles (Ensure these overrides are correct) === */
+body.dark-mode .menu-content {
+    background-color: var(--background-white); /* Dark mode background for the content block */
+    border-color: var(--border-dark); /* Dark mode border for the content block */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Dark mode shadow */
+}
+
+body.dark-mode .menu-category h2 {
+    color: var(--text-primary); /* Ensure title color is correct in dark mode */
+    border-color: var(--primary-color); /* Keep primary color for underline in dark mode */
+}
+/* Add/Modify this in your style.css */
+
+/* Ensure restaurant names are always text-primary in light mode */
+.restaurant-info h3 {
+    color: var(--text-primary); /* This should be #333333 in light mode */
+    /* Keep other existing styles like font-size, margin-bottom, font-weight, transition */
+}
+
+/* Override for dark mode */
+body.dark-mode .restaurant-info h3 {
+    color: var(--text-primary); /* This will be #f0f0f0 in dark mode as defined in dark-mode :root */
+}
+
+/* Also check the .section-title, as it often has similar issues */
+.section-title {
+    color: var(--text-primary); /* Ensure it's explicitly set for light mode */
+}
+body.dark-mode .section-title {
+    color: var(--text-primary); /* This will be #f0f0f0 in dark mode */
+}
+
+/* Double-check the main header logo if it's affected too */
+.logo h1 {
+    color: var(--primary-color); /* Usually green, so might not be affected */
+}
+
+/* If any other h3 elements are staying white, you may need to add: */
+h3 {
+    color: var(--text-primary); /* Ensure general h3 defaults to black in light mode */
+}
+
+/* Then in dark mode: */
+body.dark-mode h3 {
+    color: var(--text-primary); /* This will make them light in dark mode */
+}
