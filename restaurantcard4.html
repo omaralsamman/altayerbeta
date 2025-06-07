@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Sensation - Altayer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="restaurant-page.css">
+
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="restaurants.html" class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <div class="logo">
+                    <a href="index.html"><h1><i class="fas fa-utensils"></i> Altayer</h1></a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="plus.html">Plus</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for food, restaurants..." id="search-input">
+                        <div class="search-results" id="search-results"></div>
+                    </div>
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="darkmode-switch">
+                        <label for="darkmode-switch" class="toggle-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="toggle-ball"></span>
+                        </label>
+                    </div>
+                    <div class="user-actions">
+                        <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count" id="cart-count">0</span></a>
+                        <a href="signin.html" class="signin-btn">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="restaurant-hero">
+        <div class="restaurant-banner" style="background-image: url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c');">
+            <div class="banner-overlay">
+                <div class="container">
+                    <div class="restaurant-info">
+                        <h1>Sushi Sensation</h1>
+                        <div class="meta-details">
+                            <span class="rating"><i class="fas fa-star"></i> 4.9 (400+)</span>
+                            <span class="price-range">$$$</span>
+                            <span class="categories">Sushi • Japanese • Asian</span>
+                        </div>
+                        <div class="delivery-details">
+                            <span><i class="fas fa-clock"></i> 30-40 min</span>
+                            <span><i class="fas fa-truck"></i> $2.49 Delivery Fee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="restaurant-menu">
+        <div class="container menu-layout">
+            <aside class="menu-sidebar">
+                <nav class="menu-navigation">
+                    <h3>Menu</h3>
+                    <ul class="category-list">
+                        <li class="active"><a href="#sushi-rolls">Sushi Rolls</a></li>
+                        <li><a href="#sashimi-nigiri">Sashimi & Nigiri</a></li>
+                        <li><a href="#signature-bowls">Signature Bowls</a></li>
+                        <li><a href="#appetizers">Appetizers</a></li>
+                        <li><a href="#drinks">Drinks</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="menu-content">
+                <section id="sushi-rolls" class="menu-category">
+                    <h2>Sushi Rolls</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="sushi-1" data-item-name="California Roll" data-item-price="10.99" data-item-image="https://images.unsplash.com/photo-1563612140-59f77f9f30b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Sushi Sensation">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1563612140-59f77f9f30b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>California Roll</h3>
+                                </div>
+                                <p class="description">Crab, avocado, and cucumber, rolled with seaweed and rice.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$10.99</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" data-item-id="sushi-2" data-item-name="Spicy Tuna Roll" data-item-price="12.99" data-item-image="https://images.unsplash.com/photo-1579584425667-e737039c9b0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Sushi Sensation">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1579584425667-e737039c9b0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Spicy Tuna Roll</h3>
+                                </div>
+                                <p class="description">Fresh tuna with spicy mayo and cucumber.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$12.99</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" data-item-id="sushi-3" data-item-name="Dragon Roll" data-item-price="15.99" data-item-image="https://images.unsplash.com/photo-1601050692556-c709e35d1e2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Sushi Sensation">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1601050692556-c709e35d1e2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Dragon Roll</h3>
+                                </div>
+                                <p class="description">Shrimp tempura, cucumber, topped with avocado and eel sauce.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$15.99</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                
+                <section id="sashimi-nigiri" class="menu-category">
+                    <h2>Sashimi & Nigiri</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="sashimi-1" data-item-name="Tuna Sashimi (3 pcs)" data-item-price="9.50" data-item-image="https://images.unsplash.com/photo-1534062602715-375c742617f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Sushi Sensation">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1534062602715-375c742617f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Tuna Sashimi (3 pcs)</h3>
+                                </div>
+                                <p class="description">Fresh slices of prime tuna.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$9.50</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" data-item-id="nigiri-1" data-item-name="Salmon Nigiri (2 pcs)" data-item-price="7.50" data-item-image="https://images.unsplash.com/photo-1621213458667-27b61f9d500e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Sushi Sensation">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1621213458667-27b61f9d500e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Salmon Nigiri (2 pcs)</h3>
+                                </div>
+                                <p class="description">Fresh salmon over seasoned sushi rice.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$7.50</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="signature-bowls" class="menu-category">
+                    <h2>Signature Bowls</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="bowl-1" data-item-name="Chirashi Bowl" data-item-price="18.00" data-item-image="https://images.unsplash.com/photo-1617196039399-da183c509a25?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Sushi Sensation">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1617196039399-da183c509a25?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Chirashi Bowl</h3>
+                                </div>
+                                <p class="description">Assorted fresh fish over a bed of sushi rice.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$18.00</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                
+                <section id="appetizers" class="menu-category">
+                    <h2>Appetizers</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="appetizer-1" data-item-name="Edamame" data-item-price="5.00" data-item-image="https://images.unsplash.com/photo-1522030206103-6056d6d4d1e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Sushi Sensation">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1522030206103-6056d6d4d1e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Edamame</h3>
+                                </div>
+                                <p class="description">Steamed green soybeans lightly salted.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$5.00</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="drinks" class="menu-category">
+                    <h2>Drinks</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="drink-1" data-item-name="Green Tea" data-item-price="3.00" data-item-image="https://images.unsplash.com/photo-1582402131238-d6211831846b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Sushi Sensation">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1582402131238-d6211831846b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Green Tea</h3>
+                                </div>
+                                <p class="description">Traditional Japanese green tea.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$3.00</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="altayer-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>Altayer</span>
+                    </div>
+                    <p class="footer-tagline">Delivering happiness one meal at a time</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-title">Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="plus.html">Altayer Plus</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-title">Help</h4>
+                        <ul class="footer-links">
+                            <li><a href="track-order.html">Track Order</a></li>
+                            <li><a href="faqs.html">FAQS</a></li>
+                            <li><a href="payment-options.html">Payment Options</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 Altayer. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="darkmode.js"></script>
+    <script>
+        // Function to update cart count display
+        function updateCartCountDisplay() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCountElement = document.getElementById('cart-count');
+            if (cartCountElement) {
+                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCountElement.textContent = totalItems;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartCountDisplay();
+
+            // Add to Cart functionality
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const menuItem = this.closest('.menu-item');
+                    const itemId = menuItem.dataset.itemId;
+                    const itemName = menuItem.dataset.itemName;
+                    const itemPrice = parseFloat(menuItem.dataset.itemPrice);
+                    const itemImage = menuItem.dataset.itemImage;
+                    const restaurantName = menuItem.dataset.restaurantName; // Get restaurant name
+
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                    // Check if item already exists in cart
+                    const existingItemIndex = cart.findIndex(item => item.id === itemId);
+
+                    if (existingItemIndex > -1) {
+                        // Item exists, increment quantity
+                        cart[existingItemIndex].quantity += 1;
+                    } else {
+                        // Item does not exist, add new item
+                        cart.push({
+                            id: itemId,
+                            name: itemName,
+                            price: itemPrice,
+                            image: itemImage,
+                            restaurant: restaurantName, // Add restaurant name to cart item
+                            quantity: 1
+                        });
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartCountDisplay();
+
+                    // Optional: Visual feedback on button
+                    const originalText = this.textContent;
+                    this.textContent = 'Added!';
+                    this.classList.add('added');
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.classList.remove('added');
+                    }, 1500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napoli's Pizzeria - Altayer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="restaurant-page.css">
+
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="restaurants.html" class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <div class="logo">
+                    <a href="index.html"><h1><i class="fas fa-utensils"></i> Altayer</h1></a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="plus.html">Plus</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for food, restaurants..." id="search-input">
+                        <div class="search-results" id="search-results"></div>
+                    </div>
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="darkmode-switch">
+                        <label for="darkmode-switch" class="toggle-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="toggle-ball"></span>
+                        </label>
+                    </div>
+                    <div class="user-actions">
+                        <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count" id="cart-count">0</span></a>
+                        <a href="signin.html" class="signin-btn">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="restaurant-hero">
+        <div class="restaurant-banner" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1035&h=690&q=80');">
+            <div class="banner-overlay">
+                <div class="container">
+                    <div class="restaurant-info">
+                        <h1>Napoli's Pizzeria</h1>
+                        <div class="meta-details">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7 (300+)</span>
+                            <span class="price-range">$$</span>
+                            <span class="categories">Pizza • Italian • Pasta</span>
+                        </div>
+                        <div class="delivery-details">
+                            <span><i class="fas fa-clock"></i> 20-30 min</span>
+                            <span><i class="fas fa-truck"></i> $0.99 Delivery Fee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="restaurant-menu">
+        <div class="container menu-layout">
+            <aside class="menu-sidebar">
+                <nav class="menu-navigation">
+                    <h3>Menu</h3>
+                    <ul class="category-list">
+                        <li class="active"><a href="#classic-pizzas">Classic Pizzas</a></li>
+                        <li><a href="#specialty-pizzas">Specialty Pizzas</a></li>
+                        <li><a href="#pasta-dishes">Pasta Dishes</a></li>
+                        <li><a href="#desserts">Desserts</a></li>
+                        <li><a href="#drinks">Drinks</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="menu-content">
+                <section id="classic-pizzas" class="menu-category">
+                    <h2>Classic Pizzas</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="pizza-1" data-item-name="Margherita Pizza" data-item-price="12.00" data-item-image="https://images.unsplash.com/photo-1590947132387-17ed47dc2e54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Napoli's Pizzeria">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1590947132387-17ed47dc2e54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Margherita Pizza</h3>
+                                </div>
+                                <p class="description">Classic tomato sauce, fresh mozzarella, and basil.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$12.00</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" data-item-id="pizza-2" data-item-name="Pepperoni Pizza" data-item-price="14.50" data-item-image="https://images.unsplash.com/photo-1628840042765-356cdd075133?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Napoli's Pizzeria">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1628840042765-356cdd075133?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Pepperoni Pizza</h3>
+                                </div>
+                                <p class="description">Rich tomato sauce, generous pepperoni, and melted mozzarella.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$14.50</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" data-item-id="pizza-3" data-item-name="Four Cheese Pizza" data-item-price="15.00" data-item-image="https://images.unsplash.com/photo-1604382164749-0897d96d5b0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Napoli's Pizzeria">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1604382164749-0897d96d5b0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Four Cheese Pizza</h3>
+                                </div>
+                                <p class="description">Mozzarella, parmesan, gorgonzola, and provolone with a white sauce base.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$15.00</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                
+                <section id="specialty-pizzas" class="menu-category">
+                    <h2>Specialty Pizzas</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="pizza-4" data-item-name="Diavola Pizza" data-item-price="16.00" data-item-image="https://images.unsplash.com/photo-1594002621430-8041c220268a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Napoli's Pizzeria">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1594002621430-8041c220268a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Diavola Pizza</h3>
+                                </div>
+                                <p class="description">Spicy salami, chili flakes, mozzarella, and tomato sauce.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$16.00</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" data-item-id="pizza-5" data-item-name="Prosciutto & Arugula Pizza" data-item-price="17.50" data-item-image="https://images.unsplash.com/photo-1627956417757-b08e5630325d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Napoli's Pizzeria">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1627956417757-b08e5630325d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Prosciutto & Arugula Pizza</h3>
+                                </div>
+                                <p class="description">Tomato sauce, mozzarella, prosciutto, fresh arugula, and parmesan shavings.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$17.50</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="pasta-dishes" class="menu-category">
+                    <h2>Pasta Dishes</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="pasta-1" data-item-name="Spaghetti Carbonara" data-item-price="13.00" data-item-image="https://images.unsplash.com/photo-1608897013039-887f21d8c804?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Napoli's Pizzeria">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1608897013039-887f21d8c804?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Spaghetti Carbonara</h3>
+                                </div>
+                                <p class="description">Classic Roman pasta with eggs, Pecorino Romano cheese, guanciale, and black pepper.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$13.00</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" data-item-id="pasta-2" data-item-name="Lasagna al Forno" data-item-price="15.50" data-item-image="https://images.unsplash.com/photo-1546412414-25e227091f9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Napoli's Pizzeria">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1546412414-25e227091f9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Lasagna al Forno</h3>
+                                </div>
+                                <p class="description">Layers of pasta, rich bolognese sauce, bechamel, and parmesan cheese.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$15.50</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="desserts" class="menu-category">
+                    <h2>Desserts</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="dessert-1" data-item-name="Tiramisu" data-item-price="7.00" data-item-image="https://images.unsplash.com/photo-1613508492212-e56598585671?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Napoli's Pizzeria">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1613508492212-e56598585671?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Tiramisu</h3>
+                                </div>
+                                <p class="description">Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$7.00</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="drinks" class="menu-category">
+                    <h2>Drinks</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="drink-1" data-item-name="Coca-Cola" data-item-price="2.50" data-item-image="https://images.unsplash.com/photo-1525992994464-9646c268882a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Napoli's Pizzeria">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1525992994464-9646c268882a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Coca-Cola</h3>
+                                </div>
+                                <p class="description">Refreshing classic cola.</p>
+                                <div class="menu-item-footer">
+                                    <span class="price">$2.50</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="altayer-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>Altayer</span>
+                    </div>
+                    <p class="footer-tagline">Delivering happiness one meal at a time</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-title">Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="plus.html">Altayer Plus</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-title">Help</h4>
+                        <ul class="footer-links">
+                            <li><a href="track-order.html">Track Order</a></li>
+                            <li><a href="faqs.html">FAQS</a></li>
+                            <li><a href="payment-options.html">Payment Options</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 Altayer. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="darkmode.js"></script>
+    <script>
+        // Function to update cart count display
+        function updateCartCountDisplay() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCountElement = document.getElementById('cart-count');
+            if (cartCountElement) {
+                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCountElement.textContent = totalItems;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartCountDisplay();
+
+            // Add to Cart functionality
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const menuItem = this.closest('.menu-item');
+                    const itemId = menuItem.dataset.itemId;
+                    const itemName = menuItem.dataset.itemName;
+                    const itemPrice = parseFloat(menuItem.dataset.itemPrice);
+                    const itemImage = menuItem.dataset.itemImage;
+                    const restaurantName = menuItem.dataset.restaurantName; // Get restaurant name
+
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                    // Check if item already exists in cart
+                    const existingItemIndex = cart.findIndex(item => item.id === itemId);
+
+                    if (existingItemIndex > -1) {
+                        // Item exists, increment quantity
+                        cart[existingItemIndex].quantity += 1;
+                    } else {
+                        // Item does not exist, add new item
+                        cart.push({
+                            id: itemId,
+                            name: itemName,
+                            price: itemPrice,
+                            image: itemImage,
+                            restaurant: restaurantName, // Add restaurant name to cart item
+                            quantity: 1
+                        });
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartCountDisplay();
+
+                    // Optional: Visual feedback on button
+                    const originalText = this.textContent;
+                    this.textContent = 'Added!';
+                    this.classList.add('added');
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.classList.remove('added');
+                    }, 1500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
