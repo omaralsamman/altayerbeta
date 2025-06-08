@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Altayer Food Delivery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+<body>
+    
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <div class="logo">
+                    <h1><i class="fas fa-utensils"></i> Altayer</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for food, restaurants...">
+                    </div>
+                    
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="darkmode-switch">
+                        <label for="darkmode-switch" class="toggle-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="toggle-ball"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="user-actions">
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                        <div class="user-menu">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <span class="user-name">User</span>
+                            <div class="dropdown-menu">
+                                <a href="account.html">My Account</a>
+                                <a href="order-history.html">Order History</a>
+                                <a href="#" id="signout-btn">Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Account Section -->
+    <section class="account-section">
+        <div class="container">
+            <div class="account-container">
+                <div class="account-sidebar">
+                    <div class="user-profile">
+                        <div class="user-avatar-large">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3 class="user-name-large" id="display-name">Loading...</h3>
+                        <p class="user-email" id="user-email">Loading...</p>
+                    </div>
+                    
+                    <nav class="account-nav">
+                        <ul>
+                            <li class="active"><a href="account.html"><i class="fas fa-user"></i> Profile</a></li>
+                            <li><a href="order-history.html"><i class="fas fa-history"></i> Order History</a></li>
+                            <li><a href="addresses.html"><i class="fas fa-map-marker-alt"></i> Saved Addresses</a></li>
+                            <li><a href="payment-methods.html"><i class="fas fa-credit-card"></i> Payment Methods</a></li>
+                            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="account-content">
+                    <h2>My Profile</h2>
+                    
+                    <form id="profileForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" disabled>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="cancel-btn">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form>
+                    
+                    <div class="account-section-divider"></div>
+                    
+                    <div class="change-password">
+                        <h3>Change Password</h3>
+                        <form id="passwordForm">
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <input type="password" id="current-password" name="current-password" placeholder="Enter current password">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <input type="password" id="new-password" name="new-password" placeholder="Enter new password">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm-new-password">Confirm New Password</label>
+                                <input type="password" id="confirm-new-password" name="confirm-new-password" placeholder="Confirm new password">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Change Password</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="altayer-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>Altayer</span>
+                    </div>
+                    <p class="footer-tagline">Delivering happiness one meal at a time</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-title">Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="plus.html">Altayer Plus</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-title">Help</h4>
+                        <ul class="footer-links">
+                            <li><a href="track-order.html">Track Order</a></li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="payment-options.html">Payment Options</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 Altayer. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="cookie-policy.html">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="darkmode.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        // Load user data
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                document.getElementById('display-name').textContent = user.displayName || 'User';
+                document.getElementById('user-email').textContent = user.email;
+                document.getElementById('email').value = user.email;
+                document.getElementById('name').value = user.displayName || '';
+                
+                // Update avatar if available
+                if (user.photoURL) {
+                    document.querySelector('.user-avatar-large i').style.display = 'none';
+                    document.querySelector('.user-avatar-large').style.backgroundImage = `url(${user.photoURL})`;
+                }
+            } else {
+                window.location.href = 'signin.html';
+            }
+        });
+
+        // Update profile
+        document.getElementById('profileForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const user = auth.currentUser;
+            const name = document.getElementById('name').value;
+            
+            user.updateProfile({
+                displayName: name
+            }).then(() => {
+                alert('Profile updated successfully!');
+                window.location.reload();
+            }).catch((error) => {
+                alert(error.message);
+            });
+        });
+
+        // Change password
+        document.getElementById('passwordForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const user = auth.currentUser;
+            const currentPassword = document.getElementById('current-password').value;
+            const newPassword = document.getElementById('new-password').value;
+            const confirmPassword = document.getElementById('confirm-new-password').value;
+            
+            if (newPassword !== confirmPassword) {
+                alert('New passwords do not match!');
+                return;
+            }
+            
+            const credential = firebase.auth.EmailAuthProvider.credential(
+                user.email, 
+                currentPassword
+            );
+            
+            user.reauthenticateWithCredential(credential)
+                .then(() => {
+                    return user.updatePassword(newPassword);
+                })
+                .then(() => {
+                    alert('Password changed successfully!');
+                    document.getElementById('passwordForm').reset();
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        });
+
+        // Cancel button
+        document.getElementById('cancel-btn').addEventListener('click', function() {
+            window.location.reload();
+        });
+    </script>
+    <script src="bar.js"></script>
+    <script src="sidebar.js"></script>
+       <script src="auth.js"></script>
+</body>
+</html>

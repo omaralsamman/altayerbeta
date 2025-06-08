@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - Altayer Food Delivery</title>
+    <title>Sign Up - Altayer Food Delivery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Additional CSS for the improved design */
-        .signin-section {
+        .signup-section {
             padding: 60px 0;
             background: #f9f9f9;
             min-height: calc(100vh - 150px);
@@ -19,7 +19,7 @@
             align-items: center;
         }
         
-        .signin-container {
+        .signup-container {
             max-width: 500px;
             width: 100%;
             margin: 0 auto;
@@ -94,26 +94,48 @@
             cursor: pointer;
         }
         
-        .form-options {
+        .password-strength {
             display: flex;
-            justify-content: space-between;
+            gap: 5px;
+            margin-top: 8px;
+            align-items: center;
+        }
+        
+        .strength-meter {
+            height: 4px;
+            flex: 1;
+            background: #dfe6e9;
+            border-radius: 2px;
+        }
+        
+        .strength-meter.active {
+            background: #4caf50;
+        }
+        
+        .strength-text {
+            font-size: 12px;
+            color: #636e72;
+            margin-left: 8px;
+        }
+        
+        .terms-checkbox {
+            display: flex;
             align-items: center;
             margin: 20px 0;
         }
         
-        .remember-me {
-            display: flex;
-            align-items: center;
-        }
-        
-        .remember-me input {
+        .terms-checkbox input {
             margin-right: 8px;
         }
         
-        .forgot-password {
+        .terms-checkbox label {
+            font-size: 14px;
+            color: #636e72;
+        }
+        
+        .terms-checkbox a {
             color: #0984e3;
             text-decoration: none;
-            font-size: 14px;
         }
         
         .btn-primary {
@@ -184,27 +206,27 @@
         
         .btn-social.facebook {
             color: #1877f2;
-            border-color: #ffffff;
+            border-color: #1877f2;
         }
         
         .btn-social.facebook:hover {
             background: rgba(24, 119, 242, 0.05);
         }
         
-        .signup-link {
+        .signin-link {
             text-align: center;
             color: #636e72;
             font-size: 14px;
         }
         
-        .signup-link a {
+        .signin-link a {
             color: #0984e3;
             text-decoration: none;
             font-weight: 500;
         }
         
         @media (max-width: 768px) {
-            .signin-container {
+            .signup-container {
                 padding: 30px 20px;
                 margin: 20px;
             }
@@ -243,24 +265,32 @@
                             <i class="fas fa-shopping-cart"></i>
                             <span class="cart-count">0</span>
                         </a>
-                        <a href="#" class="signin-btn">Sign in</a>
+                        <a href="signin.html" class="signin-btn">Sign in</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Sign In Section -->
-    <section class="signin-section">
+    <!-- Sign Up Section -->
+    <section class="signup-section">
         <div class="container">
-            <div class="signin-container">
-                <div class="signin-form">
+            <div class="signup-container">
+                <div class="signup-form">
                     <div class="form-header">
-                        <h2>Sign In to Your Account</h2>
-                        <p>Welcome back! Please enter your details.</p>
+                        <h2>Create Your Account</h2>
+                        <p>Join Altayer to start ordering delicious food</p>
                     </div>
                     
-                    <form id="signinForm">
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            </div>
+                        </div>
+                        
                         <div class="form-group">
                             <label for="email">Email Address</label>
                             <div class="input-group">
@@ -273,38 +303,52 @@
                             <label for="password">Password</label>
                             <div class="input-group">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                                <input type="password" id="password" name="password" placeholder="Create a password" required>
+                                <button type="button" class="toggle-password" aria-label="Show password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="password-strength">
+                                <span class="strength-meter"></span>
+                                <span class="strength-meter"></span>
+                                <span class="strength-meter"></span>
+                                <span class="strength-text">Password strength</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
                                 <button type="button" class="toggle-password" aria-label="Show password">
                                     <i class="fas fa-eye"></i>
                                 </button>
                             </div>
                         </div>
                         
-                        <div class="form-options">
-                            <div class="remember-me">
-                                <input type="checkbox" id="remember" name="remember">
-                                <label for="remember">Remember me</label>
-                            </div>
-                            <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+                        <div class="form-group terms-checkbox">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the <a href="terms-of-service.html">Terms of Service</a> and <a href="privacy-policy.html">Privacy Policy</a></label>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">Sign In</button>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
                         
                         <div class="divider">
                             <span>or</span>
                         </div>
                         
                         <div class="social-login">
-                            <button type="button" class="btn btn-social google" id="googleSignIn">
+                            <button type="button" class="btn btn-social google" id="googleSignUp">
                                 <i class="fab fa-google"></i> Continue with Google
                             </button>
-                            <button type="button" class="btn btn-social facebook" id="facebookSignIn">
+                            <button type="button" class="btn btn-social facebook" id="facebookSignUp">
                                 <i class="fab fa-facebook-f"></i> Continue with Facebook
                             </button>
                         </div>
                         
-                        <div class="signup-link">
-                            Don't have an account? <a href="signup.html">Sign up</a>
+                        <div class="signin-link">
+                            Already have an account? <a href="signin.html">Sign in</a>
                         </div>
                     </form>
                 </div>
@@ -389,32 +433,95 @@
         const auth = firebase.auth();
 
         // Toggle password visibility
-        document.querySelector('.toggle-password').addEventListener('click', function() {
-            const passwordInput = document.getElementById('password');
-            const icon = this.querySelector('i');
-            
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                icon.classList.remove('fa-eye');
-                icon.classList.add('fa-eye-slash');
-            } else {
-                passwordInput.type = 'password';
-                icon.classList.remove('fa-eye-slash');
-                icon.classList.add('fa-eye');
-            }
+        document.querySelectorAll('.toggle-password').forEach(button => {
+            button.addEventListener('click', function() {
+                const passwordInput = this.parentNode.querySelector('input');
+                const icon = this.querySelector('i');
+                
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
         });
 
-        // Email/password sign in
-        document.getElementById('signinForm').addEventListener('submit', function(e) {
+        // Password strength indicator
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            const strengthMeters = document.querySelectorAll('.strength-meter');
+            const strengthText = document.querySelector('.strength-text');
+            
+            // Reset all
+            strengthMeters.forEach(meter => meter.classList.remove('active'));
+            strengthText.textContent = 'Password strength';
+            strengthText.style.color = '#636e72';
+            
+            if (password.length === 0) return;
+            
+            // Very weak
+            if (password.length < 4) {
+                strengthMeters[0].classList.add('active');
+                strengthText.textContent = 'Very weak';
+                strengthText.style.color = '#ff5252';
+                return;
+            }
+            
+            // Weak
+            if (password.length < 8) {
+                strengthMeters[0].classList.add('active');
+                strengthText.textContent = 'Weak';
+                strengthText.style.color = '#ff5252';
+                return;
+            }
+            
+            // Medium
+            if (password.length < 12) {
+                strengthMeters[0].classList.add('active');
+                strengthMeters[1].classList.add('active');
+                strengthText.textContent = 'Medium';
+                strengthText.style.color = '#ffb74d';
+                return;
+            }
+            
+            // Strong
+            strengthMeters[0].classList.add('active');
+            strengthMeters[1].classList.add('active');
+            strengthMeters[2].classList.add('active');
+            strengthText.textContent = 'Strong';
+            strengthText.style.color = '#4caf50';
+        });
+
+        // Email/password sign up
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
             
-            auth.signInWithEmailAndPassword(email, password)
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            auth.createUserWithEmailAndPassword(email, password)
                 .then((userCredential) => {
-                    // Signed in
+                    // Signed up
                     const user = userCredential.user;
-                    localStorage.setItem('user', JSON.stringify(user));
+                    
+                    // Update user profile with name
+                    return user.updateProfile({
+                        displayName: name
+                    });
+                })
+                .then(() => {
+                    // Profile updated
+                    localStorage.setItem('user', JSON.stringify(auth.currentUser));
                     window.location.href = 'index.html';
                 })
                 .catch((error) => {
@@ -422,8 +529,8 @@
                 });
         });
 
-        // Google Sign-In
-        document.getElementById('googleSignIn').addEventListener('click', function() {
+        // Google Sign-Up
+        document.getElementById('googleSignUp').addEventListener('click', function() {
             const provider = new firebase.auth.GoogleAuthProvider();
             auth.signInWithPopup(provider)
                 .then((result) => {
@@ -436,8 +543,8 @@
                 });
         });
 
-        // Facebook Sign-In
-        document.getElementById('facebookSignIn').addEventListener('click', function() {
+        // Facebook Sign-Up
+        document.getElementById('facebookSignUp').addEventListener('click', function() {
             const provider = new firebase.auth.FacebookAuthProvider();
             auth.signInWithPopup(provider)
                 .then((result) => {
