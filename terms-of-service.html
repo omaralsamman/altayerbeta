@@ -17,14 +17,22 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="index.html"><h1><i class="fas fa-utensils"></i> Altayer</h1></a>
+                    <a href="index.html" style="text-decoration: none; color: inherit;"><h1><i class="fas fa-utensils"></i> Altayer</h1></a>
                 </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="plus.html">Plus</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                    </ul>
+                </nav>
                 <div class="header-right">
                     <div class="search-bar">
                         <i class="fas fa-search"></i>
                         <input type="text" placeholder="Search for food, restaurants..." id="search-input">
                         <div class="search-results" id="search-results"></div>
                     </div>
+                    
                     <div class="dark-mode-toggle">
                         <input type="checkbox" id="darkmode-switch">
                         <label for="darkmode-switch" class="toggle-label">
@@ -33,8 +41,11 @@
                             <span class="toggle-ball"></span>
                         </label>
                     </div>
+                    
                     <div class="user-actions">
-                        <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
                         <a href="signin.html" class="signin-btn">Sign in</a>
                     </div>
                 </div>
@@ -42,141 +53,87 @@
         </div>
     </header>
 
-    <section class="policy-hero">
+    <section class="payment-hero">
         <div class="container">
             <h1>Terms of Service</h1>
             <p>Last updated: June 8, 2025</p>
         </div>
     </section>
 
-    <section class="policy-content">
+    <section class="policy-content-area">
         <div class="container">
-            <div class="policy-container">
-                <div class="policy-sidebar">
-                    <div class="sidebar-sticky">
-                        <h3>Table of Contents</h3>
-                        <ul class="policy-nav">
-                            <li><a href="#agreement">Agreement to Terms</a></li>
-                            <li><a href="#accounts">Accounts</a></li>
-                            <li><a href="#orders">Ordering Process</a></li>
-                            <li><a href="#payments">Payments</a></li>
-                            <li><a href="#delivery">Delivery</a></li>
-                            <li><a href="#content">User Content</a></li>
-                            <li><a href="#prohibited">Prohibited Uses</a></li>
-                            <li><a href="#termination">Termination</a></li>
-                            <li><a href="#disclaimer">Disclaimer</a></li>
-                            <li><a href="#limitation">Limitation of Liability</a></li>
-                            <li><a href="#changes">Changes to Terms</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
-                        </ul>
+            <div class="policy-grid">
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-handshake"></i></div>
+                        <h2>1. Agreement to Terms</h2>
                     </div>
+                    <p>These Terms of Service ("Terms") govern your access to and use of the Altayer website, mobile application, and services (collectively, the "Service"). By accessing or using the Service, you agree to be bound by these Terms.</p>
+                    <p>If you do not agree to these Terms, you may not access or use the Service.</p>
+                </div>
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-user-circle"></i></div>
+                        <h2>2. Accounts</h2>
+                    </div>
+                    <p>To use certain features of the Service, you must create an account. You agree to:</p>
+                    <ul>
+                        <li>Provide accurate, current, and complete information.</li>
+                        <li>Maintain the security of your account credentials.</li>
+                        <li>Promptly update any information that becomes inaccurate.</li>
+                        <li>Accept responsibility for all activities that occur under your account.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-receipt"></i></div>
+                        <h2>3. Ordering Process</h2>
+                    </div>
+                     <p>When you place an order through Altayer, you agree to pay the total amount displayed at checkout. We will send your order to the selected restaurant for preparation and delivery.</p>
+                     <p>While we strive for accuracy, menu items, prices, and availability may change without notice. We are not responsible for errors in menu descriptions or pricing.</p>
+                </div>
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-credit-card"></i></div>
+                        <h2>4. Payments</h2>
+                    </div>
+                    <p>All payments are processed securely. You agree to pay all charges incurred, including food costs, delivery fees, taxes, and any applicable service fees. Prices are subject to change.</p>
+                </div>
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-ban"></i></div>
+                        <h2>5. Prohibited Uses</h2>
+                    </div>
+                    <p>You may use the Service only for lawful purposes. You agree not to use the Service in any way that violates any applicable law, to exploit or harm others, to transmit unsolicited material, or to impersonate others.</p>
+                </div>
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-times-circle"></i></div>
+                        <h2>6. Termination</h2>
+                    </div>
+                    <p>We may terminate or suspend your access to the Service immediately, without prior notice, for any reason, including if you breach these Terms. Upon termination, your right to use the Service will cease immediately.</p>
+                </div>
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-exclamation-triangle"></i></div>
+                        <h2>7. Disclaimer</h2>
+                    </div>
+                    <p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. ALTAYER DISCLAIMS ALL WARRANTIES, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</p>
                 </div>
                 
-                <div class="policy-main">
-                    <section id="agreement">
-                        <h2>1. Agreement to Terms</h2>
-                        <p>These Terms of Service ("Terms") govern your access to and use of the Altayer website, mobile application, and services (collectively, the "Service"). By accessing or using the Service, you agree to be bound by these Terms.</p>
-                        <p>If you do not agree to these Terms, you may not access or use the Service.</p>
-                    </section>
-                    
-                    <section id="accounts">
-                        <h2>2. Accounts</h2>
-                        <p>To use certain features of the Service, you must create an account. You agree to:</p>
-                        <ul>
-                            <li>Provide accurate, current, and complete information</li>
-                            <li>Maintain the security of your account credentials</li>
-                            <li>Promptly update any information that becomes inaccurate</li>
-                            <li>Accept responsibility for all activities that occur under your account</li>
-                        </ul>
-                        <p>We reserve the right to refuse service, terminate accounts, or remove content at our sole discretion.</p>
-                    </section>
-                    
-                    <section id="orders">
-                        <h2>3. Ordering Process</h2>
-                        <p>When you place an order through Altayer:</p>
-                        <ul>
-                            <li>You agree to pay the total amount displayed at checkout</li>
-                            <li>We will send your order to the selected restaurant</li>
-                            <li>The restaurant prepares your food</li>
-                            <li>Your order is delivered by our delivery partner</li>
-                        </ul>
-                        <p>While we strive for accuracy, menu items, prices, and availability may change without notice. We are not responsible for errors in menu descriptions or pricing.</p>
-                    </section>
-                    
-                    <section id="payments">
-                        <h2>4. Payments</h2>
-                        <p>All payments are processed securely through our payment partners. You agree to pay all charges incurred in connection with your order, including:</p>
-                        <ul>
-                            <li>Food and beverage costs</li>
-                            <li>Delivery fees</li>
-                            <li>Taxes</li>
-                            <li>Any applicable service fees</li>
-                        </ul>
-                        <p>Prices are subject to change without notice. We are not responsible for pricing, typographical, or other errors.</p>
-                    </section>
-                    
-                    <section id="delivery">
-                        <h2>5. Delivery</h2>
-                        <p>Delivery times are estimates only and not guaranteed. Factors that may affect delivery time include:</p>
-                        <ul>
-                            <li>Restaurant preparation time</li>
-                            <li>Traffic and weather conditions</li>
-                            <li>Delivery partner availability</li>
-                        </ul>
-                        <p>You are responsible for providing accurate delivery information. We are not responsible for late deliveries due to incorrect addresses or recipient unavailability.</p>
-                    </section>
-                    
-                    <section id="content">
-                        <h2>6. User Content</h2>
-                        <p>The Service may allow you to submit reviews, comments, photos, and other content ("User Content"). You retain ownership of your User Content, but by submitting it, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, and display such content.</p>
-                        <p>You agree not to submit User Content that is unlawful, offensive, or violates any third-party rights.</p>
-                    </section>
-                    
-                    <section id="prohibited">
-                        <h2>7. Prohibited Uses</h2>
-                        <p>You may use the Service only for lawful purposes. You agree not to use the Service:</p>
-                        <ul>
-                            <li>In any way that violates any applicable law</li>
-                            <li>To exploit, harm, or attempt to exploit or harm minors</li>
-                            <li>To transmit any advertising or promotional material without our consent</li>
-                            <li>To impersonate or attempt to impersonate Altayer, an employee, or another user</li>
-                            <li>To engage in any other conduct that restricts or inhibits anyone's use of the Service</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="termination">
-                        <h2>8. Termination</h2>
-                        <p>We may terminate or suspend your access to the Service immediately, without prior notice or liability, for any reason, including if you breach these Terms.</p>
-                        <p>Upon termination, your right to use the Service will cease immediately.</p>
-                    </section>
-                    
-                    <section id="disclaimer">
-                        <h2>9. Disclaimer</h2>
-                        <p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. ALTAYER DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
-                        <p>We do not guarantee that the Service will be uninterrupted, secure, or error-free, or that any defects will be corrected.</p>
-                    </section>
-                    
-                    <section id="limitation">
-                        <h2>10. Limitation of Liability</h2>
-                        <p>IN NO EVENT SHALL ALTAYER, ITS DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICE.</p>
-                        <p>Our total liability for any claim related to the Service shall not exceed the amount you paid to us in the last six months.</p>
-                    </section>
-                    
-                    <section id="changes">
-                        <h2>11. Changes to Terms</h2>
-                        <p>We reserve the right to modify these Terms at any time. We will notify you of any changes by posting the new Terms on this page and updating the "Last updated" date.</p>
-                        <p>Your continued use of the Service after any changes constitutes acceptance of the new Terms.</p>
-                    </section>
-                    
-                    <section id="contact">
-                        <h2>12. Contact Us</h2>
-                        <p>If you have any questions about these Terms, please contact us:</p>
-                        <ul>
-                            <li>By email: legal@altayer.com</li>
-                            <li>By mail: Altayer Inc., 123 Food Street, San Francisco, CA 94107</li>
-                            <li>By phone: (800) 555-1234</li>
-                        </ul>
-                    </section>
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-envelope"></i></div>
+                        <h2>8. Contact Us</h2>
+                    </div>
+                    <p>If you have any questions about these Terms, please contact us at <a href="mailto:legal@altayer.com">legal@altayer.com</a>.</p>
                 </div>
             </div>
         </div>
