@@ -9,211 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Additional CSS for the improved design */
-        .signin-section {
-            padding: 60px 0;
-            background: #f9f9f9;
-            min-height: calc(100vh - 150px);
-            display: flex;
-            align-items: center;
-        }
-        
-        .signin-container {
-            max-width: 500px;
-            width: 100%;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            padding: 40px;
-        }
-        
-        .form-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .form-header h2 {
-            font-size: 28px;
-            color: #2d3436;
-            margin-bottom: 10px;
-        }
-        
-        .form-header p {
-            color: #636e72;
-            font-size: 15px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #2d3436;
-        }
-        
-        .input-group {
-            position: relative;
-        }
-        
-        .input-group i {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #636e72;
-        }
-        
-        .input-group input {
-            width: 100%;
-            padding: 12px 15px 12px 45px;
-            border: 1px solid #dfe6e9;
-            border-radius: 8px;
-            font-size: 15px;
-            transition: all 0.3s;
-        }
-        
-        .input-group input:focus {
-            border-color: #0984e3;
-            box-shadow: 0 0 0 3px rgba(9, 132, 227, 0.1);
-            outline: none;
-        }
-        
-        .toggle-password {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            color: #636e72;
-            cursor: pointer;
-        }
-        
-        .form-options {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 20px 0;
-        }
-        
-        .remember-me {
-            display: flex;
-            align-items: center;
-        }
-        
-        .remember-me input {
-            margin-right: 8px;
-        }
-        
-        .forgot-password {
-            color: #0984e3;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        
-        .btn-primary {
-            background: #0984e3;
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 500;
-            width: 100%;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary:hover {
-            background: #0767b3;
-        }
-        
-        .divider {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-            color: #636e72;
-            font-size: 14px;
-        }
-        
-        .divider::before,
-        .divider::after {
-            content: "";
-            flex: 1;
-            border-bottom: 1px solid #dfe6e9;
-        }
-        
-        .divider::before {
-            margin-right: 10px;
-        }
-        
-        .divider::after {
-            margin-left: 10px;
-        }
-        
-        .social-login {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .btn-social {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: 1px solid #dfe6e9;
-            background: white;
-        }
-        
-        .btn-social.google:hover {
-            background: #f5f5f5;
-        }
-        
-        .btn-social.facebook {
-            color: #1877f2;
-            border-color: #ffffff;
-        }
-        
-        .btn-social.facebook:hover {
-            background: rgba(24, 119, 242, 0.05);
-        }
-        
-        .signup-link {
-            text-align: center;
-            color: #636e72;
-            font-size: 14px;
-        }
-        
-        .signup-link a {
-            color: #0984e3;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        @media (max-width: 768px) {
-            .signin-container {
-                padding: 30px 20px;
-                margin: 20px;
-            }
-        }
-    </style>
 </head>
 <body>
     
-    <!-- Header Section -->
+    <!-- =================================================================
+    HEADER from index.html
+    ================================================================== -->
     <header class="main-header">
         <div class="container">
             <div class="header-content">
@@ -223,10 +24,18 @@
                 <div class="logo">
                     <h1><i class="fas fa-utensils"></i> Altayer</h1>
                 </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="plus.html">Plus</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                    </ul>
+                </nav>
                 <div class="header-right">
                     <div class="search-bar">
                         <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Search for food, restaurants...">
+                        <input type="text" placeholder="Search for food, restaurants..." id="search-input">
+                        <div class="search-results" id="search-results"></div>
                     </div>
                     
                     <div class="dark-mode-toggle">
@@ -243,76 +52,78 @@
                             <i class="fas fa-shopping-cart"></i>
                             <span class="cart-count">0</span>
                         </a>
-                        <a href="#" class="signin-btn">Sign in</a>
+                        <a href="signin.html" class="signin-btn">Sign in</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Sign In Section -->
+    <!-- =================================================================
+    SIGN IN SECTION (REDESIGNED & CORRECTED)
+    ================================================================== -->
     <section class="signin-section">
         <div class="container">
             <div class="signin-container">
-                <div class="signin-form">
-                    <div class="form-header">
-                        <h2>Sign In to Your Account</h2>
-                        <p>Welcome back! Please enter your details.</p>
+                <div class="form-header">
+                    <h2>Sign In to Your Account</h2>
+                    <p>Welcome back! Please enter your details.</p>
+                </div>
+                
+                <form id="signinForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
                     </div>
                     
-                    <form id="signinForm">
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <div class="input-group">
-                                <i class="fas fa-envelope"></i>
-                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <div class="input-group">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                                <button type="button" class="toggle-password" aria-label="Show password">
-                                    <i class="fas fa-eye"></i>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="form-options">
-                            <div class="remember-me">
-                                <input type="checkbox" id="remember" name="remember">
-                                <label for="remember">Remember me</label>
-                            </div>
-                            <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Sign In</button>
-                        
-                        <div class="divider">
-                            <span>or</span>
-                        </div>
-                        
-                        <div class="social-login">
-                            <button type="button" class="btn btn-social google" id="googleSignIn">
-                                <i class="fab fa-google"></i> Continue with Google
-                            </button>
-                            <button type="button" class="btn btn-social facebook" id="facebookSignIn">
-                                <i class="fab fa-facebook-f"></i> Continue with Facebook
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            <button type="button" class="toggle-password" aria-label="Show password">
+                                <i class="fas fa-eye"></i>
                             </button>
                         </div>
-                        
-                        <div class="signup-link">
-                            Don't have an account? <a href="signup.html">Sign up</a>
+                    </div>
+                    
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember me</label>
                         </div>
-                    </form>
-                </div>
+                        <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button type="button" class="btn btn-social google" id="googleSignIn">
+                            <i class="fab fa-google"></i> Continue with Google
+                        </button>
+                        <button type="button" class="btn-social facebook" id="facebookSignIn">
+                            <i class="fab fa-facebook-f"></i> Continue with Facebook
+                        </button>
+                    </div>
+                    
+                    <div class="signup-link">
+                        Don't have an account? <a href="signup.html">Sign up</a>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- =================================================================
+    FOOTER from index.html
+    ================================================================== -->
     <footer class="altayer-footer">
         <div class="container">
             <div class="footer-content">
@@ -323,18 +134,10 @@
                     </div>
                     <p class="footer-tagline">Delivering happiness one meal at a time</p>
                     <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
@@ -372,93 +175,25 @@
         </div>
     </footer>
 
-    <script src="darkmode.js"></script>
+    <!-- Make sure darkmode.js is linked -->
+    <script src="darkmode.js"></script> 
     <script>
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_AUTH_DOMAIN",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_STORAGE_BUCKET",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
-        };
-
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-
-        // Toggle password visibility
-        document.querySelector('.toggle-password').addEventListener('click', function() {
-            const passwordInput = document.getElementById('password');
-            const icon = this.querySelector('i');
-            
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                icon.classList.remove('fa-eye');
-                icon.classList.add('fa-eye-slash');
-            } else {
-                passwordInput.type = 'password';
-                icon.classList.remove('fa-eye-slash');
-                icon.classList.add('fa-eye');
-            }
-        });
-
-        // Email/password sign in
-        document.getElementById('signinForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            
-            auth.signInWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    // Signed in
-                    const user = userCredential.user;
-                    localStorage.setItem('user', JSON.stringify(user));
-                    window.location.href = 'index.html';
-                })
-                .catch((error) => {
-                    alert(error.message);
-                });
-        });
-
-        // Google Sign-In
-        document.getElementById('googleSignIn').addEventListener('click', function() {
-            const provider = new firebase.auth.GoogleAuthProvider();
-            auth.signInWithPopup(provider)
-                .then((result) => {
-                    const user = result.user;
-                    localStorage.setItem('user', JSON.stringify(user));
-                    window.location.href = 'index.html';
-                })
-                .catch((error) => {
-                    alert(error.message);
-                });
-        });
-
-        // Facebook Sign-In
-        document.getElementById('facebookSignIn').addEventListener('click', function() {
-            const provider = new firebase.auth.FacebookAuthProvider();
-            auth.signInWithPopup(provider)
-                .then((result) => {
-                    const user = result.user;
-                    localStorage.setItem('user', JSON.stringify(user));
-                    window.location.href = 'index.html';
-                })
-                .catch((error) => {
-                    alert(error.message);
-                });
-        });
-
-        // Check if user is already logged in
-        auth.onAuthStateChanged((user) => {
-            if (user) {
-                localStorage.setItem('user', JSON.stringify(user));
-            }
-        });
+        // Form-specific JavaScript for password toggle
+        const togglePassword = document.querySelector('.toggle-password');
+        if (togglePassword) {
+            togglePassword.addEventListener('click', function() {
+                const passwordInput = document.getElementById('password');
+                const icon = this.querySelector('i');
+                
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                
+                icon.classList.toggle('fa-eye');
+                icon.classList.toggle('fa-eye-slash');
+            });
+        }
+        
+        // Add your authentication logic (Firebase, etc.) here
     </script>
-    <script src="bar.js"></script>
-    <script src="sidebar.js"></script>
-    <script src="auth.js"></script>
 </body>
 </html>
