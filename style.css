@@ -10196,3 +10196,363 @@ body.dark-mode .policy-card ul {
 body.dark-mode .policy-card li strong {
     color: var(--text-primary);
 }
+ .featured-banner h3 {
+    color: white;
+}
+.featured .featured-banner .btn-light {
+    color: #000000;
+}/* =================================================================
+   SIGN IN & SIGN UP PAGE STYLES
+   - Replaces any previous .signin-section styles
+   - Adds full dark mode support
+   ================================================================= */
+
+/* Main section container */
+.signin-section {
+    padding: 60px 0;
+    background-color: var(--background-light);
+    min-height: calc(100vh - 200px); /* Adjust based on header/footer */
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+/* Form container card */
+.signin-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background: var(--background-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 20px var(--shadow-color);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+/* Ensure the old image column is hidden */
+.signin-image {
+    display: none;
+}
+
+/* Form header */
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+/* Form field groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Input field styling (including password toggle fix) */
+.input-group {
+    position: relative; /* Crucial for positioning the icon */
+}
+
+.input-group i.fa-envelope, 
+.input-group i.fa-lock {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    z-index: 2;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 45px; /* Left padding for icon */
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    font-size: 15px;
+    background-color: var(--background-white);
+    color: var(--text-primary);
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+/* Additional form elements */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    color: var(--text-light);
+    font-size: 14px;
+}
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+    transition: border-color 0.5s ease;
+}
+.divider span {
+    padding: 0 15px;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: var(--border-radius-md);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid var(--border-color);
+    background: var(--background-white);
+    color: var(--text-primary);
+}
+.btn-social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.btn-social.facebook {
+    background-color: #3b5998;
+    color: white;
+    border-color: #3b5998;
+}
+.btn-social.facebook:hover {
+    background-color: #344e86;
+}
+
+.signup-link {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+.signup-link a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* === DARK MODE FOR SIGN IN PAGE === */
+body.dark-mode .signin-section {
+    background-color: var(--background-dark);
+}
+
+body.dark-mode .signin-container {
+    background: var(--background-white);
+    border-color: var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .form-header h2,
+body.dark-mode .form-group label {
+    color: var(--text-primary);
+}
+
+body.dark-mode .form-header p,
+body.dark-mode .remember-me,
+body.dark-mode .signup-link {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .input-group input {
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    border-color: #555;
+}
+
+body.dark-mode .input-group input::placeholder {
+    color: var(--text-light);
+}
+
+body.dark-mode .input-group input:focus {
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+body.dark-mode .divider {
+    color: var(--text-light);
+}
+
+body.dark-mode .divider::before,
+body.dark-mode .divider::after {
+    border-color: var(--border-color);
+}
+
+body.dark-mode .btn-social {
+    background-color: var(--background-darker);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .btn-social.google:hover {
+    background-color: #333;
+}
+.signin-section {
+    padding: 60px 0;
+    display: flex; /* This is key */
+    align-items: center; /* This centers the form vertically */
+    min-height: calc(100vh - 150px); /* Adjust if header/footer height changes */
+}
+
+/* 2. Redefine the form container to be a centered card */
+.signin-container {
+    max-width: 480px; /* Controls the width of the sign-in box */
+    margin: 0 auto; /* This centers the form horizontally */
+    background: var(--background-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 30px var(--shadow-color);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    /* Remove the old flex display if it exists */
+    display: block; 
+}
+
+/* 3. Hide the old image column completely */
+.signin-image {
+    display: none;
+}
+
+/* 4. Ensure the direct form child uses the full space */
+.signin-form {
+    flex: none; /* Remove flex behavior */
+    padding: 0; /* Remove old padding */
+}
+
+/* 5. Fix the password toggle button position */
+.input-group .toggle-password {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+/* 6. Adjust input padding to prevent text from going under icons */
+.input-group input[type="password"] {
+    padding-right: 45px;
+}
+
+.input-group input[type="email"] {
+    padding-left: 45px;
+}
+
+
+/* === DARK MODE FIXES for Sign-in Page === */
+
+body.dark-mode .signin-container {
+    background: var(--background-white);
+    border-color: var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .form-header h2,
+body.dark-mode .form-group label {
+    color: var(--text-primary);
+}
+
+body.dark-mode .form-header p,
+body.dark-mode .remember-me {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .input-group input {
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    border-color: #555;
+}
+
+body.dark-mode .input-group input::placeholder {
+    color: var(--text-light);
+}
+
+body.dark-mode .btn-social {
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .btn-social:hover {
+    background-color: #333;
+}
+
+body.dark-mode .btn-social.facebook {
+    background-color: #3b5998;
+    color: white;
+    border-color: #3b5998;
+}
