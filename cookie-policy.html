@@ -19,12 +19,20 @@
                 <div class="logo">
                     <a href="index.html"><h1><i class="fas fa-utensils"></i> Altayer</h1></a>
                 </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="plus.html">Plus</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                    </ul>
+                </nav>
                 <div class="header-right">
                     <div class="search-bar">
                         <i class="fas fa-search"></i>
                         <input type="text" placeholder="Search for food, restaurants..." id="search-input">
                         <div class="search-results" id="search-results"></div>
                     </div>
+                    
                     <div class="dark-mode-toggle">
                         <input type="checkbox" id="darkmode-switch">
                         <label for="darkmode-switch" class="toggle-label">
@@ -33,8 +41,11 @@
                             <span class="toggle-ball"></span>
                         </label>
                     </div>
+                    
                     <div class="user-actions">
-                        <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
                         <a href="signin.html" class="signin-btn">Sign in</a>
                     </div>
                 </div>
@@ -42,104 +53,86 @@
         </div>
     </header>
 
-    <section class="policy-hero">
+    <section class="payment-hero">
         <div class="container">
             <h1>Cookie Policy</h1>
             <p>Last updated: June 8, 2025</p>
         </div>
     </section>
 
-    <section class="policy-content">
+    <section class="policy-content-area">
         <div class="container">
-            <div class="policy-container">
-                <div class="policy-sidebar">
-                    <div class="sidebar-sticky">
-                        <h3>Table of Contents</h3>
-                        <ul class="policy-nav">
-                            <li><a href="#what-are-cookies">What Are Cookies</a></li>
-                            <li><a href="#how-we-use">How We Use Cookies</a></li>
-                            <li><a href="#types-of-cookies">Types of Cookies</a></li>
-                            <li><a href="#third-party">Third-Party Cookies</a></li>
-                            <li><a href="#managing">Managing Cookies</a></li>
-                            <li><a href="#changes">Policy Changes</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
-                        </ul>
+            <div class="policy-grid">
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-cookie-bite"></i></div>
+                        <h2>1. What Are Cookies?</h2>
                     </div>
+                    <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to the website owners.</p>
+                    <p>Cookies do not typically contain any information that personally identifies a user, but personal information that we store about you may be linked to the information stored in and obtained from cookies.</p>
+                </div>
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-tasks"></i></div>
+                        <h2>2. How We Use Cookies</h2>
+                    </div>
+                    <p>We use cookies for several purposes:</p>
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> Necessary for the website to function properly.</li>
+                        <li><strong>Preference Cookies:</strong> To remember your preferences and settings.</li>
+                        <li><strong>Analytics Cookies:</strong> To help us understand how visitors interact with our website.</li>
+                        <li><strong>Marketing Cookies:</strong> To track visitors across websites to display relevant ads.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-list-alt"></i></div>
+                        <h2>3. Types of Cookies We Use</h2>
+                    </div>
+                    <p><strong>Strictly Necessary Cookies:</strong> These cookies are essential for you to browse the website and use its features, such as accessing secure areas of the site.</p>
+                    <p><strong>Performance Cookies:</strong> These cookies collect information about how you use our website, like which pages you visited and which links you clicked on. This helps us improve how our website works.</p>
+                    <p><strong>Functionality Cookies:</strong> These cookies allow the website to remember choices you make (such as your username, language, or region) and provide enhanced, more personal features.</p>
                 </div>
                 
-                <div class="policy-main">
-                    <section id="what-are-cookies">
-                        <h2>1. What Are Cookies</h2>
-                        <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the website owners.</p>
-                        <p>Cookies do not typically contain any information that personally identifies a user, but personal information that we store about you may be linked to the information stored in and obtained from cookies.</p>
-                    </section>
-                    
-                    <section id="how-we-use">
-                        <h2>2. How We Use Cookies</h2>
-                        <p>We use cookies for several purposes:</p>
-                        <ul>
-                            <li><strong>Essential Cookies:</strong> Necessary for the website to function properly.</li>
-                            <li><strong>Preference Cookies:</strong> Remember your preferences and settings.</li>
-                            <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website.</li>
-                            <li><strong>Marketing Cookies:</strong> Used to track visitors across websites to display relevant ads.</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="types-of-cookies">
-                        <h2>3. Types of Cookies We Use</h2>
-                        <p>We use the following types of cookies on our website:</p>
-                        
-                        <h3>Strictly Necessary Cookies</h3>
-                        <p>These cookies are essential for you to browse the website and use its features. Without these cookies, services like shopping carts and secure login would not work.</p>
-                        
-                        <h3>Performance Cookies</h3>
-                        <p>These cookies collect information about how visitors use our website, such as which pages are visited most often. This helps us improve how our website works.</p>
-                        
-                        <h3>Functionality Cookies</h3>
-                        <p>These cookies allow the website to remember choices you make (such as your username, language, or region) and provide enhanced, more personal features.</p>
-                        
-                        <h3>Targeting/Advertising Cookies</h3>
-                        <p>These cookies are used to deliver ads more relevant to you and your interests. They are also used to limit the number of times you see an ad and help measure the effectiveness of advertising campaigns.</p>
-                    </section>
-                    
-                    <section id="third-party">
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-users"></i></div>
                         <h2>4. Third-Party Cookies</h2>
-                        <p>In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the Service, deliver advertisements, and so on.</p>
-                        <p>Some specific third-party cookies we use include:</p>
-                        <ul>
-                            <li><strong>Google Analytics:</strong> For analyzing website traffic and user behavior.</li>
-                            <li><strong>Facebook Pixel:</strong> For measuring the effectiveness of our advertising.</li>
-                            <li><strong>Stripe:</strong> For processing payments securely.</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="managing">
+                    </div>
+                    <p>In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the Service, deliver advertisements, and so on. These include:</p>
+                     <ul>
+                        <li><strong>Google Analytics:</strong> For analyzing website traffic and user behavior.</li>
+                        <li><strong>Facebook Pixel:</strong> For measuring the effectiveness of our advertising.</li>
+                        <li><strong>Stripe:</strong> For processing payments securely.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-sliders-h"></i></div>
                         <h2>5. Managing Cookies</h2>
-                        <p>You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed.</p>
-                        <p>If you do this, however, you may have to manually adjust some preferences every time you visit a site and some services and functionalities may not work.</p>
-                        
-                        <h3>Browser Controls</h3>
-                        <p>Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set and how to manage and delete them, visit <a href="https://www.allaboutcookies.org" target="_blank">www.allaboutcookies.org</a>.</p>
-                        
-                        <h3>Opting Out</h3>
-                        <p>To opt out of being tracked by Google Analytics across all websites, visit <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">https://tools.google.com/dlpage/gaoptout</a>.</p>
-                    </section>
-                    
-                    <section id="changes">
+                    </div>
+                    <p>You can control and/or delete cookies as you wish. Most web browsers allow some control of most cookies through the browser settings. To find out more, including how to see what cookies have been set, visit <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener noreferrer">www.allaboutcookies.org</a>.</p>
+                    <p>To opt out of being tracked by Google Analytics across all websites, visit <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout</a>.</p>
+                </div>
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-history"></i></div>
                         <h2>6. Policy Changes</h2>
-                        <p>We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons.</p>
-                        <p>We will notify you of any changes by posting the new Cookie Policy on this page and updating the "Last updated" date.</p>
-                    </section>
-                    
-                    <section id="contact">
+                    </div>
+                    <p>We may update this Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page and updating the "Last updated" date at the top.</p>
+                </div>
+
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <div class="policy-icon-wrapper"><i class="fas fa-envelope"></i></div>
                         <h2>7. Contact Us</h2>
-                        <p>If you have any questions about our use of cookies, please contact us:</p>
-                        <ul>
-                            <li>By email: privacy@altayer.com</li>
-                            <li>By mail: Altayer Inc., 123 Food Street, San Francisco, CA 94107</li>
-                            <li>By phone: (800) 555-1234</li>
-                        </ul>
-                    </section>
+                    </div>
+                    <p>If you have any questions about our use of cookies, please contact us at <a href="mailto:privacy@altayer.com">privacy@altayer.com</a>.</p>
                 </div>
             </div>
         </div>
