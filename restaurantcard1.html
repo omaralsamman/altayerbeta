@@ -4,34 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Garden Salad Bar - Altayer</title>
-    <!-- Google Fonts - Poppins is used for a modern, clean look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons for various UI elements -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Main Stylesheet (existing site-wide styles) -->
     <link rel="stylesheet" href="style.css">
-    <!-- Restaurant Page Specific Stylesheet (new styles for this page) -->
     <link rel="stylesheet" href="restaurant-page.css">
 
 </head>
 <body>
     
-    <!-- Header Section - Kept consistent with the rest of the site -->
     <header class="main-header">
         <div class="container">
             <div class="header-content">
-                <!-- Back button for easy navigation to the restaurants list -->
                 <a href="restaurants.html" class="back-button" aria-label="Go back">
                     <i class="fas fa-arrow-left"></i>
                 </a>
-                <!-- Site Logo -->
                 <div class="logo">
                     <a href="index.html"><h1><i class="fas fa-utensils"></i> Altayer</h1></a>
                 </div>
-                <!-- Main Navigation - Links to key sections of the site -->
                 <nav class="main-nav">
                     <ul>
                         <li><a href="restaurants.html">Restaurants</a></li>
@@ -39,15 +31,12 @@
                         <li><a href="promotions.html">Promotions</a></li>
                     </ul>
                 </nav>
-                <!-- Header Right Section - Contains search, dark mode, and user actions -->
                 <div class="header-right">
-                    <!-- Search Bar -->
                     <div class="search-bar">
                         <i class="fas fa-search"></i>
                         <input type="text" placeholder="Search for food, restaurants..." id="search-input">
                         <div class="search-results" id="search-results"></div>
                     </div>
-                    <!-- Dark Mode Toggle Switch -->
                     <div class="dark-mode-toggle">
                         <input type="checkbox" id="darkmode-switch">
                         <label for="darkmode-switch" class="toggle-label">
@@ -56,7 +45,6 @@
                             <span class="toggle-ball"></span>
                         </label>
                     </div>
-                    <!-- User Actions - Cart and Sign In buttons -->
                     <div class="user-actions">
                         <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count" id="cart-count">0</span></a>
                         <a href="signin.html" class="signin-btn">Sign in</a>
@@ -66,20 +54,17 @@
         </div>
     </header>
 
-    <!-- Restaurant Hero Section - Displays restaurant banner and key information -->
     <section class="restaurant-hero">
         <div class="restaurant-banner" style="background-image: url('https://static.vecteezy.com/system/resources/previews/007/774/305/non_2x/salad-bar-buffet-at-restaurant-fresh-salad-bar-buffet-for-lunch-or-dinner-healthy-food-fresh-green-and-purple-lettuce-in-white-plate-on-counter-catering-food-banquet-service-vegetarian-food-photo.jpg');">
             <div class="banner-overlay">
                 <div class="container">
                     <div class="restaurant-info">
                         <h1>Green Garden Salad Bar</h1>
-                        <!-- Restaurant meta details: rating, price range, categories -->
                         <div class="meta-details">
                             <span class="rating"><i class="fas fa-star"></i> 4.8 (200+)</span>
                             <span class="price-range">$$</span>
                             <span class="categories">Salads • Healthy • Vegan</span>
                         </div>
-                        <!-- Delivery details: time and fee -->
                         <div class="delivery-details">
                             <span><i class="fas fa-clock"></i> 25-35 min</span>
                             <span><i class="fas fa-truck"></i> $0.99 Delivery Fee</span>
@@ -90,15 +75,12 @@
         </div>
     </section>
 
-    <!-- Restaurant Menu Section - Main content area with side menu and food items -->
     <main class="restaurant-menu">
         <div class="container menu-layout">
-            <!-- Menu Sidebar - Sticky navigation for menu categories -->
             <aside class="menu-sidebar">
                 <nav class="menu-navigation">
                     <h3>Menu</h3>
                     <ul class="category-list">
-                        <!-- Navigation links to different sections of the menu -->
                         <li class="active"><a href="#signature-bowls">Signature Bowls</a></li>
                         <li><a href="#classic-salads">Classic Salads</a></li>
                         <li><a href="#breakfast-bowls">Breakfast Bowls</a></li>
@@ -109,13 +91,10 @@
                 </nav>
             </aside>
             
-            <!-- Menu Content - Displays menu items organized by category -->
             <div class="menu-content">
-                <!-- Signature Bowls Category -->
                 <section id="signature-bowls" class="menu-category">
                     <h2>Signature Bowls</h2>
                     <div class="menu-items-grid">
-                        <!-- Menu Item Card 1 - Styled to match restaurant cards -->
                         <article class="menu-item" data-item-id="salad-1" data-item-name="Signature Garden Bowl" data-item-price="12.99" data-item-image="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=350" data-restaurant-name="Green Garden Salad Bar">
                             <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=350');"></div>
                             <div class="menu-item-info">
@@ -146,7 +125,6 @@
                     </div>
                 </section>
                 
-                <!-- Classic Salads Category -->
                 <section id="classic-salads" class="menu-category">
                     <h2>Classic Salads</h2>
                     <div class="menu-items-grid">
@@ -180,7 +158,6 @@
                     </div>
                 </section>
                 
-                <!-- Breakfast Bowls Category -->
                 <section id="breakfast-bowls" class="menu-category">
                     <h2>Breakfast Bowls</h2>
                     <div class="menu-items-grid">
@@ -200,12 +177,11 @@
                     </div>
                 </section>
 
-                <!-- Sandwiches Category -->
                 <section id="sandwiches" class="menu-category">
                     <h2>Sandwiches</h2>
                     <div class="menu-items-grid">
-                        <article class="menu-item" data-item-id="sandwich-1" data-item-name="Veggie Wrap" data-item-price="8.50" data-item-image="https://images.unsplash.com/photo-1528735602780-2558ab96c348?w=500&h=350" data-restaurant-name="Green Garden Salad Bar">
-                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1528735602780-2558ab96c348?w=500&h=350');"></div>
+                        <article class="menu-item" data-item-id="sandwich-1" data-item-name="Veggie Wrap" data-item-price="8.50" data-item-image="https://www.plantperks.com/wp-content/uploads/2020/02/IMG_0198-Edit.jpg" data-restaurant-name="Green Garden Salad Bar">
+                            <div class="menu-item-image" style="background-image: url('https://www.plantperks.com/wp-content/uploads/2020/02/IMG_0198-Edit.jpg');"></div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
                                     <h3>Veggie Wrap</h3>
@@ -220,12 +196,11 @@
                     </div>
                 </section>
 
-                <!-- Smoothies Category -->
                 <section id="smoothies" class="menu-category">
                     <h2>Smoothies</h2>
                     <div class="menu-items-grid">
-                        <article class="menu-item" data-item-id="smoothie-1" data-item-name="Berry Blast Smoothie" data-item-price="7.00" data-item-image="https://images.unsplash.com/photo-1502446757155-7d5d2146903d?w=500&h=350" data-restaurant-name="Green Garden Salad Bar">
-                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1502446757155-7d5d2146903d?w=500&h=350');"></div>
+                        <article class="menu-item" data-item-id="smoothie-1" data-item-name="Berry Blast Smoothie" data-item-price="7.00" data-item-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK5m_kPYlwCzvGqh0uwHLGqm9k_K6xSLcQwQ&s" data-restaurant-name="Green Garden Salad Bar">
+                            <div class="menu-item-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK5m_kPYlwCzvGqh0uwHLGqm9k_K6xSLcQwQ&s');"></div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
                                     <h3>Berry Blast Smoothie</h3>
@@ -240,12 +215,11 @@
                     </div>
                 </section>
 
-                <!-- Sides Category -->
                 <section id="sides" class="menu-category">
                     <h2>Sides</h2>
                     <div class="menu-items-grid">
-                        <article class="menu-item" data-item-id="side-a1" data-item-name="Side of Quinoa" data-item-price="4.00" data-item-image="https://images.unsplash.com/photo-1555543714-c8c2b5f7e7e7?w=500&h=350" data-restaurant-name="Green Garden Salad Bar">
-                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1555543714-c8c2b5f7e7e7?w=500&h=350');"></div>
+                        <article class="menu-item" data-item-id="side-a1" data-item-name="Side of Quinoa" data-item-price="4.00" data-item-image="https://foolproofliving.com/wp-content/uploads/2020/04/Lemon-Quinoa-Recipe-Image.jpg" data-restaurant-name="Green Garden Salad Bar">
+                            <div class="menu-item-image" style="background-image: url('https://foolproofliving.com/wp-content/uploads/2020/04/Lemon-Quinoa-Recipe-Image.jpg');"></div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
                                     <h3>Side of Quinoa</h3>
@@ -264,7 +238,6 @@
         </div>
     </main>
     
-    <!-- Footer remains the same -->
     <footer class="altayer-footer">
         <div class="container">
             <div class="footer-content">
@@ -313,7 +286,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Dark Mode and other functionalities -->
     <script src="darkmode.js"></script>
     <script src="bar.js"></script>
     <script>
@@ -322,28 +294,22 @@
             document.querySelectorAll('.category-list a').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    // Scrolls the target section into view smoothly
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
                         behavior: 'smooth'
                     });
-
-                    // Update active class on sidebar navigation items
                     document.querySelectorAll('.category-list li').forEach(li => li.classList.remove('active'));
                     this.closest('li').classList.add('active');
                 });
             });
 
-            // Intersection Observer to dynamically highlight active category in sidebar
             const sections = document.querySelectorAll('.menu-category');
             const navLi = document.querySelectorAll('.category-list li');
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    // If a menu category section is currently intersecting the viewport
                     if (entry.isIntersecting) {
                         navLi.forEach(li => {
-                            li.classList.remove('active'); // Remove active class from all links
-                            // Add active class to the link corresponding to the intersecting section
+                            li.classList.remove('active');
                             if (li.querySelector('a').getAttribute('href') === '#' + entry.target.id) {
                                 li.classList.add('active');
                             }
@@ -351,32 +317,25 @@
                     }
                 });
             }, {
-                // Defines the portion of the viewport that triggers the intersection
-                // Adjust rootMargin to fine-tune when categories become active based on scroll position
                 rootMargin: '-30% 0px -70% 0px' 
             });
 
-            // Observe each menu category section
             sections.forEach(section => {
                 observer.observe(section);
             });
 
 
-            // --- Cart Functionality ---
             const cartCountElement = document.getElementById('cart-count');
 
-            // Function to update the cart count display in the header
             function updateCartCountDisplay() {
                 let cart = JSON.parse(localStorage.getItem('cart')) || [];
                 const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
                 cartCountElement.textContent = totalItems;
-                cartCountElement.style.display = totalItems > 0 ? 'flex' : 'none'; // Show/hide based on count
+                cartCountElement.style.display = totalItems > 0 ? 'flex' : 'none';
             }
 
-            // Call on page load to set initial cart count
             updateCartCountDisplay();
 
-            // Add to Cart Button Event Listeners
             document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                 button.addEventListener('click', function() {
                     const menuItem = this.closest('.menu-item');
@@ -384,24 +343,20 @@
                     const itemName = menuItem.dataset.itemName;
                     const itemPrice = parseFloat(menuItem.dataset.itemPrice);
                     const itemImage = menuItem.dataset.itemImage;
-                    const restaurantName = menuItem.dataset.restaurantName; // Get restaurant name
+                    const restaurantName = menuItem.dataset.restaurantName;
 
                     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-                    // Check if item already exists in cart
                     const existingItemIndex = cart.findIndex(item => item.id === itemId);
 
                     if (existingItemIndex > -1) {
-                        // Item exists, increment quantity
                         cart[existingItemIndex].quantity += 1;
                     } else {
-                        // Item does not exist, add new item
                         cart.push({
                             id: itemId,
                             name: itemName,
                             price: itemPrice,
                             image: itemImage,
-                            restaurant: restaurantName, // Add restaurant name to cart item
+                            restaurant: restaurantName,
                             quantity: 1
                         });
                     }
@@ -409,7 +364,6 @@
                     localStorage.setItem('cart', JSON.stringify(cart));
                     updateCartCountDisplay();
 
-                    // Optional: Visual feedback on button
                     const originalText = this.textContent;
                     this.textContent = 'Added!';
                     this.classList.add('added');
