@@ -9,233 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Additional CSS for the improved design */
-        .signup-section {
-            padding: 60px 0;
-            background: #f9f9f9;
-            min-height: calc(100vh - 150px);
-            display: flex;
-            align-items: center;
-        }
-        
-        .signup-container {
-            max-width: 500px;
-            width: 100%;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            padding: 40px;
-        }
-        
-        .form-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .form-header h2 {
-            font-size: 28px;
-            color: #2d3436;
-            margin-bottom: 10px;
-        }
-        
-        .form-header p {
-            color: #636e72;
-            font-size: 15px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #2d3436;
-        }
-        
-        .input-group {
-            position: relative;
-        }
-        
-        .input-group i {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #636e72;
-        }
-        
-        .input-group input {
-            width: 100%;
-            padding: 12px 15px 12px 45px;
-            border: 1px solid #dfe6e9;
-            border-radius: 8px;
-            font-size: 15px;
-            transition: all 0.3s;
-        }
-        
-        .input-group input:focus {
-            border-color: #0984e3;
-            box-shadow: 0 0 0 3px rgba(9, 132, 227, 0.1);
-            outline: none;
-        }
-        
-        .toggle-password {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            color: #636e72;
-            cursor: pointer;
-        }
-        
-        .password-strength {
-            display: flex;
-            gap: 5px;
-            margin-top: 8px;
-            align-items: center;
-        }
-        
-        .strength-meter {
-            height: 4px;
-            flex: 1;
-            background: #dfe6e9;
-            border-radius: 2px;
-        }
-        
-        .strength-meter.active {
-            background: #4caf50;
-        }
-        
-        .strength-text {
-            font-size: 12px;
-            color: #636e72;
-            margin-left: 8px;
-        }
-        
-        .terms-checkbox {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-        }
-        
-        .terms-checkbox input {
-            margin-right: 8px;
-        }
-        
-        .terms-checkbox label {
-            font-size: 14px;
-            color: #636e72;
-        }
-        
-        .terms-checkbox a {
-            color: #0984e3;
-            text-decoration: none;
-        }
-        
-        .btn-primary {
-            background: #0984e3;
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 500;
-            width: 100%;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary:hover {
-            background: #0767b3;
-        }
-        
-        .divider {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-            color: #636e72;
-            font-size: 14px;
-        }
-        
-        .divider::before,
-        .divider::after {
-            content: "";
-            flex: 1;
-            border-bottom: 1px solid #dfe6e9;
-        }
-        
-        .divider::before {
-            margin-right: 10px;
-        }
-        
-        .divider::after {
-            margin-left: 10px;
-        }
-        
-        .social-login {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .btn-social {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: 1px solid #dfe6e9;
-            background: white;
-        }
-        
-        .btn-social.google:hover {
-            background: #f5f5f5;
-        }
-        
-        .btn-social.facebook {
-            color: #1877f2;
-            border-color: #1877f2;
-        }
-        
-        .btn-social.facebook:hover {
-            background: rgba(24, 119, 242, 0.05);
-        }
-        
-        .signin-link {
-            text-align: center;
-            color: #636e72;
-            font-size: 14px;
-        }
-        
-        .signin-link a {
-            color: #0984e3;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        @media (max-width: 768px) {
-            .signup-container {
-                padding: 30px 20px;
-                margin: 20px;
-            }
-        }
-    </style>
 </head>
 <body>
     
-    <!-- Header Section -->
     <header class="main-header">
         <div class="container">
             <div class="header-content">
@@ -245,10 +21,18 @@
                 <div class="logo">
                     <h1><i class="fas fa-utensils"></i> Altayer</h1>
                 </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="plus.html">Plus</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                    </ul>
+                </nav>
                 <div class="header-right">
                     <div class="search-bar">
                         <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Search for food, restaurants...">
+                        <input type="text" placeholder="Search for food, restaurants..." id="search-input">
+                        <div class="search-results" id="search-results"></div>
                     </div>
                     
                     <div class="dark-mode-toggle">
@@ -272,91 +56,88 @@
         </div>
     </header>
 
-    <!-- Sign Up Section -->
     <section class="signup-section">
         <div class="container">
+            
+            <div class="form-header">
+                <h2>Create Your Account</h2>
+                <p>Join Altayer to start ordering delicious food</p>
+            </div>
+            
             <div class="signup-container">
-                <div class="signup-form">
-                    <div class="form-header">
-                        <h2>Create Your Account</h2>
-                        <p>Join Altayer to start ordering delicious food</p>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
                     </div>
                     
-                    <form id="signupForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <div class="input-group">
-                                <i class="fas fa-user"></i>
-                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                            </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <div class="input-group">
-                                <i class="fas fa-envelope"></i>
-                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <div class="input-group">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" id="password" name="password" placeholder="Create a password" required>
-                                <button type="button" class="toggle-password" aria-label="Show password">
-                                    <i class="fas fa-eye"></i>
-                                </button>
-                            </div>
-                            <div class="password-strength">
-                                <span class="strength-meter"></span>
-                                <span class="strength-meter"></span>
-                                <span class="strength-meter"></span>
-                                <span class="strength-text">Password strength</span>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="confirm-password">Confirm Password</label>
-                            <div class="input-group">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
-                                <button type="button" class="toggle-password" aria-label="Show password">
-                                    <i class="fas fa-eye"></i>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group terms-checkbox">
-                            <input type="checkbox" id="terms" name="terms" required>
-                            <label for="terms">I agree to the <a href="terms-of-service.html">Terms of Service</a> and <a href="privacy-policy.html">Privacy Policy</a></label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Create Account</button>
-                        
-                        <div class="divider">
-                            <span>or</span>
-                        </div>
-                        
-                        <div class="social-login">
-                            <button type="button" class="btn btn-social google" id="googleSignUp">
-                                <i class="fab fa-google"></i> Continue with Google
-                            </button>
-                            <button type="button" class="btn btn-social facebook" id="facebookSignUp">
-                                <i class="fab fa-facebook-f"></i> Continue with Facebook
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" name="password" placeholder="Create a password" required>
+                            <button type="button" class="toggle-password" aria-label="Show password">
+                                <i class="fas fa-eye"></i>
                             </button>
                         </div>
-                        
-                        <div class="signin-link">
-                            Already have an account? <a href="signin.html">Sign in</a>
+                        <div class="password-strength">
+                            <span class="strength-meter"></span>
+                            <span class="strength-meter"></span>
+                            <span class="strength-meter"></span>
+                            <span class="strength-text">Password strength</span>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                            <button type="button" class="toggle-password" aria-label="Show password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="terms-of-service.html">Terms of Service</a> and <a href="privacy-policy.html">Privacy Policy</a></label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button type="button" class="btn btn-social google" id="googleSignUp">
+                            <i class="fab fa-google"></i> Continue with Google
+                        </button>
+                        <button type="button" class="btn btn-social facebook" id="facebookSignUp">
+                            <i class="fab fa-facebook-f"></i> Continue with Facebook
+                        </button>
+                    </div>
+                    
+                    <div class="signin-link">
+                        Already have an account? <a href="signin.html">Sign in</a>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="altayer-footer">
         <div class="container">
             <div class="footer-content">
@@ -367,18 +148,10 @@
                     </div>
                     <p class="footer-tagline">Delivering happiness one meal at a time</p>
                     <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
@@ -416,156 +189,23 @@
         </div>
     </footer>
 
-    <script src="darkmode.js"></script>
+    <script src="darkmode.js"></script> 
     <script>
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_AUTH_DOMAIN",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_STORAGE_BUCKET",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
-        };
-
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-
-        // Toggle password visibility
+        // Your existing script for password toggle and authentication logic can remain here
         document.querySelectorAll('.toggle-password').forEach(button => {
             button.addEventListener('click', function() {
-                const passwordInput = this.parentNode.querySelector('input');
+                const passwordInput = this.closest('.input-group').querySelector('input');
                 const icon = this.querySelector('i');
                 
-                if (passwordInput.type === 'password') {
-                    passwordInput.type = 'text';
-                    icon.classList.remove('fa-eye');
-                    icon.classList.add('fa-eye-slash');
-                } else {
-                    passwordInput.type = 'password';
-                    icon.classList.remove('fa-eye-slash');
-                    icon.classList.add('fa-eye');
-                }
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                
+                icon.classList.toggle('fa-eye');
+                icon.classList.toggle('fa-eye-slash');
             });
         });
-
-        // Password strength indicator
-        document.getElementById('password').addEventListener('input', function() {
-            const password = this.value;
-            const strengthMeters = document.querySelectorAll('.strength-meter');
-            const strengthText = document.querySelector('.strength-text');
-            
-            // Reset all
-            strengthMeters.forEach(meter => meter.classList.remove('active'));
-            strengthText.textContent = 'Password strength';
-            strengthText.style.color = '#636e72';
-            
-            if (password.length === 0) return;
-            
-            // Very weak
-            if (password.length < 4) {
-                strengthMeters[0].classList.add('active');
-                strengthText.textContent = 'Very weak';
-                strengthText.style.color = '#ff5252';
-                return;
-            }
-            
-            // Weak
-            if (password.length < 8) {
-                strengthMeters[0].classList.add('active');
-                strengthText.textContent = 'Weak';
-                strengthText.style.color = '#ff5252';
-                return;
-            }
-            
-            // Medium
-            if (password.length < 12) {
-                strengthMeters[0].classList.add('active');
-                strengthMeters[1].classList.add('active');
-                strengthText.textContent = 'Medium';
-                strengthText.style.color = '#ffb74d';
-                return;
-            }
-            
-            // Strong
-            strengthMeters[0].classList.add('active');
-            strengthMeters[1].classList.add('active');
-            strengthMeters[2].classList.add('active');
-            strengthText.textContent = 'Strong';
-            strengthText.style.color = '#4caf50';
-        });
-
-        // Email/password sign up
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirm-password').value;
-            
-            if (password !== confirmPassword) {
-                alert('Passwords do not match!');
-                return;
-            }
-            
-            auth.createUserWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    // Signed up
-                    const user = userCredential.user;
-                    
-                    // Update user profile with name
-                    return user.updateProfile({
-                        displayName: name
-                    });
-                })
-                .then(() => {
-                    // Profile updated
-                    localStorage.setItem('user', JSON.stringify(auth.currentUser));
-                    window.location.href = 'index.html';
-                })
-                .catch((error) => {
-                    alert(error.message);
-                });
-        });
-
-        // Google Sign-Up
-        document.getElementById('googleSignUp').addEventListener('click', function() {
-            const provider = new firebase.auth.GoogleAuthProvider();
-            auth.signInWithPopup(provider)
-                .then((result) => {
-                    const user = result.user;
-                    localStorage.setItem('user', JSON.stringify(user));
-                    window.location.href = 'index.html';
-                })
-                .catch((error) => {
-                    alert(error.message);
-                });
-        });
-
-        // Facebook Sign-Up
-        document.getElementById('facebookSignUp').addEventListener('click', function() {
-            const provider = new firebase.auth.FacebookAuthProvider();
-            auth.signInWithPopup(provider)
-                .then((result) => {
-                    const user = result.user;
-                    localStorage.setItem('user', JSON.stringify(user));
-                    window.location.href = 'index.html';
-                })
-                .catch((error) => {
-                    alert(error.message);
-                });
-        });
-
-        // Check if user is already logged in
-        auth.onAuthStateChanged((user) => {
-            if (user) {
-                localStorage.setItem('user', JSON.stringify(user));
-            }
-        });
+        
+        // Add your authentication logic (Firebase, etc.) here
     </script>
-    <script src="bar.js"></script>
-    <script src="sidebar.js"></script>
-    <script src="auth.js"></script>
 </body>
 </html>
