@@ -10556,3 +10556,656 @@ body.dark-mode .btn-social.facebook {
     color: white;
     border-color: #3b5998;
 }
+/* =============================================
+   Forgot Password Page - Dark Mode
+   ============================================= */
+
+body.dark-mode .forgot-password-section {
+    background: var(--background-dark); /* Dark page background */
+}
+
+body.dark-mode .forgot-password-container {
+    background: var(--background-white); /* Dark card background */
+    box-shadow: 0 4px 20px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .form-header h2,
+body.dark-mode .form-group label {
+    color: var(--text-primary); /* Light text for titles */
+}
+
+body.dark-mode .form-header p,
+body.dark-mode .input-group i,
+body.dark-mode .back-to-signin {
+    color: var(--text-secondary); /* Lighter secondary text */
+}
+
+body.dark-mode .input-group input {
+    background-color: var(--background-dark);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+body.dark-mode .input-group input:focus {
+    border-color: var(--primary-color); /* Use site's primary green for focus */
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+body.dark-mode .back-to-signin a {
+    color: var(--primary-color); /* Use site's primary green for links */
+}
+/* =================================================================
+   ELEGANT PROMOTIONS PAGE STYLES
+   - Add this entire block to the end of your style.css file.
+   ================================================================= */
+
+/* --- Promotions Page Hero Section --- */
+.promotions-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1974&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+.promotions-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.promotions-hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* --- Main Content & Grid --- */
+.promotions-content {
+    padding: 60px 0;
+    background-color: var(--background-light);
+    transition: background-color 0.3s ease;
+}
+
+.promotions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+/* --- Elegant Promotion Card --- */
+.promo-card {
+    background: var(--background-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.promo-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.promo-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Badge Color Variants */
+.promo-badge.limited { background-color: rgba(231, 76, 60, 0.7); } /* Red */
+.promo-badge.new-user { background-color: rgba(52, 152, 219, 0.7); } /* Blue */
+.promo-badge.plus { background-color: rgba(142, 68, 173, 0.7); } /* Purple */
+.promo-badge.deal { background-color: rgba(243, 156, 18, 0.7); } /* Orange */
+
+.promo-details {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ensures footer aligns to bottom */
+}
+
+.promo-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.promo-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.promo-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Pushes this to the bottom */
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.promo-validity, .promo-code {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.promo-code {
+    background-color: var(--primary-extra-light);
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: var(--primary-dark);
+    font-weight: 500;
+}
+
+/* --- Dark Mode Styles for Promotions --- */
+body.dark-mode .promotions-content {
+    background-color: var(--background-dark);
+}
+
+body.dark-mode .promo-card {
+    background: var(--background-white);
+    border-color: var(--border-color);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+body.dark-mode .promo-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .promo-title {
+    color: var(--text-primary);
+}
+
+body.dark-mode .promo-description,
+body.dark-mode .promo-validity {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .promo-meta {
+    border-top-color: var(--border-color);
+}
+body.dark-mode .promo-code {
+    background-color: var(--primary-light);
+    color: var(--text-primary);
+}
+body.dark-mode .btn-secondary {
+    background-color: var(--background-white); /* Uses the dark card background */
+    color: var(--primary-color); /* Keeps the green text */
+    border-color: var(--primary-color); /* Keeps the green border */
+}
+
+body.dark-mode .btn-secondary:hover {
+    background-color: var(--primary-extra-light); /* Uses the dark, subtle green on hover */
+    color: var(--primary-color);
+}
+.btn-secondary {
+    background-color: var(--primary-color); /* Main green background */
+    color: #1a1a1a;                         /* Black text for high contrast */
+    border: 1px solid var(--primary-color); /* Border matches background */
+    font-weight: 500;
+}
+
+/* Hover state for the new button style */
+.btn-secondary:hover {
+    background-color: var(--primary-dark); /* Darker green on hover */
+    border-color: var(--primary-dark);   /* Darker border on hover */
+    color: #000000;                      /* Text remains black */
+}
+
+/* Ensure dark mode does not override this new style */
+body.dark-mode .btn-secondary {
+    background-color: var(--primary-color);
+    color: #1a1a1a;
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .btn-secondary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: #000000;
+}
+:root {
+    --gold-gradient: linear-gradient(135deg, #FFD700, #D4AF37, #FFDF00, #F9D423);
+}
+
+.plus-promo-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plus-promo-image::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.golden-logo-overlay {
+    position: relative; 
+    z-index: 2;
+    color: white; 
+    font-size: 2.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+}
+
+.golden-logo-overlay i,
+.golden-logo-overlay span {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+}
+.plus-hero .logo {
+    text-align: center;
+}
+/* =================================================================
+   SIGN-UP PAGE STYLES
+   ================================================================= */
+.signup-section {
+    padding: 60px 0;
+    background: var(--background-light);
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+.signup-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background: var(--background-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 20px var(--shadow-color);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    transition: all 0.5s ease;
+}
+
+.signup-container .form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.signup-container .form-header h2 {
+    font-size: 28px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.signup-container .form-header p {
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.signup-container .input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.signup-container .input-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+    outline: none;
+}
+
+.password-strength {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.strength-meter {
+    height: 4px;
+    flex: 1;
+    background: #dfe6e9;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+.strength-meter.active {
+    background: #4caf50;
+}
+
+.strength-text {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-left: 8px;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.terms-checkbox input {
+    margin-right: 8px;
+}
+
+.terms-checkbox label {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.terms-checkbox a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.terms-checkbox a:hover {
+    text-decoration: underline;
+}
+
+.signup-container .btn-social.facebook {
+    background-color: #1877f2;
+    border-color: #1877f2;
+    color: white;
+}
+
+.signup-container .btn-social.facebook:hover {
+    background: #166fe5;
+}
+
+.signin-link {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.signin-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* === DARK MODE FOR SIGN-UP PAGE === */
+body.dark-mode .signup-section {
+    background-color: var(--background-dark);
+}
+
+body.dark-mode .signup-container {
+    background: var(--background-white);
+    border-color: var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .signup-container .form-header h2,
+body.dark-mode .form-group label {
+    color: var(--text-primary);
+}
+
+body.dark-mode .signup-container .form-header p,
+body.dark-mode .terms-checkbox label,
+body.dark-mode .signin-link {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .signup-container .input-group input {
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    border-color: #555;
+}
+
+body.dark-mode .signup-container .input-group input::placeholder {
+    color: var(--text-light);
+}
+
+body.dark-mode .signup-container .input-group input:focus {
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+body.dark-mode .strength-meter {
+    background: #444;
+}
+
+body.dark-mode .strength-text {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .btn-social {
+    background-color: var(--background-darker);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .btn-social.google:hover {
+    background-color: #333;
+}
+/* =================================================================
+   SIGN-UP PAGE STYLES
+   ================================================================= */
+.signup-section {
+    padding: 60px 0;
+    background: var(--background-light);
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+.signup-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background: var(--background-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 20px var(--shadow-color);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    transition: all 0.5s ease;
+}
+
+/* Password Strength Indicator */
+.password-strength {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.strength-meter {
+    height: 4px;
+    flex: 1;
+    background: #dfe6e9;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+.strength-meter.active {
+    background: var(--success-color);
+}
+.strength-text {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-left: 8px;
+}
+
+/* Terms and Conditions Checkbox */
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.terms-checkbox label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+.terms-checkbox a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.terms-checkbox a:hover {
+    text-decoration: underline;
+}
+
+/* Link to Sign In page */
+.signin-link {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.signin-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* === DARK MODE FOR SIGN-UP PAGE === */
+
+body.dark-mode .signup-section {
+    background-color: var(--background-dark);
+}
+
+body.dark-mode .signup-container {
+    background: var(--background-white);
+    border-color: var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .strength-meter {
+    background: #444;
+}
+
+body.dark-mode .strength-text {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .terms-checkbox label,
+body.dark-mode .signin-link {
+    color: var(--text-secondary);
+}
+/* =================================================================
+   COMING SOON PAGE
+   ================================================================= */
+.coming-soon-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: calc(100vh - 250px); /* Adjust based on your header/footer height */
+    background-color: var(--background-light);
+    transition: background-color 0.5s ease;
+}
+
+.coming-soon-content {
+    padding: 40px;
+}
+
+.coming-soon-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.coming-soon-content h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    transition: color 0.5s ease;
+}
+
+.coming-soon-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin: 0 auto;
+    transition: color 0.5s ease;
+}
+
+/* --- Dark Mode for Coming Soon Page --- */
+body.dark-mode .coming-soon-section {
+    background-color: var(--background-dark);
+}
+
+body.dark-mode .coming-soon-content h1 {
+    color: var(--text-primary);
+}
+
+body.dark-mode .coming-soon-content p {
+    color: var(--text-secondary);
+}
+.golden-logo-overlay {
+    position: relative; /* It's a flex item, so relative is fine */
+    z-index: 2; /* Ensures it's on top of the ::before overlay */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: white; 
+    pointer-events: none;
+    /* The 'text-shadow' property that caused the glow has been removed. */
+}
+
+/* This part remains the same to create the golden text effect */
+.golden-logo-overlay i,
+.golden-logo-overlay span {
+    background: linear-gradient(135deg, #FFD700, #D4AF37, #FFDF00, #F9D423);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+}
+.promo-image {
+    position: relative; /* This is crucial for positioning children elements */
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+}
+/* Add this to the end of style.css to remove the logo glow */
+.golden-logo-overlay {
+    text-shadow: none !important;
+}
