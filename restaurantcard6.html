@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Brew Café - Altayer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="restaurant-page.css">
+
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="restaurants.html" class="back-button" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <div class="logo">
+                    <a href="index.html"><h1><i class="fas fa-utensils"></i> Altayer</h1></a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="plus.html">Plus</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for food, restaurants..." id="search-input">
+                        <div class="search-results" id="search-results"></div>
+                    </div>
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="darkmode-switch">
+                        <label for="darkmode-switch" class="toggle-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="toggle-ball"></span>
+                        </label>
+                    </div>
+                    <div class="user-actions">
+                        <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count" id="cart-count">0</span></a>
+                        <a href="signin.html" class="signin-btn">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="restaurant-hero">
+        <div class="restaurant-banner" style="background-image: url('https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg');">
+            <div class="banner-overlay">
+                <div class="container">
+                    <div class="restaurant-info">
+                        <h1>Morning Brew Café</h1>
+                        <div class="meta-details">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7 (200+)</span>
+                            <span class="price-range">$$</span>
+                            <span class="categories">Coffee • Breakfast • Pastries</span>
+                        </div>
+                        <div class="delivery-details">
+                            <span><i class="fas fa-clock"></i> 15-25 min</span>
+                            <span><i class="fas fa-truck"></i> $0.99 Delivery Fee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="restaurant-menu">
+        <div class="container menu-layout">
+            <aside class="menu-sidebar">
+                <nav class="menu-navigation">
+                    <h3>Menu</h3>
+                    <ul class="category-list">
+                        <li class="active"><a href="#coffee">Coffee</a></li>
+                        <li><a href="#pastries">Pastries</a></li>
+                        <li><a href="#breakfast">Breakfast</a></li>
+                        <li><a href="#sides">Sides</a></li>
+                        <li><a href="#drinks">Drinks</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="menu-content">
+                <section id="coffee" class="menu-category">
+                    <h2>Coffee</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="coffee-1" data-item-name="Classic Latte" data-item-price="4.50" data-item-image="https://images.unsplash.com/photo-1572442388796-11668a67d5b2" data-restaurant-name="Morning Brew Café">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1572442388796-11668a67d5b2');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Classic Latte</h3>
+                                    <span class="price">$4.50</span>
+                                </div>
+                                <p class="description">Rich espresso with steamed milk, a timeless classic.</p>
+                                <div class="menu-item-footer">
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" data-item-id="coffee-2" data-item-name="Foamy Cappuccino" data-item-price="4.50" data-item-image="https://images.unsplash.com/photo-1517256064527-09c73fc73e38" data-restaurant-name="Morning Brew Café">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1517256064527-09c73fc73e38');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Foamy Cappuccino</h3>
+                                     <span class="price">$4.50</span>
+                                </div>
+                                <p class="description">Espresso topped with a deep layer of foamed milk.</p>
+                                <div class="menu-item-footer">
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" data-item-id="coffee-3" data-item-name="Bold Americano" data-item-price="3.75" data-item-image="https://images.unsplash.com/photo-1594419533473-1a07085959c8" data-restaurant-name="Morning Brew Café">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1594419533473-1a07085959c8');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Bold Americano</h3>
+                                    <span class="price">$3.75</span>
+                                </div>
+                                <p class="description">A shot of espresso diluted with hot water.</p>
+                                <div class="menu-item-footer">
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                
+                <section id="pastries" class="menu-category">
+                    <h2>Pastries</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="pastry-1" data-item-name="Butter Croissant" data-item-price="3.25" data-item-image="https://images.unsplash.com/photo-1589114407335-08a6d13b2dc6" data-restaurant-name="Morning Brew Café">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1589114407335-08a6d13b2dc6');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Butter Croissant</h3>
+                                    <span class="price">$3.25</span>
+                                </div>
+                                <p class="description">Flaky, buttery, and freshly baked. A perfect pair with coffee.</p>
+                                <div class="menu-item-footer">
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="menu-item" data-item-id="pastry-2" data-item-name="Blueberry Muffin" data-item-price="3.50" data-item-image="https://images.unsplash.com/photo-1599785209707-a456fc13372c" data-restaurant-name="Morning Brew Café">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1599785209707-a456fc13372c');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Blueberry Muffin</h3>
+                                    <span class="price">$3.50</span>
+                                </div>
+                                <p class="description">Moist and delicious muffin bursting with fresh blueberries.</p>
+                                <div class="menu-item-footer">
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                         <article class="menu-item" data-item-id="pastry-3" data-item-name="Cinnamon Roll" data-item-price="4.00" data-item-image="https://images.unsplash.com/photo-1607478900766-efe13248b125" data-restaurant-name="Morning Brew Café">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1607478900766-efe13248b125');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Cinnamon Roll</h3>
+                                    <span class="price">$4.00</span>
+                                </div>
+                                <p class="description">Warm, gooey cinnamon roll with a sweet cream cheese frosting.</p>
+                                <div class="menu-item-footer">
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="breakfast" class="menu-category">
+                    <h2>Breakfast</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="breakfast-1" data-item-name="Avocado Toast" data-item-price="8.50" data-item-image="https://images.unsplash.com/photo-1584776510343-cc4c65774a88" data-restaurant-name="Morning Brew Café">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1584776510343-cc4c65774a88');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Avocado Toast</h3>
+                                     <span class="price">$8.50</span>
+                                </div>
+                                <p class="description">Sourdough toast topped with fresh avocado, chili flakes, and a sprinkle of salt.</p>
+                                <div class="menu-item-footer">
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                         <article class="menu-item" data-item-id="breakfast-2" data-item-name="Breakfast Burrito" data-item-price="9.00" data-item-image="https://images.unsplash.com/photo-1613431692228-2f129a7c360e" data-restaurant-name="Morning Brew Café">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1613431692228-2f129a7c360e');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Breakfast Burrito</h3>
+                                     <span class="price">$9.00</span>
+                                </div>
+                                <p class="description">Scrambled eggs, cheese, potatoes, and your choice of bacon or sausage.</p>
+                                <div class="menu-item-footer">
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                
+                <section id="sides" class="menu-category">
+                    <h2>Sides</h2>
+                    <div class="menu-items-grid">
+                        <article class="menu-item" data-item-id="side-1" data-item-name="Fresh Fruit Bowl" data-item-price="5.00" data-item-image="https://images.unsplash.com/photo-1592376230919-7225d9727443" data-restaurant-name="Morning Brew Café">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1592376230919-7225d9727443');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Fresh Fruit Bowl</h3>
+                                    <span class="price">$5.00</span>
+                                </div>
+                                <p class="description">A mix of seasonal fresh fruits like berries, melon, and grapes.</p>
+                                <div class="menu-item-footer">
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="drinks" class="menu-category">
+                    <h2>Drinks</h2>
+                    <div class="menu-items-grid">
+                         <article class="menu-item" data-item-id="drink-1" data-item-name="Fresh Orange Juice" data-item-price="4.00" data-item-image="https://images.unsplash.com/photo-1600271886742-f049cd451bba" data-restaurant-name="Morning Brew Café">
+                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1600271886742-f049cd451bba');"></div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h3>Fresh Orange Juice</h3>
+                                    <span class="price">$4.00</span>
+                                </div>
+                                <p class="description">Freshly squeezed orange juice, a perfect start to your day.</p>
+                                <div class="menu-item-footer">
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="altayer-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>Altayer</span>
+                    </div>
+                    <p class="footer-tagline">Delivering happiness one meal at a time</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-title">Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="plus.html">Altayer Plus</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-title">Help</h4>
+                        <ul class="footer-links">
+                            <li><a href="track-order.html">Track Order</a></li>
+                            <li><a href="faqs.html">FAQS</a></li>
+                            <li><a href="payment-options.html">Payment Options</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 Altayer. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="cookie-policy.html">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="darkmode.js"></script>
+    <script>
+        // Function to update cart count display
+        function updateCartCountDisplay() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCountElement = document.getElementById('cart-count');
+            if (cartCountElement) {
+                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCountElement.textContent = totalItems;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartCountDisplay();
+
+            // Add to Cart functionality
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const menuItem = this.closest('.menu-item');
+                    const itemId = menuItem.dataset.itemId;
+                    const itemName = menuItem.dataset.itemName;
+                    const itemPrice = parseFloat(menuItem.dataset.itemPrice);
+                    const itemImage = menuItem.dataset.itemImage;
+                    const restaurantName = menuItem.dataset.restaurantName; // Get restaurant name
+
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                    // Check if item already exists in cart
+                    const existingItemIndex = cart.findIndex(item => item.id === itemId);
+
+                    if (existingItemIndex > -1) {
+                        // Item exists, increment quantity
+                        cart[existingItemIndex].quantity += 1;
+                    } else {
+                        // Item does not exist, add new item
+                        cart.push({
+                            id: itemId,
+                            name: itemName,
+                            price: itemPrice,
+                            image: itemImage,
+                            restaurant: restaurantName, // Add restaurant name to cart item
+                            quantity: 1
+                        });
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartCountDisplay();
+
+                    // Optional: Visual feedback on button
+                    const originalText = this.textContent;
+                    this.textContent = 'Added!';
+                    this.classList.add('added');
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.classList.remove('added');
+                    }, 1500);
+                });
+            });
+
+            // Sidebar navigation scroll functionality
+            const sidebarLinks = document.querySelectorAll('.menu-sidebar .category-list a');
+            const menuCategories = document.querySelectorAll('.menu-category');
+
+            // Function to handle scroll and update active link
+            function onScroll() {
+                let currentCategory = '';
+
+                menuCategories.forEach(category => {
+                    const categoryTop = category.offsetTop;
+                    if (pageYOffset >= categoryTop - 150) {
+                        currentCategory = category.getAttribute('id');
+                    }
+                });
+
+                sidebarLinks.forEach(link => {
+                    link.parentElement.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === currentCategory) {
+                        link.parentElement.classList.add('active');
+                    }
+                });
+            }
+
+            // Smooth scroll for sidebar links
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100, // Adjust for sticky header
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Listen for scroll events
+            window.addEventListener('scroll', onScroll);
+        });
+    </script>
+</body>
+</html>
