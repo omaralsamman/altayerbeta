@@ -105,18 +105,10 @@
                     </div>
                     <p class="footer-tagline">Delivering happiness one meal at a time</p>
                     <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
@@ -146,9 +138,9 @@
                 <div class="footer-legal">
                     <p>&copy; 2025 Altayer. All rights reserved.</p>
                     <div class="legal-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookie Policy</a>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="cookie-policy.html">Cookie Policy</a>
                     </div>
                 </div>
             </div>
@@ -362,7 +354,14 @@
             } else {
                 visibleRestaurants.forEach(restaurant => {
                     const restaurantCard = document.createElement('a');
-                    restaurantCard.href = `restaurantcard${restaurant.id}.html`;
+                    
+                    // ** CHANGE: Link to comingsoon.html for IDs 7 and up **
+                    if (restaurant.id >= 7) {
+                        restaurantCard.href = 'comingsoon.html';
+                    } else {
+                        restaurantCard.href = `restaurantcard${restaurant.id}.html`;
+                    }
+                    
                     restaurantCard.className = 'restaurant-card';
                     restaurantCard.innerHTML = `
                         <div class="restaurant-img">
@@ -439,7 +438,14 @@
                 } else {
                     filtered.forEach(restaurant => {
                         const restaurantCard = document.createElement('a');
-                        restaurantCard.href = `restaurantcard${restaurant.id}.html`;
+                        
+                        // ** CHANGE: Link to comingsoon.html for IDs 7 and up **
+                        if (restaurant.id >= 7) {
+                            restaurantCard.href = 'comingsoon.html';
+                        } else {
+                            restaurantCard.href = `restaurantcard${restaurant.id}.html`;
+                        }
+                        
                         restaurantCard.className = 'restaurant-card';
                         restaurantCard.innerHTML = `
                             <div class="restaurant-img">
