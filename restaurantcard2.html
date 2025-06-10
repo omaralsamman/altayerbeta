@@ -4,34 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gourmet Burger House - Altayer</title>
-    <!-- Google Fonts - Poppins is used for a modern, clean look -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons for various UI elements -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Main Stylesheet (existing site-wide styles) -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Restaurant Page Specific Stylesheet (new styles for this page) -->
     <link rel="stylesheet" href="restaurant-page.css">
 
 </head>
 <body>
     
-    <!-- Header Section - Kept consistent with the rest of the site -->
+    <!-- Header Section -->
     <header class="main-header">
         <div class="container">
             <div class="header-content">
-                <!-- Back button for easy navigation to the restaurants list -->
                 <a href="restaurants.html" class="back-button" aria-label="Go back">
                     <i class="fas fa-arrow-left"></i>
                 </a>
-                <!-- Site Logo -->
                 <div class="logo">
                     <a href="index.html"><h1><i class="fas fa-utensils"></i> Altayer</h1></a>
                 </div>
-                <!-- Main Navigation - Links to key sections of the site -->
                 <nav class="main-nav">
                     <ul>
                         <li><a href="restaurants.html">Restaurants</a></li>
@@ -39,15 +35,12 @@
                         <li><a href="promotions.html">Promotions</a></li>
                     </ul>
                 </nav>
-                <!-- Header Right Section - Contains search, dark mode, and user actions -->
                 <div class="header-right">
-                    <!-- Search Bar -->
                     <div class="search-bar">
                         <i class="fas fa-search"></i>
                         <input type="text" placeholder="Search for food, restaurants..." id="search-input">
                         <div class="search-results" id="search-results"></div>
                     </div>
-                    <!-- Dark Mode Toggle Switch -->
                     <div class="dark-mode-toggle">
                         <input type="checkbox" id="darkmode-switch">
                         <label for="darkmode-switch" class="toggle-label">
@@ -56,7 +49,6 @@
                             <span class="toggle-ball"></span>
                         </label>
                     </div>
-                    <!-- User Actions - Cart and Sign In buttons -->
                     <div class="user-actions">
                         <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count" id="cart-count">0</span></a>
                         <a href="signin.html" class="signin-btn">Sign in</a>
@@ -66,20 +58,18 @@
         </div>
     </header>
 
-    <!-- Restaurant Hero Section - Displays restaurant banner and key information -->
+    <!-- Restaurant Hero Section -->
     <section class="restaurant-hero">
-        <div class="restaurant-banner" style="background-image: url('https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
+        <div class="restaurant-banner" style="background-image: url('https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
             <div class="banner-overlay">
                 <div class="container">
                     <div class="restaurant-info">
                         <h1>Gourmet Burger House</h1>
-                        <!-- Restaurant meta details: rating, price range, categories -->
                         <div class="meta-details">
                             <span class="rating"><i class="fas fa-star"></i> 4.5 (150+)</span>
                             <span class="price-range">$$</span>
                             <span class="categories">Burgers • Fast Food • American</span>
                         </div>
-                        <!-- Delivery details: time and fee -->
                         <div class="delivery-details">
                             <span><i class="fas fa-clock"></i> 15-25 min</span>
                             <span><i class="fas fa-truck"></i> $1.49 Delivery Fee</span>
@@ -90,67 +80,50 @@
         </div>
     </section>
 
-    <!-- Restaurant Menu Section - Main content area with side menu and food items -->
+    <!-- Restaurant Menu Section -->
     <main class="restaurant-menu">
         <div class="container menu-layout">
-            <!-- Menu Sidebar - Sticky navigation for menu categories -->
             <aside class="menu-sidebar">
                 <nav class="menu-navigation">
                     <h3>Menu</h3>
                     <ul class="category-list">
-                        <!-- Navigation links to different sections of the menu -->
-                        <li class="active"><a href="#signature-burgers">Signature Burgers</a></li>
+                        <li class="active"><a href="#burgers">Signature Burgers</a></li>
                         <li><a href="#sides">Sides</a></li>
-                        <li><a href="#drinks">Drinks</a></li>
-                        <li><a href="#desserts">Desserts</a></li>
+                        <li><a href="#drinks">Drinks & Shakes</a></li>
                     </ul>
                 </nav>
             </aside>
-
-            <!-- Menu Content - Displays menu items organized by category -->
+            
             <div class="menu-content">
                 <!-- Signature Burgers Category -->
-                <section id="signature-burgers" class="menu-category">
+                <section id="burgers" class="menu-category">
                     <h2>Signature Burgers</h2>
                     <div class="menu-items-grid">
-                        <!-- Menu Item Card 1 - Styled to match restaurant cards -->
-                        <article class="menu-item" data-item-id="burger-1" data-item-name="House Special Burger" data-item-price="14.99" data-item-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Gourmet Burger House">
-                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                        <!-- Classic Cheeseburger -->
+                        <article class="menu-item" data-item-id="burger-1" data-item-name="Classic Cheeseburger" data-item-price="10.99" data-item-image="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-restaurant-name="Gourmet Burger House">
+                            <div class="menu-item-image" style="background-image: url('https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3>House Special Burger</h3>
+                                    <h3>Classic Cheeseburger</h3>
+                                    <span class="price">$10.99</span>
                                 </div>
-                                <p class="description">Double beef patties, smoked bacon, aged cheddar, caramelized onions, and our signature BBQ sauce.</p>
+                                <p class="description">A juicy beef patty with melted cheddar cheese, lettuce, tomato, onions, and our secret sauce.</p>
                                 <div class="menu-item-footer">
-                                    <span class="price">$14.99</span>
                                     <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
                                 </div>
                             </div>
                         </article>
-                        <!-- Menu Item Card 2 -->
-                        <article class="menu-item" data-item-id="burger-2" data-item-name="Truffle Mushroom Burger" data-item-price="16.99" data-item-image="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Gourmet Burger House">
-                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                            <div class="menu-item-info">
-                                <div class="menu-item-header">
-                                    <h3>Truffle Mushroom Burger</h3>
-                                </div>
-                                <p class="description">Wagyu beef patty, wild mushrooms, truffle aioli, melted Swiss cheese, and arugula.</p>
-                                <div class="menu-item-footer">
-                                    <span class="price">$16.99</span>
-                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
-                                </div>
-                            </div>
-                        </article>
-                        <!-- New Menu Item Card 3 - Added for more content example -->
-                        <article class="menu-item" data-item-id="burger-3" data-item-name="Spicy Jalapeño Burger" data-item-price="13.50" data-item-image="https://images.unsplash.com/photo-1627956417757-b08e5630325d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Gourmet Burger House">
-                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1627956417757-b08e5630325d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                        
+                        <!-- Spicy Jalapeño Burger (FIXED IMAGE) -->
+                        <article class="menu-item" data-item-id="burger-2" data-item-name="Spicy Jalapeño Burger" data-item-price="11.99" data-item-image="https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-restaurant-name="Gourmet Burger House">
+                            <div class="menu-item-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeFldFmxBVlW3avVMCceeqGAr18Kb_98FFrg&s');"></div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
                                     <h3>Spicy Jalapeño Burger</h3>
+                                    <span class="price">$11.99</span>
                                 </div>
-                                <p class="description">Grilled beef patty, fresh jalapeños, pepper jack cheese, and spicy chipotle mayo.</p>
+                                <p class="description">For heat lovers! A beef patty topped with pepper jack cheese, spicy jalapeños, and chipotle mayo.</p>
                                 <div class="menu-item-footer">
-                                    <span class="price">$13.50</span>
                                     <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
                                 </div>
                             </div>
@@ -158,73 +131,56 @@
                     </div>
                 </section>
                 
+                <!-- Sides Category -->
                 <section id="sides" class="menu-category">
                     <h2>Sides</h2>
                     <div class="menu-items-grid">
-                        <!-- Side Item Card 1 -->
-                        <article class="menu-item" data-item-id="side-1" data-item-name="Hand-cut Fries" data-item-price="4.99" data-item-image="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Gourmet Burger House">
-                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                        <!-- French Fries -->
+                        <article class="menu-item" data-item-id="side-1" data-item-name="French Fries" data-item-price="3.99" data-item-image="https://images.pexels.com/photos/115740/pexels-photo-115740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-restaurant-name="Gourmet Burger House">
+                            <div class="menu-item-image" style="background-image: url('https://images.pexels.com/photos/115740/pexels-photo-115740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
-                                    <h3>Hand-cut Fries</h3>
+                                    <h3>French Fries</h3>
+                                    <span class="price">$3.99</span>
                                 </div>
-                                <p class="description">Crispy golden fries seasoned with sea salt and served with our house dipping sauce.</p>
+                                <p class="description">Crispy golden fries, lightly salted. The perfect companion to any burger.</p>
                                 <div class="menu-item-footer">
-                                    <span class="price">$4.99</span>
                                     <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
                                 </div>
                             </div>
                         </article>
-                        <!-- Side Item Card 2 -->
-                        <article class="menu-item" data-item-id="side-2" data-item-name="Onion Rings" data-item-price="5.49" data-item-image="https://images.unsplash.com/photo-1596700813632-4752b04f7b60?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Gourmet Burger House">
-                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1596700813632-4752b04f7b60?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                        
+                        <!-- Onion Rings (FIXED IMAGE) -->
+                        <article class="menu-item" data-item-id="side-2" data-item-name="Onion Rings" data-item-price="4.99" data-item-image="https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-restaurant-name="Gourmet Burger House">
+                            <div class="menu-item-image" style="background-image: url('');"><img src="https://www.crazyvegankitchen.com/wp-content/uploads/2023/06/onion-rings-recipe.jpg" alt=""></div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
                                     <h3>Onion Rings</h3>
+                                    <span class="price">$4.99</span>
                                 </div>
-                                <p class="description">Thick-cut, battered onion rings served with a tangy horseradish sauce.</p>
+                                <p class="description">Thick-cut onion rings, beer-battered and fried to a perfect golden brown.</p>
                                 <div class="menu-item-footer">
-                                    <span class="price">$5.49</span>
                                     <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
                                 </div>
                             </div>
                         </article>
                     </div>
                 </section>
-
+                
+                <!-- Drinks & Shakes Category -->
                 <section id="drinks" class="menu-category">
-                    <h2>Drinks</h2>
+                    <h2>Drinks & Shakes</h2>
                     <div class="menu-items-grid">
-                        <!-- Drink Item Card 1 -->
-                        <article class="menu-item" data-item-id="drink-1" data-item-name="Classic Milkshake" data-item-price="5.99" data-item-image="https://images.unsplash.com/photo-1543253687-f27361845694?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Gourmet Burger House">
-                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1543253687-f27361845694?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                         <!-- Classic Milkshake (FIXED IMAGE) -->
+                        <article class="menu-item" data-item-id="drink-1" data-item-name="Classic Milkshake" data-item-price="5.99" data-item-image="" data-restaurant-name="Gourmet Burger House">
+                            <div class="menu-item-image" style="background-image: url('');"> <img src="https://preppykitchen.com/wp-content/uploads/2021/04/Milkshake-Recipe-Card.jpg" alt=""></div>
                             <div class="menu-item-info">
                                 <div class="menu-item-header">
                                     <h3>Classic Milkshake</h3>
-                                </div>
-                                <p class="description">Creamy vanilla, chocolate, or strawberry milkshake, topped with whipped cream.</p>
-                                <div class="menu-item-footer">
                                     <span class="price">$5.99</span>
-                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <section id="desserts" class="menu-category">
-                    <h2>Desserts</h2>
-                    <div class="menu-items-grid">
-                        <!-- Dessert Item Card 1 -->
-                        <article class="menu-item" data-item-id="dessert-1" data-item-name="Chocolate Brownie" data-item-price="6.50" data-item-image="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" data-restaurant-name="Gourmet Burger House">
-                            <div class="menu-item-image" style="background-image: url('https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                            <div class="menu-item-info">
-                                <div class="menu-item-header">
-                                    <h3>Chocolate Brownie</h3>
-                                </div>
-                                <p class="description">Warm, fudgy chocolate brownie with a scoop of vanilla ice cream.</p>
+                                <p class="description">A thick, creamy milkshake. Your choice of vanilla, chocolate, or strawberry.</p>
                                 <div class="menu-item-footer">
-                                    <span class="price">$6.50</span>
                                     <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
                                 </div>
                             </div>
@@ -235,7 +191,7 @@
         </div>
     </main>
     
-    <!-- Footer Section - Kept consistent with the rest of the site -->
+    <!-- Footer -->
     <footer class="altayer-footer">
         <div class="container">
             <div class="footer-content">
@@ -284,70 +240,47 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Dark Mode and other functionalities -->
+    <!-- Scripts -->
     <script src="darkmode.js"></script>
-    <script src="bar.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Smooth scrolling for menu category links
             document.querySelectorAll('.category-list a').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    // Scrolls the target section into view smoothly
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
                         behavior: 'smooth'
                     });
-
-                    // Update active class on sidebar navigation items
                     document.querySelectorAll('.category-list li').forEach(li => li.classList.remove('active'));
                     this.closest('li').classList.add('active');
                 });
             });
 
-            // Intersection Observer to dynamically highlight active category in sidebar
             const sections = document.querySelectorAll('.menu-category');
             const navLi = document.querySelectorAll('.category-list li');
-
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    // If a menu category section is currently intersecting the viewport
                     if (entry.isIntersecting) {
                         navLi.forEach(li => {
-                            li.classList.remove('active'); // Remove active class from all links
-                            // Add active class to the link corresponding to the intersecting section
-                            if (li.querySelector('a').getAttribute('href') === '#' + entry.target.id) {
+                            li.classList.remove('active');
+                            if (li.querySelector('a').getAttribute('href').substring(1) === entry.target.id) {
                                 li.classList.add('active');
                             }
                         });
                     }
                 });
-            }, {
-                // Defines the portion of the viewport that triggers the intersection
-                // Adjust rootMargin to fine-tune when categories become active based on scroll position
-                rootMargin: '-30% 0px -70% 0px' 
-            });
+            }, { rootMargin: '-30% 0px -70% 0px' });
+            sections.forEach(section => { observer.observe(section); });
 
-            // Observe each menu category section
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-
-
-            // --- Cart Functionality ---
             const cartCountElement = document.getElementById('cart-count');
-
-            // Function to update the cart count display in the header
             function updateCartCountDisplay() {
                 let cart = JSON.parse(localStorage.getItem('cart')) || [];
                 const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
                 cartCountElement.textContent = totalItems;
-                cartCountElement.style.display = totalItems > 0 ? 'flex' : 'none'; // Show/hide based on count
+                cartCountElement.style.display = totalItems > 0 ? 'flex' : 'none';
             }
-
-            // Call on page load to set initial cart count
             updateCartCountDisplay();
 
-            // Add to Cart Button Event Listeners
             document.querySelectorAll('.add-to-cart-btn').forEach(button => {
                 button.addEventListener('click', function() {
                     const menuItem = this.closest('.menu-item');
@@ -355,32 +288,19 @@
                     const itemName = menuItem.dataset.itemName;
                     const itemPrice = parseFloat(menuItem.dataset.itemPrice);
                     const itemImage = menuItem.dataset.itemImage;
-                    const restaurantName = menuItem.dataset.restaurantName; // Get restaurant name
-
+                    const restaurantName = menuItem.dataset.restaurantName;
                     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-                    // Check if item already exists in cart
                     const existingItemIndex = cart.findIndex(item => item.id === itemId);
 
                     if (existingItemIndex > -1) {
-                        // Item exists, increment quantity
                         cart[existingItemIndex].quantity += 1;
                     } else {
-                        // Item does not exist, add new item
-                        cart.push({
-                            id: itemId,
-                            name: itemName,
-                            price: itemPrice,
-                            image: itemImage,
-                            restaurant: restaurantName, // Add restaurant name to cart item
-                            quantity: 1
-                        });
+                        cart.push({ id: itemId, name: itemName, price: itemPrice, image: itemImage, restaurant: restaurantName, quantity: 1 });
                     }
 
                     localStorage.setItem('cart', JSON.stringify(cart));
                     updateCartCountDisplay();
 
-                    // Optional: Visual feedback on button
                     const originalText = this.textContent;
                     this.textContent = 'Added!';
                     this.classList.add('added');
