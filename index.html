@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +8,75 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
+    <style>
+        /* Language switcher styles */
+        .language-switcher {
+            margin-left: 15px;
+        }
+        
+        .btn-language {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            padding: 8px 12px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-language:hover {
+            background-color: var(--primary-extra-light);
+            border-color: var(--primary-color);
+        }
+        
+        .language-flag {
+            margin-left: 5px;
+            font-size: 16px;
+        }
+        
+        .language-text {
+            font-size: 14px;
+        }
+        
+        /* RTL styles */
+        html[dir="rtl"] body {
+            font-family: 'Tajawal', sans-serif;
+            text-align: right;
+        }
+        
+        html[dir="rtl"] .hero-content,
+        html[dir="rtl"] .section-title,
+        html[dir="rtl"] .category-list,
+        html[dir="rtl"] .featured-content,
+        html[dir="rtl"] .restaurant-info,
+        html[dir="rtl"] .app-text,
+        html[dir="rtl"] .footer-content {
+            text-align: right;
+        }
+        
+        html[dir="rtl"] .category-item .category-hover,
+        html[dir="rtl"] .restaurant-meta,
+        html[dir="rtl"] .featured-banner {
+            direction: rtl;
+        }
+        
+        html[dir="rtl"] .category-item .category-hover i {
+            margin-right: 5px;
+            margin-left: 0;
+            transform: rotate(180deg);
+        }
+        
+        html[dir="rtl"] .main-nav ul,
+        html[dir="rtl"] .footer-links {
+            padding-right: 0;
+        }
+    </style>
 </head>
 <body>
    <!-- Header Section -->
@@ -24,16 +88,23 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="restaurants.html">Restaurants</a></li>
-                    <li><a href="plus.html">Plus</a></li>
-                    <li><a href="promotions.html">Promotions</a></li>
+                    <li><a href="restaurants.html" data-en="Restaurants" data-ar="المطاعم">Restaurants</a></li>
+                    <li><a href="plus.html" data-en="Plus" data-ar="بلس">Plus</a></li>
+                    <li><a href="promotions.html" data-en="Promotions" data-ar="العروض">Promotions</a></li>
                 </ul>
             </nav>
             <div class="header-right">
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search for food, restaurants..." id="search-input">
+                    <input type="text" placeholder="Search for food, restaurants..." id="search-input" data-en="Search for food, restaurants..." data-ar="ابحث عن طعام، مطاعم...">
                     <div class="search-results" id="search-results"></div>
+                </div>
+                
+                <div class="language-switcher">
+                    <button id="language-toggle" class="btn btn-language">
+                        <span class="language-flag">🌐</span>
+                        <span class="language-text">العربية</span>
+                    </button>
                 </div>
                 
                 <div class="dark-mode-toggle">
@@ -49,7 +120,7 @@
                     <a href="cart.html" class="cart-btn">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-                    <a href="signin.html" class="signin-btn">Sign in</a>
+                    <a href="signin.html" class="signin-btn" data-en="Sign in" data-ar="تسجيل الدخول">Sign in</a>
                 </div>
             </div>
         </div>
@@ -59,10 +130,10 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2 style="color: white !important; -webkit-text-fill-color: white !important;">Food delivery in minutes</h2>
-                <p>Order food from the best local restaurants</p>
+                <h2 style="color: white !important; -webkit-text-fill-color: white !important;" data-en="Food delivery in minutes" data-ar="توصيل الطعام في دقائق">Food delivery in minutes</h2>
+                <p data-en="Order food from the best local restaurants" data-ar="اطلب الطعام من أفضل المطاعم المحلية">Order food from the best local restaurants</p>
                 <div class="hero-cta">
-                    <a href="restaurants.html" class="btn btn-primary">Order Now</a>
+                    <a href="restaurants.html" class="btn btn-primary" data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
                 </div>
             </div>
         </div>
@@ -71,15 +142,15 @@
     <!-- Food Categories -->
     <section class="categories">
         <div class="container">
-            <h2 class="section-title">Explore by Category</h2>
+            <h2 class="section-title" data-en="Explore by Category" data-ar="تصفح حسب الفئة">Explore by Category</h2>
             <div class="category-list">
                 <a href="restaurants.html?category=burgers" class="category-item">
                     <div class="category-icon" style="background-color: #FFE8D6;">
                         <i class="fas fa-hamburger" style="color: #CB997E;"></i>
                     </div>
-                    <p>Burgers</p>
+                    <p data-en="Burgers" data-ar="برجر">Burgers</p>
                     <div class="category-hover">
-                        <span>Explore</span>
+                        <span data-en="Explore" data-ar="تصفح">Explore</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
@@ -87,9 +158,9 @@
                     <div class="category-icon" style="background-color: #FFD6E0;">
                         <i class="fas fa-pizza-slice" style="color: #FF5D8F;"></i>
                     </div>
-                    <p>Pizza</p>
+                    <p data-en="Pizza" data-ar="بيتزا">Pizza</p>
                     <div class="category-hover">
-                        <span>Explore</span>
+                        <span data-en="Explore" data-ar="تصفح">Explore</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
@@ -97,9 +168,9 @@
                     <div class="category-icon" style="background-color: #E2F3FB;">
                         <i class="fas fa-bowl-rice" style="color: #3D9BE9;"></i>
                     </div>
-                    <p>Asian</p>
+                    <p data-en="Asian" data-ar="آسيوي">Asian</p>
                     <div class="category-hover">
-                        <span>Explore</span>
+                        <span data-en="Explore" data-ar="تصفح">Explore</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
@@ -107,9 +178,9 @@
                     <div class="category-icon" style="background-color: #FEEAFA;">
                         <i class="fas fa-drumstick-bite" style="color: #D47AE8;"></i>
                     </div>
-                    <p>Chicken</p>
+                    <p data-en="Chicken" data-ar="دجاج">Chicken</p>
                     <div class="category-hover">
-                        <span>Explore</span>
+                        <span data-en="Explore" data-ar="تصفح">Explore</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
@@ -118,9 +189,9 @@
                     <div class="category-icon" style="background-color: #FFF5E6;">
                         <i class="fas fa-ice-cream" style="color: #FFA726;"></i>
                     </div>
-                    <p>Desserts</p>
+                    <p data-en="Desserts" data-ar="حلويات">Desserts</p>
                     <div class="category-hover">
-                        <span>Explore</span>
+                        <span data-en="Explore" data-ar="تصفح">Explore</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
@@ -128,9 +199,9 @@
                     <div class="category-icon" style="background-color: #F5E9FF;">
                         <i class="fas fa-coffee" style="color: #9C27B0;"></i>
                     </div>
-                    <p>Coffee</p>
+                    <p data-en="Coffee" data-ar="قهوة">Coffee</p>
                     <div class="category-hover">
-                        <span>Explore</span>
+                        <span data-en="Explore" data-ar="تصفح">Explore</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
@@ -141,18 +212,18 @@
     <!-- Featured Section -->
     <section class="featured">
         <div class="container">
-            <h2 class="section-title">Featured on Altayer</h2>
+            <h2 class="section-title" data-en="Featured on Altayer" data-ar="مميز على التاير">Featured on Altayer</h2>
             <div class="featured-banners">
                 <div class="featured-banner">
                     <div class="featured-content">
-                        <h3>Free Delivery on Your First 3 Orders</h3>
-                        <a href="restaurants.html" class="btn btn-light">Order Now</a>
+                        <h3 data-en="Free Delivery on Your First 3 Orders" data-ar="توصيل مجاني على أول 3 طلبات">Free Delivery on Your First 3 Orders</h3>
+                        <a href="restaurants.html" class="btn btn-light" data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
                     </div>
                 </div>
                 <div class="featured-banner banner-dark">
                     <div class="featured-content">
-                        <h3>20% Off for New Members</h3>
-                        <a href="#" class="btn btn-light">Join Now</a>
+                        <h3 data-en="20% Off for New Members" data-ar="خصم 20% للأعضاء الجدد">20% Off for New Members</h3>
+                        <a href="#" class="btn btn-light" data-en="Join Now" data-ar="انضم الآن">Join Now</a>
                     </div>
                 </div>
             </div>
@@ -163,24 +234,24 @@
     <section class="restaurants">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Popular Restaurants</h2>
+                <h2 class="section-title" data-en="Popular Restaurants" data-ar="المطاعم الشهيرة">Popular Restaurants</h2>
                 <div class="filter-options">
     <div class="filter-dropdown">
         <select id="category-filter">
-            <option value="all">All Categories</option>
-            <option value="burgers">Burgers</option>
-            <option value="pizza">Pizza</option>
-            <option value="asian">Asian</option>
-            <option value="chicken">Chicken</option>
-            <option value="desserts">Desserts</option>
-            <option value="coffee">Coffee</option>
+            <option value="all" data-en="All Categories" data-ar="جميع الفئات">All Categories</option>
+            <option value="burgers" data-en="Burgers" data-ar="برجر">Burgers</option>
+            <option value="pizza" data-en="Pizza" data-ar="بيتزا">Pizza</option>
+            <option value="asian" data-en="Asian" data-ar="آسيوي">Asian</option>
+            <option value="chicken" data-en="Chicken" data-ar="دجاج">Chicken</option>
+            <option value="desserts" data-en="Desserts" data-ar="حلويات">Desserts</option>
+            <option value="coffee" data-en="Coffee" data-ar="قهوة">Coffee</option>
         </select>
     </div>
     <select id="sort-options">
-        <option value="recommended">Sort by: Recommended</option>
-        <option value="delivery">Fastest Delivery</option>
-        <option value="rating">Rating</option>
-        <option value="distance">Distance</option>
+        <option value="recommended" data-en="Sort by: Recommended" data-ar="ترتيب حسب: موصى به">Sort by: Recommended</option>
+        <option value="delivery" data-en="Fastest Delivery" data-ar="أسرع توصيل">Fastest Delivery</option>
+        <option value="rating" data-en="Rating" data-ar="التقييم">Rating</option>
+        <option value="distance" data-en="Distance" data-ar="المسافة">Distance</option>
     </select>
 </div>
             </div>
@@ -189,10 +260,8 @@
                 <!-- Restaurant cards will be loaded here -->
             </div>
 
-           
-
             <div class="load-more">
-                <a href="restaurants.html" class="btn btn-load-more">
+                <a href="restaurants.html" class="btn btn-load-more" data-en="Load More Restaurants" data-ar="تحميل المزيد من المطاعم">
                     Load More Restaurants
                 </a>
             </div>
@@ -219,27 +288,27 @@
         <div class="app-container">
             <div class="app-content">
                 <div class="app-text">
-                    <h2 class="app-heading">Elevate Your Experience</h2>
-                    <p class="app-subtitle">Get the Altayer app for exclusive features and faster ordering</p>
+                    <h2 class="app-heading" data-en="Elevate Your Experience" data-ar="ارتق بتجربتك">Elevate Your Experience</h2>
+                    <p class="app-subtitle" data-en="Get the Altayer app for exclusive features and faster ordering" data-ar="احصل على تطبيق التاير لميزات حصرية وطلب أسرع">Get the Altayer app for exclusive features and faster ordering</p>
                     
                     <div class="app-features">
     <div class="feature">
         <div class="feature-icon">
             <i class="fas fa-bolt"></i>
         </div>
-        <p>Lightning-fast ordering</p>
+        <p data-en="Lightning-fast ordering" data-ar="طلب سريع البرق">Lightning-fast ordering</p>
     </div>
     <div class="feature">
         <div class="feature-icon">
             <i class="fas fa-gem"></i>
         </div>
-        <p>Exclusive member deals</p>
+        <p data-en="Exclusive member deals" data-ar="صفقات حصرية للأعضاء">Exclusive member deals</p>
     </div>
     <div class="feature">
         <div class="feature-icon">
             <i class="fas fa-heart"></i>
         </div>
-        <p>Personalized recommendations</p>
+        <p data-en="Personalized recommendations" data-ar="توصيات مخصصة">Personalized recommendations</p>
     </div>
 </div>
                     
@@ -247,15 +316,15 @@
                         <a href="#" class="download-btn">
                             <i class="fab fa-apple"></i>
                             <div class="btn-text">
-                                <span>Download on the</span>
-                                <strong>App Store</strong>
+                                <span data-en="Download on the" data-ar="حمل من">Download on the</span>
+                                <strong data-en="App Store" data-ar="متجر التطبيقات">App Store</strong>
                             </div>
                         </a>
                         <a href="#" class="download-btn">
                             <i class="fab fa-google-play"></i>
                             <div class="btn-text">
-                                <span>Get it on</span>
-                                <strong>Google Play</strong>
+                                <span data-en="Get it on" data-ar="احصل عليه من">Get it on</span>
+                                <strong data-en="Google Play" data-ar="جوجل بلاي">Google Play</strong>
                             </div>
                         </a>
                     </div>
@@ -278,7 +347,7 @@
                                                 <span class="rating"><i class="fas fa-star"></i> 4.8</span>
                                                 <span class="price">$$</span>
                                             </div>
-                                            <button class="preview-btn">Add to Cart</button>
+                                            <button class="preview-btn" data-en="Add to Cart" data-ar="أضف للسلة">Add to Cart</button>
                                         </div>
                                     </div>
                                 </div>
@@ -307,7 +376,7 @@
                         <i class="fas fa-utensils"></i>
                         <span>Altayer</span>
                     </div>
-                    <p class="footer-tagline">Delivering happiness one meal at a time</p>
+                    <p class="footer-tagline" data-en="Delivering happiness one meal at a time" data-ar="نقدم السعادة وجبة واحدة في كل مرة">Delivering happiness one meal at a time</p>
                     <div class="footer-social">
                         <a href="#" class="social-link" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
@@ -326,20 +395,20 @@
 
                 <div class="footer-grid">
                     <div class="footer-col">
-                        <h4 class="footer-title">Company</h4>
+                        <h4 class="footer-title" data-en="Company" data-ar="الشركة">Company</h4>
                         <ul class="footer-links">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                             <li><a href="plus.html">Altayer Plus</a></li>
+                            <li><a href="about.html" data-en="About Us" data-ar="معلومات عنا">About Us</a></li>
+                            <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                             <li><a href="plus.html" data-en="Altayer Plus" data-ar="التاير بلس">Altayer Plus</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-col">
-                        <h4 class="footer-title">Help</h4>
+                        <h4 class="footer-title" data-en="Help" data-ar="مساعدة">Help</h4>
                         <ul class="footer-links">
-                            <li><a href="track-order.html">track order</a></li>
-                            <li><a href="faqs.html">FAQS</a></li>
-                             <li><a href="payment-options.html">Payment Options</a></li>
+                            <li><a href="track-order.html" data-en="Track Order" data-ar="تتبع الطلب">Track Order</a></li>
+                            <li><a href="faqs.html" data-en="FAQs" data-ar="الأسئلة الشائعة">FAQs</a></li>
+                             <li><a href="payment-options.html" data-en="Payment Options" data-ar="خيارات الدفع">Payment Options</a></li>
                         </ul>
                     </div>
                     </div>
@@ -350,9 +419,9 @@
                 <div class="footer-legal">
                     <p>&copy; 2025 Altayer. All rights reserved.</p>
                     <div class="legal-links">
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                        <a href="terms-of-service.html">Terms of Service</a>
-                        <a href="cookie-policy.html">Cookie Policy</a>
+                        <a href="privacy-policy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+                        <a href="terms-of-service.html" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a>
+                        <a href="cookie-policy.html" data-en="Cookie Policy" data-ar="سياسة الكوكيز">Cookie Policy</a>
                     </div>
                 </div>
             </div>
@@ -363,7 +432,54 @@
      <script src="bar.js"></script>
     <script src="darkmode.js"></script>
      <script src="promotions.html"></script>
+      <script src="language.js"></script>
     <script>
+    // Language switcher functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const languageToggle = document.getElementById('language-toggle');
+        const currentLanguage = localStorage.getItem('language') || 'en';
+        
+        // Set initial language
+        setLanguage(currentLanguage);
+        
+        // Toggle language on button click
+        languageToggle.addEventListener('click', function() {
+            const newLanguage = document.documentElement.lang === 'en' ? 'ar' : 'en';
+            setLanguage(newLanguage);
+            localStorage.setItem('language', newLanguage);
+        });
+        
+        function setLanguage(lang) {
+            // Update html lang and dir attributes
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Update toggle button text
+            const languageText = languageToggle.querySelector('.language-text');
+            languageText.textContent = lang === 'en' ? 'العربية' : 'English';
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-en], [data-ar]').forEach(element => {
+                const text = element.getAttribute(`data-${lang}`);
+                if (text) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
+                        element.placeholder = text;
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            });
+            
+            // Update select options
+            document.querySelectorAll('option[data-en], option[data-ar]').forEach(option => {
+                const text = option.getAttribute(`data-${lang}`);
+                if (text) {
+                    option.textContent = text;
+                }
+            });
+        }
+    });
+
     // Restaurant data (same as in restaurants.html)
     const restaurants = [
             {
@@ -563,7 +679,7 @@
         if (visibleRestaurants.length === 0) {
             restaurantGrid.innerHTML = `
                 <div class="no-results">
-                    <p>No restaurants found in this category. Try another filter.</p>
+                    <p data-en="No restaurants found in this category. Try another filter." data-ar="لم يتم العثور على مطاعم في هذه الفئة. جرب عامل تصفية آخر.">No restaurants found in this category. Try another filter.</p>
                 </div>
             `;
         } else {
